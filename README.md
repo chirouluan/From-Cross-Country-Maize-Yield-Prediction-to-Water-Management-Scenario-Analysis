@@ -26,7 +26,7 @@ conda run -n specllm python -m cybench.stages.stage1_feature_engineering.summari
 
 ### Stage 2：TabPFN 跨国家预测
 
-Stage 2 固定读取 Stage 1 的 `qwen_rag/feature_dataset.csv`，比较原始 TabPFN 与使用 CN 数据继续训练的 TabPFN。CN 使用严格留出的 2020–2022 年；其他国家采用最后 30% 年份的前向时间测试。
+Stage 2 固定读取 Stage 1 的 `qwen_rag/feature_dataset.csv`，比较原始 TabPFN 与使用 CN 数据继续训练的 TabPFN。CN 使用严格留出的 2020–2022 年；其他国家采用最后 30% 年份的前向时间测试。CN 微调权重见 [模型权重](#模型权重)。
 
 ```powershell
 conda run -n specllm python -m cybench.stages.stage2_tabpfn_transfer.prepare_cn_data
@@ -61,6 +61,15 @@ cybench/output/
 ```
 
 每个正式 CSV 都有相邻的 `.manifest.json`，记录数据身份、来源 SHA-256、模型、年份边界和实验参数。
+
+## 模型权重
+
+Stage 2 使用的 CN 微调 TabPFN-3 权重已发布在 Hugging Face：
+
+- `tabpfn-v3-regressor-cn_finetuned_full.ckpt`（668 MB，含 AdamW 优化器状态，可从此续训）
+  <https://huggingface.co/rouluan/Agro-TabPFN>
+
+该权重是 TABPFN-3（`tabpfn-v3-regressor-v3_default`）在中国省级玉米产量数据上的微调衍生版本，受 **TABPFN-3 Non-Commercial License v1.0** 约束，仅限非商业研究与内部评估使用，禁止商用及托管/API/SaaS 形式的再分发。许可全文与修改声明见该仓库的 `LICENSE` 与 `NOTICE`。
 
 ## 测试
 
