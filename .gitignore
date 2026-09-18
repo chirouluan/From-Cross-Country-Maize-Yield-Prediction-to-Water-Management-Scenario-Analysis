@@ -8,6 +8,7 @@ cybench/data/wheat/
 *.nc4
 *.tif
 *.tiff
+!Graphical Abstract.tif
 *.pkl
 *.zip
 
