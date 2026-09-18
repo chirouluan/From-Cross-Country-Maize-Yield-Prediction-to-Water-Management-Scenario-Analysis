@@ -1,0 +1,111 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZM-A2-0206",
+      "year": 2017,
+      "evidence_features": [
+        "prec<1.117p2",
+        "tmax>34.574p10",
+        "mean_ssm12",
+        "mean_rad10"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (mean_ssm12) is below reference and precipitation proxies indicate deficit, irrigation assessment or soil water conservation may mitigate yield loss. Temperature and radiation hazards cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability."
+    },
+    {
+      "adm_id": "ZM-A2-0208",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>34.574p11",
+        "tmax>34.574p10",
+        "max_cum_gdd2",
+        "mean_tavg10"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if high temperature hazards (tmax, GDD, tavg) coincide with sensitive growth stages, review sowing windows or adopt stress-tolerant cultivars. Water proxies are not direct irrigation doses.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and variety availability."
+    },
+    {
+      "adm_id": "ZM-A2-0512",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>34.574p10",
+        "mean_tavg10",
+        "mean_tmax10",
+        "mean_ssm10"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if soil moisture (mean_ssm10) is low and temperature hazards are high, irrigation assessment or soil conservation may help. If sowing timing aligns with heat stress, adjust sowing window or select tolerant cultivars.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability."
+    },
+    {
+      "adm_id": "ZM-A2-0808",
+      "year": 2017,
+      "evidence_features": [
+        "prec<1.117p12",
+        "mean_rad12",
+        "max_cum_gdd2",
+        "mean_cum_cwb1"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if precipitation proxies indicate deficit and soil water (cwb) is low, irrigation assessment or soil water conservation may mitigate stress. Radiation and temperature cannot be directly changed.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability."
+    },
+    {
+      "adm_id": "ZM-A2-1007",
+      "year": 2017,
+      "evidence_features": [
+        "max_cum_prec8",
+        "tmax>34.574p10",
+        "mean_ssm2",
+        "mean_tmax2"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if soil moisture (mean_ssm2) is below reference and precipitation proxies indicate deficit, irrigation assessment or soil water conservation may help. Temperature cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability."
+    },
+    {
+      "adm_id": "ZM-A2-1012",
+      "year": 2017,
+      "evidence_features": [
+        "max_cum_prec8",
+        "tmax>34.574p10",
+        "mean_tmax10",
+        "mean_tavg1"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if temperature hazards are high and precipitation proxies indicate deficit, review sowing windows to avoid peak heat or select stress-tolerant cultivars. Water proxies are not direct irrigation doses.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and variety availability."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

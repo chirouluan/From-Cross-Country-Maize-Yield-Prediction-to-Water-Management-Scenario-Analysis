@@ -1,0 +1,40 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:29:57.128147+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_predictions",
+  "file": "inner_candidate_predictions_qwen_rag_ridge.csv",
+  "sha256": "0053bc7f14753c33152d0aa91c4f27c4e1c944b853262087a2c53a591adf7979",
+  "rows": 360,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "rag1_rag_historical_regime",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "rag1_rag_historical_regime": "float64",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "ZA",
+    "advisor": "qwen_rag",
+    "model": "ridge",
+    "years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Mediterranean Atlantic margin characterized by mild wet winters and hot dry summers. Evidence indicates recurrent seasonal water limitation (high dry days, low precipitation quantiles) and temperature extremes (max tmax > 40°C, potential frost). Calibration data shows low-frequency extreme events (tmin < 0°C ~0.43 days/yr) and frequent mild heat days, suggesting a need for robust hybrid configurations to capture both water stress and thermal thresholds without overfitting to rare extremes.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Configured strictly on calibration years (2003-2015) to capture the specific event frequency of the study region. Uses local quantiles for thresholds (tmin < 0°C, tmax > 35°C, prec < 1mm) reflecting the observed mild winter/frequent summer drought regime.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Configured using structured historical CSV records (2001-2015) to judge regime frequency. Incorporates broad climate indicators like GDD (base 10°C), high VPD, and dry spell duration to identify years dominated by water limitation rather than just local event counts.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 50.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -2.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 33.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 2.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "max"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Hybrid configuration combining local event thresholds (tmin < 0°C) with historical regime robustness (high dry day counts). Designed to filter out noise from rare frost events while capturing the persistent summer drought signal evident in the CSV regime statistics.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 35.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 30.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 2.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

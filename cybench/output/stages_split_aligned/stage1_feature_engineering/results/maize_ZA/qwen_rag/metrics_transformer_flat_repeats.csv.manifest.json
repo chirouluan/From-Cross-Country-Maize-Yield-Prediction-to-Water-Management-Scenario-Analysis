@@ -1,0 +1,43 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:40:12.190576+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "repeated_train_test_metrics",
+  "file": "metrics_transformer_flat_repeats.csv",
+  "sha256": "62dba230a18ee074aebc48e5fb7de58bc1e2c0a55b6a65fb8921544e3b58ea49",
+  "rows": 10,
+  "columns": [
+    "country",
+    "advisor",
+    "model",
+    "candidate_id",
+    "selected_k",
+    "repeat",
+    "seed",
+    "split",
+    "mape",
+    "normalized_rmse",
+    "r",
+    "r2",
+    "kge"
+  ],
+  "dtypes": {
+    "country": "object",
+    "advisor": "object",
+    "model": "object",
+    "candidate_id": "object",
+    "selected_k": "int64",
+    "repeat": "int64",
+    "seed": "int64",
+    "split": "object",
+    "mape": "float64",
+    "normalized_rmse": "float64",
+    "r": "float64",
+    "r2": "float64",
+    "kge": "float64"
+  },
+  "metadata": {
+    "repeats": 5,
+    "base_seed": 42
+  }
+}

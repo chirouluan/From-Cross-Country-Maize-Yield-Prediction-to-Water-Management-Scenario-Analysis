@@ -1,0 +1,41 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-07T04:32:27.791927+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "accepted_proxy_changes",
+  "file": "accepted_proxy_changes.csv",
+  "sha256": "52459de7983f636fd0719a9f2982842fa3b14642d7dad20f4e07fbcab306a352",
+  "rows": 118,
+  "columns": [
+    "adm_id",
+    "year",
+    "feature",
+    "feature_role",
+    "from_value",
+    "to_value",
+    "predicted_increment"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "feature": "object",
+    "feature_role": "object",
+    "from_value": "float64",
+    "to_value": "float64",
+    "predicted_increment": "float64"
+  },
+  "metadata": {
+    "crop": "maize",
+    "country": "CN",
+    "feature_strategy": "qwen_rag",
+    "training_end_year_exclusive": 2013,
+    "decision_snapshot_rule": "latest_row_with_both_stage2_predictions",
+    "stage1_dataset_sha256": "f5adff2995337f53f441e747da56e4fff6550c2587d3f08487254db7db7c963f",
+    "strategy": "qwen_rag",
+    "stage2_tabpfn_base_sha256": "aca73607dcea94989d553e40c38f62ec1b02176a72fce88a28e14b61e36b78f6",
+    "stage2_tabpfn_base_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "stage2_tabpfn_cn_finetuned_sha256": "842fcf6036f83b067201a1212f934baf610c60572c74d34393fa1f11ad50eb2e",
+    "stage2_tabpfn_cn_finetuned_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "policy": "deterministic_policy"
+  }
+}

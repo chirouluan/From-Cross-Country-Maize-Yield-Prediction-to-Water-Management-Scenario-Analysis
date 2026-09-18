@@ -1,0 +1,91 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "PT11",
+      "year": 2020,
+      "evidence_features": [
+        "median_cum_ndvi1",
+        "median_cum_ndvi2",
+        "median_cum_ndvi3",
+        "max_ssm5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (max_ssm5) is managed to recover from 6.656 to 6.4942 and crop vigor (NDVI indices) is monitored, a potential yield gain of 0.0586 may be realized. This assumes water recovery is feasible and does not directly alter temperature or radiation.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, local stage, and infrastructure constraints."
+    },
+    {
+      "adm_id": "PT15",
+      "year": 2020,
+      "evidence_features": [
+        "max_ssm5",
+        "mean_tmin3",
+        "median_cum_ndvi3",
+        "max_ssm6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (max_ssm5, max_ssm6) is managed to recover and crop vigor (NDVI) is monitored, a potential yield gain of 0.3485 may be realized. Temperature hazard (mean_tmin3) cannot be directly changed.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, local stage, and infrastructure constraints."
+    },
+    {
+      "adm_id": "PT16",
+      "year": 2020,
+      "evidence_features": [
+        "max_ssm2",
+        "mean_tmin1",
+        "max_cum_gdd2",
+        "mean_tmin7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (max_ssm2) is managed to recover and crop water balance (precip proxies) is monitored, a potential yield gain of 0.1299 may be realized. Temperature hazards (GDD, tmin) cannot be directly changed.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, local stage, and infrastructure constraints."
+    },
+    {
+      "adm_id": "PT17",
+      "year": 2020,
+      "evidence_features": [
+        "mean_tmin3",
+        "tmax>33p6",
+        "mean_tmin8",
+        "mean_tmin7"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if sowing window is reviewed to mitigate temperature hazards (tmax>33p6, tmin) and stress-tolerant cultivars are considered, a potential yield gain of 0.0454 may be realized. Water proxies (cwb) cannot be directly changed.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, local stage, and infrastructure constraints."
+    },
+    {
+      "adm_id": "PT18",
+      "year": 2020,
+      "evidence_features": [
+        "mean_cum_cwb8",
+        "mean_tmin7",
+        "median_cum_ndvi2",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (cwb, precip) is managed to recover and crop vigor (NDVI) is monitored, a potential yield gain of 0.0959 may be realized. Temperature hazard (tmin) cannot be directly changed.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, local stage, and infrastructure constraints."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

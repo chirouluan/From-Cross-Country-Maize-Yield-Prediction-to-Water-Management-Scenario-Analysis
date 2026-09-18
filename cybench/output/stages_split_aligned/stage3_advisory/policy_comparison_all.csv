@@ -1,0 +1,9 @@
+scenario,n_location_years,mean_predicted_yield,mean_scenario_gain,n_stress_signals,country,policy,schema_valid,grounded_recommendation_ratio,n_recommendations,n_grounded_recommendations
+S1_observed_conditions,31,5.253103942652328,0.0,917,CN,qwen_rag,1,1.0,6,6
+S2_bounded_water_recovery,31,5.274550340501793,0.021446397849462253,917,CN,qwen_rag,1,1.0,6,6
+S1_observed_conditions,9,6.327516543209878,0.0,366,ZA,qwen_rag,1,1.0,6,6
+S2_bounded_water_recovery,9,6.4096324074074085,0.08211586419753086,366,ZA,qwen_rag,1,1.0,6,6
+S1_observed_conditions,32,4.213348920095812,0.0,1441,MX,qwen_rag,1,1.0,6,6
+S2_bounded_water_recovery,32,4.58145604242191,0.36810712232609877,1441,MX,qwen_rag,1,1.0,6,6
+S1_observed_conditions,5,9.045565222222226,0.0,177,PT,qwen_rag,1,1.0,5,5
+S2_bounded_water_recovery,5,9.181204777777781,0.13563955555555413,177,PT,qwen_rag,1,1.0,5,5

@@ -1,0 +1,11 @@
+country,advisor,model,candidate_id,selected_k,repeat,seed,split,mape,normalized_rmse,r,r2,kge
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,1,42,train,0.1414,19.2478,0.8998,0.7883,0.7984
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,1,42,test,0.2583,31.5977,0.888,0.1604,0.6117
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,2,1051,train,0.1541,21.1797,0.887,0.7437,0.7534
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,2,1051,test,0.2516,31.2886,0.888,0.1768,0.6072
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,3,2060,train,0.1428,18.6172,0.8983,0.8019,0.8187
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,3,2060,test,0.2618,31.2213,0.903,0.1803,0.6032
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,4,3069,train,0.1454,19.5392,0.8905,0.7818,0.8036
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,4,3069,test,0.258,30.7487,0.8938,0.2049,0.6259
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,5,4078,train,0.1616,23.8821,0.881,0.6741,0.6912
+PT,qwen_base,cnn1d,sample1_extreme_heat_drought_syndrome,60,5,4078,test,0.265,32.7354,0.8758,0.0989,0.5955

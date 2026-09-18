@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.75,
+  "stress_score_threshold": 0.75,
+  "max_water_proxy_shift_fraction": 0.5,
+  "max_actionable_features": 5,
+  "top_reported_stresses": 8,
+  "rationale": "Settings calibrated to the conservative default policy provided in the dataset summary. The reference yield quantile (0.75) and stress threshold (0.75) align with the 'cool_wet' to 'hot_dry' regime boundaries observed in the representative rows (e.g., 2005 vs 2003). The max water proxy shift fraction (0.5) allows for significant counterfactual manipulation of precipitation/dry-day variables to simulate drought or wetness extremes without inventing non-existent management treatments. The max actionable features (5) and top reported stresses (8) are set to the default limits to ensure the analysis remains within the bounds of the available predictor-only data (weather, soil, remote-sensing) while capturing the primary stress drivers identified in the feature role counts."
+}

@@ -1,0 +1,31 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-07T04:32:27.816112+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "policy_comparison_all",
+  "file": "policy_comparison_all.csv",
+  "sha256": "a136a252b098060a895197cf7f22f657804a4df3cfbf3028aa48d7331dc4f13b",
+  "rows": 2,
+  "columns": [
+    "scenario",
+    "n_location_years",
+    "mean_predicted_yield",
+    "mean_scenario_gain",
+    "n_stress_signals",
+    "country",
+    "policy"
+  ],
+  "dtypes": {
+    "scenario": "object",
+    "n_location_years": "int64",
+    "mean_predicted_yield": "float64",
+    "mean_scenario_gain": "float64",
+    "n_stress_signals": "int64",
+    "country": "object",
+    "policy": "object"
+  },
+  "metadata": {
+    "crop": "maize",
+    "feature_strategy": "qwen_rag"
+  }
+}

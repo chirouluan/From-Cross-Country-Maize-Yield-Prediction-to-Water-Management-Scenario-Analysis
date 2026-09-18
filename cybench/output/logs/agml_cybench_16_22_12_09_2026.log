@@ -1,0 +1,7 @@
+2026-09-12 16:22:46,823 [DEBUG] matplotlib: matplotlib data path: d:\Anaconda\envs\specllm\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 16:22:46,826 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 16:22:46,842 [DEBUG] matplotlib: interactive is False
+2026-09-12 16:22:46,843 [DEBUG] matplotlib: platform is win32
+2026-09-12 16:22:46,860 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 16:22:46,861 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 16:22:47,406 [DEBUG] matplotlib.pyplot: Loaded backend module://matplotlib_inline.backend_inline version unknown.

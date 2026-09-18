@@ -1,0 +1,41 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T06:03:43.028054+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "accepted_proxy_changes",
+  "file": "accepted_proxy_changes.csv",
+  "sha256": "c605ce8271396d00b9f26ab465e8e96e2c313b7a4e4190d45cdc01c3fd873789",
+  "rows": 19,
+  "columns": [
+    "adm_id",
+    "year",
+    "feature",
+    "feature_role",
+    "from_value",
+    "to_value",
+    "predicted_increment"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "feature": "object",
+    "feature_role": "object",
+    "from_value": "float64",
+    "to_value": "float64",
+    "predicted_increment": "float64"
+  },
+  "metadata": {
+    "crop": "maize",
+    "country": "PT",
+    "feature_strategy": "qwen_rag",
+    "training_end_year_exclusive": 2020,
+    "decision_snapshot_rule": "latest_row_with_both_stage2_predictions",
+    "stage1_dataset_sha256": "eeeba4e8277cc19c42248911cb59b0f52bbcd39ae6095c85b88bc56d5304058c",
+    "strategy": "qwen_rag",
+    "stage2_tabpfn_base_sha256": "75a9db6d76696074e0403e917bea7969466b7e81eae299d0a5c9cdb5feaaec3c",
+    "stage2_tabpfn_base_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "stage2_tabpfn_cn_finetuned_sha256": "aee02e85480861b821baa6412d40072c7d82f6284c1a7e725ee0e555a9f4860d",
+    "stage2_tabpfn_cn_finetuned_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "policy": "qwen_rag"
+  }
+}

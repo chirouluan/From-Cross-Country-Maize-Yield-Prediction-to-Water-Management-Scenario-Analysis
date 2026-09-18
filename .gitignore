@@ -1,0 +1,87 @@
+# ---------------------------------------------------------------------------
+# 数据：默认排除，仅保留 CN / PT / ZA / MX 四国的玉米数据
+# ---------------------------------------------------------------------------
+/data/
+/output/
+tmp/
+cybench/data/wheat/
+*.nc4
+*.tif
+*.tiff
+*.pkl
+*.zip
+
+*.csv
+!cybench/data/maize/CN/*.csv
+!cybench/data/maize/PT/*.csv
+!cybench/data/maize/ZA/*.csv
+!cybench/data/maize/MX/*.csv
+!cybench/output/**/*.csv
+
+*.txt
+!cybench/output/**/*.txt
+
+# ---------------------------------------------------------------------------
+# 模型权重与大型二进制：一律不入库
+# ---------------------------------------------------------------------------
+LLM/
+tabpfn_3/
+artifacts/
+*.ckpt
+*.safetensors
+*.pth
+*.pt
+
+# ---------------------------------------------------------------------------
+# 未纳入本仓库的本地产物
+# ---------------------------------------------------------------------------
+Missing value imputation model/
+figures/
+visualizations/
+results_baselines/
+Climate_rag_knowledge_base/
+.codex-finalizer-framework-*/
+.codex_tmp/
+.codex_review/
+
+# ---------------------------------------------------------------------------
+# data_preparation：仅 CN / PT(EU) / ZA(FEWSNET) / MX 四国，其余国家目录排除
+# ---------------------------------------------------------------------------
+data_preparation/crop_statistics_AR/
+data_preparation/crop_statistics_AU/
+data_preparation/crop_statistics_BR/
+data_preparation/crop_statistics_DE/
+data_preparation/crop_statistics_IN/
+data_preparation/crop_statistics_ML/
+data_preparation/crop_statistics_US/
+data_preparation/shapefiles_AR/
+data_preparation/shapefiles_AU/
+data_preparation/shapefiles_BR/
+data_preparation/shapefiles_IN/
+data_preparation/shapefiles_ML/
+data_preparation/shapefiles_US/
+data_preparation/ne_110m_admin_0_countries/
+
+# ---------------------------------------------------------------------------
+# GIS 矢量数据
+# ---------------------------------------------------------------------------
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+
+# ---------------------------------------------------------------------------
+# 本地缓存与临时产物
+# ---------------------------------------------------------------------------
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+_build
+api_keys
+*~
+*.Rhistory
+.Rproj.user
+Scratch.R
+*.xml

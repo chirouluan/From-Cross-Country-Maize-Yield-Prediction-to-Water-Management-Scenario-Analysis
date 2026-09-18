@@ -1,0 +1,11 @@
+country,advisor,model,candidate_id,selected_k,repeat,seed,split,mape,normalized_rmse,r,r2,kge
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,1,42,train,0.1098,13.7396,0.8075,0.651,0.7075
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,1,42,test,0.1136,13.7461,0.8045,0.4533,0.7287
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,2,1051,train,0.1098,13.7396,0.8075,0.651,0.7075
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,2,1051,test,0.1136,13.7461,0.8045,0.4533,0.7287
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,3,2060,train,0.1098,13.7396,0.8075,0.651,0.7075
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,3,2060,test,0.1136,13.7461,0.8045,0.4533,0.7287
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,4,3069,train,0.1098,13.7396,0.8075,0.651,0.7075
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,4,3069,test,0.1136,13.7461,0.8045,0.4533,0.7287
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,5,4078,train,0.1098,13.7396,0.8075,0.651,0.7075
+CN,qwen_rag,ridge,rag1_rag_local_profile,60,5,4078,test,0.1136,13.7461,0.8045,0.4533,0.7287

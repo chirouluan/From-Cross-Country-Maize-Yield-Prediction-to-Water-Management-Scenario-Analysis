@@ -1,0 +1,106 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ES417",
+      "year": 2020,
+      "evidence_features": [
+        "max_cum_gdd2",
+        "mean_tmax8",
+        "mean_tavg8",
+        "mean_cum_cwb2"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (mean_cum_cwb2) is low and irrigation access exists, assess irrigation to mitigate water deficit. If temperature hazards (max_cum_gdd2, mean_tmax8, mean_tavg8) are high, monitor for heat stress; irrigation may be required only if soil water is available, as temperature cannot be directly altered.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed; implementation depends on local water infrastructure and costs; agronomist review required."
+    },
+    {
+      "adm_id": "ES424",
+      "year": 2020,
+      "evidence_features": [
+        "tmax>35p7",
+        "prec<2p8",
+        "median_cum_ndvi7",
+        "mean_rad2"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "sowing_window_review"
+      ],
+      "reasoning": "Conditional on local crop stage: if precipitation (prec<2p8) is low, assess irrigation potential. If extreme heat (tmax>35p7) or radiation (mean_rad2) is high, review sowing window to avoid peak stress; monitor crop state (median_cum_ndvi7) for stress indicators. Temperature and radiation cannot be directly modified.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed; irrigation depends on infrastructure and costs; agronomist review required."
+    },
+    {
+      "adm_id": "ES521",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p8",
+        "mean_ssm8",
+        "mean_ssm7",
+        "median_cum_ndvi2"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: significant water deficits (prec<2p8, mean_ssm8, mean_ssm7) suggest irrigation assessment or soil water conservation measures. Monitor crop state (median_cum_ndvi2) to track recovery. Temperature and radiation cannot be directly altered.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed; irrigation depends on infrastructure and costs; agronomist review required."
+    },
+    {
+      "adm_id": "ES612",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p6",
+        "mean_rad2",
+        "prec<2p2",
+        "mean_tmax6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if precipitation (prec<2p6, prec<2p2) is low, assess irrigation. Monitor for heat stress (mean_tmax6) and radiation (mean_rad2) impacts. Temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed; irrigation depends on infrastructure and costs; agronomist review required."
+    },
+    {
+      "adm_id": "ES613",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p6",
+        "tmax>35p5",
+        "mean_ssm8",
+        "mean_ssm7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: if precipitation (prec<2p6) is low, assess irrigation. Monitor for extreme heat (tmax>35p5) and soil moisture deficits (mean_ssm8, mean_ssm7). Temperature and radiation cannot be directly altered.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed; irrigation depends on infrastructure and costs; agronomist review required."
+    },
+    {
+      "adm_id": "ES620",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p8",
+        "prec<2p5",
+        "median_cum_ndvi2",
+        "mean_ssm8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: significant water deficits (prec<2p8, prec<2p5, mean_ssm8) suggest irrigation assessment or soil water conservation. Monitor crop state (median_cum_ndvi2) for stress. Temperature and radiation cannot be directly altered.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed; irrigation depends on infrastructure and costs; agronomist review required."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

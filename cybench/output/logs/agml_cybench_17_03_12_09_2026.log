@@ -1,0 +1,502 @@
+2026-09-12 17:03:33,464 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\envs\specllm\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 17:03:33,468 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 17:03:33,469 [DEBUG] matplotlib: interactive is False
+2026-09-12 17:03:33,469 [DEBUG] matplotlib: platform is win32
+2026-09-12 17:03:33,487 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 17:03:33,488 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 17:03:34,036 [DEBUG] matplotlib.pyplot: Loaded backend tkagg version 8.6.
+2026-09-12 17:03:34,067 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,067 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,067 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,067 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,067 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 1189
+2026-09-12 17:03:34,071 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,071 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,071 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,071 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,071 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 2994
+2026-09-12 17:03:34,086 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,086 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,086 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,086 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,086 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 696
+2026-09-12 17:03:34,087 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,087 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,088 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,088 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,088 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 526
+2026-09-12 17:03:34,089 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,089 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,089 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,089 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,089 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 499
+2026-09-12 17:03:34,090 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,090 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,090 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,090 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,090 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 673
+2026-09-12 17:03:34,091 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,091 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,092 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,092 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,092 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 922
+2026-09-12 17:03:34,093 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,093 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,093 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,093 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,093 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 568
+2026-09-12 17:03:34,094 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:34,094 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:34,094 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:34,094 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:34,095 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 626
+2026-09-12 17:04:12,033 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:04:13,099 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:04:13,897 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:04:14,476 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:04:15,815 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:04:16,438 [DEBUG] cybench.models.nn_models: Early stopped at epoch 16
+2026-09-12 17:04:17,552 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:04:20,673 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:04:21,705 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:04:22,311 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:04:23,191 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:04:24,668 [DEBUG] cybench.models.nn_models: Early stopped at epoch 38
+2026-09-12 17:04:26,224 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:04:28,244 [DEBUG] cybench.models.nn_models: Early stopped at epoch 19
+2026-09-12 17:04:29,347 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:04:30,260 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:04:30,991 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:04:31,429 [DEBUG] cybench.models.nn_models: Early stopped at epoch 13
+2026-09-12 17:04:33,623 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:04:34,200 [DEBUG] cybench.models.nn_models: Early stopped at epoch 19
+2026-09-12 17:04:35,074 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:04:35,876 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:04:37,229 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:04:38,025 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:04:39,489 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:04:42,275 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:04:43,418 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:04:43,948 [DEBUG] cybench.models.nn_models: Early stopped at epoch 18
+2026-09-12 17:04:45,053 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:04:45,695 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:04:53,516 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:04:54,900 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:04:56,640 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:04:59,162 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:05:01,049 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:05:02,834 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:05:04,462 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:05:08,968 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:05:10,758 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:05:12,973 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:05:14,867 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:05:16,644 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:05:17,739 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:05:21,736 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:05:27,287 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:05:28,628 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:05:31,887 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:05:34,408 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:05:36,395 [DEBUG] cybench.models.nn_models: Early stopped at epoch 38
+2026-09-12 17:05:39,329 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:05:41,758 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:05:43,623 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:05:46,411 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:05:48,762 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:05:50,212 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:05:51,758 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:05:53,248 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:05:54,829 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:05:56,712 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:05:58,227 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:06:00,416 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:06:40,026 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:06:40,592 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:06:43,675 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:06:44,522 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:06:46,219 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:06:47,567 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:06:50,661 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:06:51,821 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:06:52,937 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:06:54,174 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:06:54,892 [DEBUG] cybench.models.nn_models: Early stopped at epoch 18
+2026-09-12 17:06:57,589 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:06:58,304 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:06:58,857 [DEBUG] cybench.models.nn_models: Early stopped at epoch 16
+2026-09-12 17:06:59,545 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:07:00,168 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:07:01,471 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:07:02,163 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:07:03,061 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:07:03,951 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:07:05,730 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:07:06,255 [DEBUG] cybench.models.nn_models: Early stopped at epoch 15
+2026-09-12 17:07:07,283 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:07:08,103 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:07:09,719 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:07:11,224 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:07:13,504 [DEBUG] cybench.models.nn_models: Early stopped at epoch 16
+2026-09-12 17:07:14,608 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:07:15,264 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:07:16,876 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:07:18,188 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:07:26,913 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:07:28,470 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:07:30,020 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:07:33,292 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:07:36,676 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:07:41,066 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:07:42,640 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:07:44,267 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:07:45,639 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:07:47,507 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:07:49,550 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:07:50,856 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:07:55,587 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:07:57,635 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:07:59,002 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:08:00,365 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:08:02,132 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:08:04,374 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:08:05,933 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:08:07,280 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:08:09,496 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:08:11,180 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:08:12,802 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:08:14,153 [DEBUG] cybench.models.nn_models: Early stopped at epoch 19
+2026-09-12 17:08:18,610 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:08:20,336 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:08:22,843 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:08:24,655 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:08:25,899 [DEBUG] cybench.models.nn_models: Early stopped at epoch 19
+2026-09-12 17:08:27,807 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:08:29,476 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:09:08,679 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:09:09,954 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:09:11,024 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:09:11,883 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:09:12,703 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:09:13,281 [DEBUG] cybench.models.nn_models: Early stopped at epoch 15
+2026-09-12 17:09:14,652 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:09:15,667 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:09:17,241 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:09:19,891 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:09:20,535 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:09:21,721 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:09:22,722 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:09:24,266 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:09:25,906 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:09:27,106 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:09:29,809 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:09:31,552 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:09:32,998 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:09:34,566 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:09:35,223 [DEBUG] cybench.models.nn_models: Early stopped at epoch 19
+2026-09-12 17:09:36,570 [DEBUG] cybench.models.nn_models: Early stopped at epoch 38
+2026-09-12 17:09:37,119 [DEBUG] cybench.models.nn_models: Early stopped at epoch 15
+2026-09-12 17:09:37,756 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:09:39,413 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:09:39,958 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:09:40,678 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:09:41,414 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:09:42,526 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:09:43,668 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:09:44,472 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:09:45,097 [DEBUG] cybench.models.nn_models: Early stopped at epoch 16
+2026-09-12 17:09:46,652 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:09:54,104 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:09:55,741 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:09:57,950 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:10:00,378 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:10:01,885 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:10:04,645 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:10:06,493 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:10:08,173 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:10:10,041 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:10:11,513 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:10:12,926 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:10:14,550 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:10:16,353 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:10:17,859 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:10:19,800 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:10:21,477 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:10:23,552 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:10:25,539 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:10:26,995 [DEBUG] cybench.models.nn_models: Early stopped at epoch 20
+2026-09-12 17:10:29,053 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:10:30,620 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:10:32,842 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:10:34,271 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:10:35,432 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:10:37,254 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:10:38,915 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:10:40,599 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:10:42,110 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:10:43,976 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:10:45,929 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:10:47,922 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:10:49,077 [DEBUG] cybench.models.nn_models: Early stopped at epoch 17
+2026-09-12 17:10:50,835 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:10:54,450 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:10:56,550 [DEBUG] cybench.models.nn_models: Early stopped at epoch 38
+2026-09-12 17:11:13,784 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:11:14,348 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:11:14,777 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:11:15,121 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:11:15,560 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:11:17,731 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:11:18,220 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:11:18,704 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:11:19,048 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:11:21,557 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:11:21,942 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:11:22,316 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:11:24,971 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:11:25,584 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:11:25,940 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:11:27,152 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:11:28,190 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:11:28,544 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:11:29,114 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:11:33,257 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:11:34,247 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:11:35,233 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:11:36,285 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:11:37,084 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:11:38,789 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:11:40,900 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:11:41,957 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:11:43,028 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:11:43,912 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:11:46,807 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:11:47,615 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:11:49,337 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:11:50,218 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:11:51,669 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:11:54,265 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:11:55,137 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:11:56,944 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:12:02,841 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:12:17,472 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:12:18,574 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:12:19,093 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:12:19,512 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:12:19,896 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:12:20,086 [DEBUG] cybench.models.nn_models: Early stopped at epoch 18
+2026-09-12 17:12:20,432 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:12:21,567 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:12:21,996 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:12:22,242 [DEBUG] cybench.models.nn_models: Early stopped at epoch 21
+2026-09-12 17:12:22,732 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:12:23,093 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:12:23,322 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:12:24,130 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:12:24,437 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:12:24,811 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:12:25,229 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:12:25,482 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:12:25,724 [DEBUG] cybench.models.nn_models: Early stopped at epoch 22
+2026-09-12 17:12:26,976 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:12:27,353 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:12:27,838 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:12:28,317 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:12:28,591 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:12:29,003 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:12:30,053 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:12:30,502 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:12:31,145 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:12:31,553 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:12:31,972 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:12:34,936 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:12:35,798 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:12:36,655 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:12:37,420 [DEBUG] cybench.models.nn_models: Early stopped at epoch 38
+2026-09-12 17:12:38,367 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:12:39,771 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:12:40,626 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:12:41,566 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:12:43,545 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:12:44,523 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:12:46,158 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:12:47,074 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:12:47,954 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:12:48,852 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:12:50,709 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:12:52,934 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:12:53,818 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:12:54,416 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:12:55,084 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:12:55,709 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:13:01,021 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:13:01,998 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:13:16,407 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:13:17,020 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:13:17,461 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:13:17,921 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:13:18,331 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:13:18,767 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:13:19,196 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:13:19,658 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:13:20,565 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:13:21,085 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:13:21,505 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:13:21,996 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:13:22,911 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:13:23,990 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:13:24,287 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:13:24,892 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:13:25,405 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:13:25,857 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:13:26,240 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:13:27,323 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:13:27,889 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:13:28,246 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:13:28,616 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:13:30,580 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:13:30,971 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:13:31,389 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:13:31,782 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:13:32,153 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:13:35,250 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:13:36,176 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:13:37,794 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:13:39,530 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:13:42,248 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:13:44,131 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:13:45,038 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:13:48,538 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:13:50,468 [DEBUG] cybench.models.nn_models: Early stopped at epoch 46
+2026-09-12 17:13:53,780 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:13:55,821 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:13:56,565 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:13:57,282 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:13:57,867 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:14:01,483 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:14:02,494 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:14:03,534 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:14:11,442 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:14:11,638 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:14:11,796 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:11,966 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:13,347 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:13,508 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:14:14,840 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:15,454 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:14:15,727 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:16,049 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:14:16,929 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:14:17,816 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:14:18,111 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:14:18,477 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:14:24,573 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:24,720 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:24,885 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:14:25,071 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:26,590 [DEBUG] cybench.models.nn_models: Early stopped at epoch 24
+2026-09-12 17:14:28,366 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:14:28,678 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:14:29,000 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:14:29,270 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:14:30,143 [DEBUG] cybench.models.nn_models: Early stopped at epoch 28
+2026-09-12 17:14:30,478 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:14:31,329 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:14:31,610 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:14:43,178 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:14:44,135 [DEBUG] cybench.models.nn_models: Early stopped at epoch 37
+2026-09-12 17:14:44,499 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:14:44,874 [DEBUG] cybench.models.nn_models: Early stopped at epoch 29
+2026-09-12 17:14:47,520 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:14:57,649 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:14:57,948 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:14:58,272 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:14:58,543 [DEBUG] cybench.models.nn_models: Early stopped at epoch 30
+2026-09-12 17:14:58,887 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:14:59,217 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:14:59,518 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:14:59,721 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:15:00,005 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:15:00,386 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:00,726 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:15:01,069 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:01,376 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:15:01,685 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:02,450 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:15:02,750 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:15:03,157 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:03,490 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:15:03,878 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:04,318 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:15:04,569 [DEBUG] cybench.models.nn_models: Early stopped at epoch 25
+2026-09-12 17:15:04,788 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:15:05,092 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:05,358 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:15:05,536 [DEBUG] cybench.models.nn_models: Early stopped at epoch 23
+2026-09-12 17:15:06,150 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:15:06,481 [DEBUG] cybench.models.nn_models: Early stopped at epoch 47
+2026-09-12 17:15:08,431 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:15:09,481 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:10,222 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:18,877 [DEBUG] cybench.models.nn_models: Early stopped at epoch 36
+2026-09-12 17:15:26,790 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:15:38,310 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:15:38,628 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:15:39,378 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49
+2026-09-12 17:15:39,810 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:15:40,488 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:40,773 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:15:41,440 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:15:41,824 [DEBUG] cybench.models.nn_models: Early stopped at epoch 38
+2026-09-12 17:15:42,112 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:15:42,387 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:15:42,749 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:15:43,057 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:15:43,931 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:15:44,236 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:44,554 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:15:45,286 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:15:46,029 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:15:46,323 [DEBUG] cybench.models.nn_models: Early stopped at epoch 41
+2026-09-12 17:15:46,648 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:47,236 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:15:47,812 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:15:48,048 [DEBUG] cybench.models.nn_models: Early stopped at epoch 31
+2026-09-12 17:15:49,975 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:15:51,106 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:51,815 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:15:52,983 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:15:58,958 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:16:06,788 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:16:17,256 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:16:17,479 [DEBUG] cybench.models.nn_models: Early stopped at epoch 34
+2026-09-12 17:16:18,128 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:16:18,546 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:16:18,805 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:16:19,070 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:16:19,326 [DEBUG] cybench.models.nn_models: Early stopped at epoch 40
+2026-09-12 17:16:19,952 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:16:20,680 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:16:20,977 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:16:21,317 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:16:21,639 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:16:22,267 [DEBUG] cybench.models.nn_models: Early stopped at epoch 27
+2026-09-12 17:16:22,625 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:16:22,872 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:16:23,204 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:16:23,527 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:16:23,817 [DEBUG] cybench.models.nn_models: Early stopped at epoch 43
+2026-09-12 17:16:24,139 [DEBUG] cybench.models.nn_models: Early stopped at epoch 32
+2026-09-12 17:16:24,413 [DEBUG] cybench.models.nn_models: Early stopped at epoch 35
+2026-09-12 17:16:24,749 [DEBUG] cybench.models.nn_models: Early stopped at epoch 44
+2026-09-12 17:16:25,103 [DEBUG] cybench.models.nn_models: Early stopped at epoch 39
+2026-09-12 17:16:25,348 [DEBUG] cybench.models.nn_models: Early stopped at epoch 33
+2026-09-12 17:16:25,726 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:16:26,032 [DEBUG] cybench.models.nn_models: Early stopped at epoch 26
+2026-09-12 17:16:26,379 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:16:29,169 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:16:30,924 [DEBUG] cybench.models.nn_models: Early stopped at epoch 45
+2026-09-12 17:16:33,184 [DEBUG] cybench.models.nn_models: Early stopped at epoch 48
+2026-09-12 17:16:43,208 [DEBUG] cybench.models.nn_models: Early stopped at epoch 50
+2026-09-12 17:16:48,703 [DEBUG] cybench.models.nn_models: Early stopped at epoch 42
+2026-09-12 17:16:52,572 [DEBUG] cybench.models.nn_models: Early stopped at epoch 49

@@ -1,0 +1,43 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:46:35.219551+00:00",
+  "stage": "stage2_tabpfn_transfer",
+  "artifact": "repeated_train_test_metrics",
+  "file": "metrics_tabpfn_cn_finetuned_repeats.csv",
+  "sha256": "87f2df6345f7b4e716c77ee525fb45d5eb1158642eee607ede49deacae2fbb11",
+  "rows": 10,
+  "columns": [
+    "country",
+    "model",
+    "checkpoint_sha256",
+    "test_years",
+    "n_features",
+    "repeat",
+    "seed",
+    "split",
+    "mape",
+    "normalized_rmse",
+    "r",
+    "r2",
+    "kge"
+  ],
+  "dtypes": {
+    "country": "object",
+    "model": "object",
+    "checkpoint_sha256": "object",
+    "test_years": "object",
+    "n_features": "int64",
+    "repeat": "int64",
+    "seed": "int64",
+    "split": "object",
+    "mape": "float64",
+    "normalized_rmse": "float64",
+    "r": "float64",
+    "r2": "float64",
+    "kge": "float64"
+  },
+  "metadata": {
+    "repeats": 5,
+    "base_seed": 42
+  }
+}

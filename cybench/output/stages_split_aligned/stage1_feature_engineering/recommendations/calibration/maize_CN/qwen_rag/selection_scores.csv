@@ -1,0 +1,6 @@
+model,candidate_id,calibration_mse_mean,calibration_mse_variance
+ridge,rag1_rag_historical_regime,0.7984064731872634,0.0
+xgboost,rag1_rag_historical_regime,0.6314022743235312,1.7016920152105445e-05
+svr,rag1_rag_historical_regime,0.7266916306788551,0.0
+cnn1d,rag1_rag_historical_regime,0.7557574366954153,0.0008068271235235572
+transformer_flat,rag1_rag_historical_regime,0.9037674755851997,0.0012574657553561536

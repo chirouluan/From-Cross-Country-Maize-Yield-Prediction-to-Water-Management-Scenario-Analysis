@@ -1,0 +1,44 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-06T10:03:42.201974+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_predictions",
+  "file": "inner_candidate_predictions_qwen_rag_transformer_flat.csv",
+  "sha256": "b4b31d47bb27e2a4e755bb66b24d245fe165655b0ac0d987e270a1005ee65c52",
+  "rows": 1225,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "rag1_rag_local_profile",
+    "rag1_rag_historical_regime",
+    "rag1_rag_robust_hybrid",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "rag1_rag_local_profile": "float32",
+    "rag1_rag_historical_regime": "float32",
+    "rag1_rag_robust_hybrid": "float32",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "CN",
+    "advisor": "qwen_rag",
+    "model": "transformer_flat",
+    "years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ]
+  }
+}

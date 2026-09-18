@@ -1,0 +1,45 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-06T10:11:33.647580+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "train_test_predictions",
+  "file": "predictions_ridge.csv",
+  "sha256": "be4714b64f7188b903e5603a6600b6885e892f236e6b436e4d82857dc788d435",
+  "rows": 440,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "prediction",
+    "split",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "prediction": "float64",
+    "split": "object",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "PT",
+    "advisor": "fixed",
+    "model": "ridge",
+    "test_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "candidate_id": "baseline",
+    "selected_k": 60,
+    "train_prediction": "in_sample_fit_before_outer_test_per_repeat",
+    "repeats": 5,
+    "base_seed": 42,
+    "neural_epochs": null
+  }
+}

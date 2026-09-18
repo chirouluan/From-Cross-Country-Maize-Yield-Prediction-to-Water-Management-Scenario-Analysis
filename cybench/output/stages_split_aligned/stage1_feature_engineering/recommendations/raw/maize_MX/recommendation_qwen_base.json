@@ -1,0 +1,41 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "sample1_extreme_heat_drought_syndrome",
+      "agronomic_rationale": "Targets high-yield outliers by relaxing GDD base to tmin 10th percentile (0.94°C) to include warmer northern zones, raising upper limit to tmax 95th percentile (31.25°C) to capture heat-stressed but potentially high-radiation scenarios, and tightening precipitation threshold (1.0mm) to identify early drought onset risks that suppress yield despite high thermal sums.",
+      "candidate_source": "llm",
+      "config": {
+        "gdd_base_temp": {
+          "maize": 0.94
+        },
+        "gdd_upper_limit": {
+          "maize": 31.25
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.94,
+            "label": "tmin<0.94"
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 31.25,
+            "label": "tmax>31.25"
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.0,
+            "label": "prec<1"
+          }
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true,
+        "veg_agg_method": "mean",
+        "soil_moisture_agg_method": "mean"
+      }
+    }
+  ],
+  "country": "MX",
+  "advisor": "qwen_base"
+}

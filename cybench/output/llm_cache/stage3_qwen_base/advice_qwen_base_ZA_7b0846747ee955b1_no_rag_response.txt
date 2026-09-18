@@ -1,0 +1,120 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZA-A1-0001",
+      "year": 2022,
+      "evidence_features": [
+        "tmin<5p7",
+        "prec<0.5p7",
+        "mean_cum_fpar12",
+        "mean_tavg6"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: Temperature hazards (tmin<5p7, mean_tavg6) and water proxy (prec<0.5p7) indicate stress. Since temperature and radiation cannot be directly changed, and water proxies are not irrigation doses, actions are limited to reviewing sowing windows to avoid cold snaps, assessing stress-tolerant cultivars, and monitoring soil moisture status.",
+      "limitations": "Data is observational; implementation requires agronomist review of local soil water holding capacity and costs."
+    },
+    {
+      "adm_id": "ZA-A1-0003",
+      "year": 2022,
+      "evidence_features": [
+        "mean_prec8",
+        "max_cum_prec9",
+        "mean_rad8",
+        "mean_tmin12"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: High water proxy values (mean_prec8, max_cum_prec9) suggest potential waterlogging or poor drainage, while low mean_tmin12 indicates cold stress. Actions include drainage assessment and soil water conservation. Irrigation assessment is conditional on infrastructure availability. Temperature and radiation cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of local drainage infrastructure and costs."
+    },
+    {
+      "adm_id": "ZA-A1-0004",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_cwb9",
+        "mean_prec8",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: Extreme water proxy values (max_cum_prec9, mean_prec8, max_cum_prec8) and negative mean_cum_cwb9 indicate severe water stress or saturation. Actions focus on drainage assessment and soil water conservation. Irrigation assessment is conditional on infrastructure. Temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; implementation requires agronomist review of local drainage infrastructure and costs."
+    },
+    {
+      "adm_id": "ZA-A1-0005",
+      "year": 2022,
+      "evidence_features": [
+        "mean_cum_fpar12",
+        "mean_cum_cwb9",
+        "mean_cum_fpar11",
+        "mean_cum_ndvi9"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: Low water proxy (mean_cum_cwb9) and reduced crop state indicators (mean_cum_fpar12, mean_cum_fpar11, mean_cum_ndvi9) suggest water stress and poor canopy development. Since water proxies are not irrigation doses and temperature/radiation cannot be changed, actions are limited to monitoring, sowing window review, and cultivar selection.",
+      "limitations": "Data is observational; implementation requires agronomist review of local soil water holding capacity and costs."
+    },
+    {
+      "adm_id": "ZA-A1-0006",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_fpar12",
+        "prec<0.5p8",
+        "mean_prec8",
+        "max_cum_prec8",
+        "prec<0.5p9"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: Mixed water proxy signals (high max_cum_prec9, low mean_prec8, high max_cum_prec8, low prec<0.5p9) indicate complex moisture dynamics. Actions include drainage assessment, soil water conservation, and irrigation assessment (if infrastructure exists). Temperature and radiation cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of local drainage infrastructure and costs."
+    },
+    {
+      "adm_id": "ZA-A1-0009",
+      "year": 2022,
+      "evidence_features": [
+        "tmax>32p12",
+        "tmax>32p9",
+        "mean_cum_fpar11",
+        "mean_tavg12"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: Temperature hazards (tmax>32p12, tmax>32p9) and low mean_tavg12 indicate thermal stress. Since temperature cannot be directly changed, actions are limited to reviewing sowing windows to avoid heat stress and assessing stress-tolerant cultivars. Water proxies are not irrigation doses.",
+      "limitations": "Data is observational; implementation requires agronomist review of local conditions and costs."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

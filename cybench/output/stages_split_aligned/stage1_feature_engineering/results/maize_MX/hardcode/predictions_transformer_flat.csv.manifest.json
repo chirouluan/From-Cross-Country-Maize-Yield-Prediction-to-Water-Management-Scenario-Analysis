@@ -1,0 +1,41 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:40:26.394784+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "train_test_predictions",
+  "file": "predictions_transformer_flat.csv",
+  "sha256": "05121a6f4c8fbe3901212698b45a4a535b26baa4b1d28a96047b8c452518262c",
+  "rows": 495,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "prediction",
+    "split",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "prediction": "float32",
+    "split": "object",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "MX",
+    "advisor": "hardcode",
+    "model": "transformer_flat",
+    "test_years": [
+      2022
+    ],
+    "candidate_id": "baseline",
+    "selected_k": 60,
+    "train_prediction": "in_sample_fit_before_outer_test_per_repeat",
+    "repeats": 5,
+    "base_seed": 42,
+    "neural_epochs": 50
+  }
+}

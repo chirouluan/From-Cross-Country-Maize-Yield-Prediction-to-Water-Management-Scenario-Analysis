@@ -1,0 +1,115 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ES417",
+      "year": 2020,
+      "evidence_features": [
+        "max_cum_gdd2",
+        "mean_tmax8",
+        "mean_tavg8",
+        "mean_cum_cwb2",
+        "mean_ssm8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: observed temperature hazards (max_cum_gdd2, mean_tmax8, mean_tavg8) cannot be directly altered; however, water proxy mean_cum_cwb2 shows a significant gap. If irrigation infrastructure exists, an irrigation_assessment is recommended to address water deficits. Alternatively, soil_water_conservation may be considered to improve retention, pending agronomist review of costs and feasibility.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed. Implementation depends on local infrastructure, costs, and agronomist review."
+    },
+    {
+      "adm_id": "ES424",
+      "year": 2020,
+      "evidence_features": [
+        "tmax>35p7",
+        "prec<2p6",
+        "median_cum_ndvi7",
+        "mean_rad2",
+        "max_cum_prec2",
+        "mean_prec3"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "sowing_window_review"
+      ],
+      "reasoning": "Conditional on local crop stage: temperature hazard (tmax>35p7) and radiation (mean_rad2) are unchangeable. Water proxies (prec<2p6, max_cum_prec2, mean_prec3) indicate deficits. If irrigation is feasible, irrigation_assessment is advised. If not, soil_water_conservation or sowing_window_review may mitigate stress, subject to agronomist review.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed. Implementation depends on local infrastructure, costs, and agronomist review."
+    },
+    {
+      "adm_id": "ES521",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p8",
+        "mean_ssm8",
+        "mean_ssm7",
+        "mean_prec5",
+        "mean_prec8",
+        "median_cum_ndvi2"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage: water proxies (prec<2p8, mean_ssm8, mean_ssm7, mean_prec5, mean_prec8) show substantial gaps relative to high-yield references. Temperature and radiation are unchangeable. If irrigation infrastructure is available, irrigation_assessment is recommended. Otherwise, soil_water_conservation may be considered, pending agronomist review of costs and feasibility.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed. Implementation depends on local infrastructure, costs, and agronomist review."
+    },
+    {
+      "adm_id": "ES612",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p6",
+        "mean_rad2",
+        "prec<2p2",
+        "mean_tmax6",
+        "mean_ssm3",
+        "mean_ssm8",
+        "mean_ssm7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage: water proxies (prec<2p6, prec<2p2, mean_ssm3, mean_ssm8, mean_ssm7) indicate deficits. Temperature (mean_tmax6) and radiation (mean_rad2) are unchangeable. If irrigation infrastructure exists, irrigation_assessment is recommended. Otherwise, soil_water_conservation may be considered, pending agronomist review.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed. Implementation depends on local infrastructure, costs, and agronomist review."
+    },
+    {
+      "adm_id": "ES613",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p6",
+        "tmax>35p5",
+        "mean_ssm8",
+        "mean_ssm7",
+        "prec<2p4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage: water proxies (prec<2p6, mean_ssm8, mean_ssm7, prec<2p4) show deficits. Temperature hazard (tmax>35p5) is unchangeable. If irrigation infrastructure is available, irrigation_assessment is recommended. Otherwise, soil_water_conservation may be considered, pending agronomist review.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed. Implementation depends on local infrastructure, costs, and agronomist review."
+    },
+    {
+      "adm_id": "ES620",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p8",
+        "prec<2p5",
+        "median_cum_ndvi2",
+        "mean_ssm8",
+        "mean_prec5",
+        "mean_cum_cwb7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage: water proxies (prec<2p8, prec<2p5, mean_ssm8, mean_prec5, mean_cum_cwb7) indicate deficits. Temperature and radiation are unchangeable. If irrigation infrastructure exists, irrigation_assessment is recommended. Otherwise, soil_water_conservation may be considered, pending agronomist review.",
+      "limitations": "Data is observational; temperature and radiation cannot be changed. Implementation depends on local infrastructure, costs, and agronomist review."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Zambian maize production occurs on a tropical plateau with a unimodal rainy season and negligible frost risk (median frost days = 0). Historical records show high interannual variability in precipitation (CV ~1.27) and distinct dry spells (median 156 consecutive days), while temperature remains stable within a warm range (mean ~20.6°C). The calibration profile indicates frequent heat stress events (>35°C) and water deficit days, suggesting that optimal feature engineering must balance thermal accumulation constraints against moisture availability thresholds derived from the 2001-2013 regime.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Constructs stress thresholds directly from the 2004-2013 calibration distribution to define daily event limits for temperature and precipitation, ensuring thresholds reflect the specific variability of the Zambian plateau without extrapolation from external historical regimes.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 9.215
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 34.574
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.117
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "max"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Utilizes the structured CSV records (2001-2013) to identify regime-specific constraints, setting GDD and stress thresholds based on the distribution of historical annual maximum temperatures and precipitation percentiles to capture broad climate regime frequency rather than local calibration noise.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 50.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 6.5
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 37.47
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 13.93
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "median"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Combines local calibration event frequencies for daily stress detection with historical regime medians for aggregate robustness, creating a configuration that is sensitive to local drought/heat spikes while maintaining stability against extreme outliers via median-based aggregation.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 35.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 14.554
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 10.394
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "median"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

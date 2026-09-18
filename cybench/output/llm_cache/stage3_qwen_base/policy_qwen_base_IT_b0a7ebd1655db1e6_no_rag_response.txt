@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.85,
+  "stress_score_threshold": 1.2,
+  "max_water_proxy_shift_fraction": 0.3,
+  "max_actionable_features": 3,
+  "top_reported_stresses": 6,
+  "rationale": "Settings adjusted for conservative analysis of non-manipulable data. Reference yield quantile raised to 0.85 to focus on high-performing baselines where stress is most critical. Stress threshold increased to 1.2 to filter out marginal cases given the lack of management levers. Water proxy shift limited to 0.3 to ensure counterfactuals remain within realistic physical bounds without inventing irrigation data. Actionable features capped at 3 and top stresses at 6 to prioritize the most significant weather and soil hazards (temperature, water, radiation) identified in the feature counts, avoiding dilution from low-frequency indicators."
+}

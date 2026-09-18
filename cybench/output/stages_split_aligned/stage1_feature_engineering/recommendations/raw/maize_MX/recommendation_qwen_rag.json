@@ -1,0 +1,677 @@
+{
+  "prompt_version": "stage1_structured_csv_rag_v1",
+  "advisor": "qwen_rag",
+  "model_variant": "qwen_base",
+  "sampling": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "country": "MX",
+  "used_fallback": false,
+  "raw_attempts": [
+    {
+      "regional_assessment": "The region exhibits a subtropical/tropical highland profile with significant frost contrasts (median Tmin ~10°C, max -1.4°C to -3.8°C) and pronounced wet/dry seasonality (median annual precip ~535mm, max consecutive dry days up to 135). The crop-season profile indicates frequent water stress (median CWB -4.48 mm) and rare heat stress (median Tmax >35°C events = 0). Historical records confirm high inter-annual variability in precipitation and dry spells, suggesting a configuration robust to moisture limitation is critical.",
+      "candidates": [
+        {
+          "candidate_id": "rag_local_profile",
+          "agronomic_rationale": "Leverages the 2014-2021 calibration profile to define event thresholds directly observed in the target region, capturing local frost risks and precipitation variability without external bias.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 10.0
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 30.0
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": -1.382
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 35.0
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 1.0
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "max"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "max"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        },
+        {
+          "candidate_id": "rag_historical_regime",
+          "agronomic_rationale": "Utilizes the 2001-2021 CSV regime statistics to model broad climatic modes (cool_wet, hot_dry, long_dry_spell), prioritizing robustness against the observed high variance in dry spells and precipitation coefficients of variation.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 10.0
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 30.0
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": -2.5
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 35.0
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 0.0
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "mean"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "mean"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        },
+        {
+          "candidate_id": "rag_robust_hybrid",
+          "agronomic_rationale": "Combines local calibration event definitions with historical regime medians to balance sensitivity to local extremes (frost/dryness) against long-term regime stability, ensuring coverage across the full 2001-2021 variability spectrum.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 10.0
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 30.0
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": -1.382
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 35.0
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 1.0
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "median"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "median"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        }
+      ]
+    }
+  ],
+  "climate_profile": {
+    "calibration_end_year": 2021,
+    "n_locations": 32,
+    "n_location_years": 67,
+    "year_range": [
+      2014,
+      2019
+    ],
+    "weather": {
+      "tmin": {
+        "mean": 16.0374733961201,
+        "std": 5.018230585657876,
+        "min": -1.382,
+        "q05": 8.187,
+        "q10": 9.6992,
+        "q25": 12.341000000000001,
+        "median": 15.477,
+        "q75": 20.2815,
+        "q90": 22.85200000000001,
+        "q95": 24.279,
+        "max": 30.305
+      },
+      "tmax": {
+        "mean": 28.551858568783707,
+        "std": 4.3131439848086055,
+        "min": 8.757,
+        "q05": 21.1891,
+        "q10": 22.7758,
+        "q25": 25.588,
+        "median": 28.85,
+        "q75": 31.675,
+        "q90": 33.8326,
+        "q95": 35.0008,
+        "max": 45.347
+      },
+      "tavg": {
+        "mean": 21.803132737664008,
+        "std": 4.373670470091037,
+        "min": 4.831,
+        "q05": 14.809099999999999,
+        "q10": 16.069599999999998,
+        "q25": 18.563000000000002,
+        "median": 21.876,
+        "q75": 25.0225,
+        "q90": 27.4868,
+        "q95": 28.6607,
+        "max": 38.014
+      },
+      "prec": {
+        "mean": 2.9140965950253563,
+        "std": 5.045397816800642,
+        "min": 0.0,
+        "q05": 0.0,
+        "q10": 0.0,
+        "q25": 0.024,
+        "median": 0.566,
+        "q75": 3.8165,
+        "q90": 9.313400000000003,
+        "q95": 13.0509,
+        "max": 74.694
+      },
+      "rad": {
+        "mean": 23633988.435039844,
+        "std": 3740585.87861851,
+        "min": 5658879.5,
+        "q05": 16781800.8,
+        "q10": 18942624.0,
+        "q25": 21554639.0,
+        "median": 23992866.0,
+        "q75": 26281193.0,
+        "q90": 28080526.8,
+        "q95": 28967699.6,
+        "max": 31983760.0
+      },
+      "cwb": {
+        "mean": -2.3222013201320135,
+        "std": 5.709997632747989,
+        "min": -9.518,
+        "q05": -7.015,
+        "q10": -6.5078,
+        "q25": -5.689500000000001,
+        "median": -4.479,
+        "q75": -0.899,
+        "q90": 5.080200000000005,
+        "q95": 9.144799999999998,
+        "max": 72.001
+      }
+    },
+    "yield": {
+      "mean": 3.925625589019552,
+      "std": 2.505278923414843,
+      "min": 0.908,
+      "q05": 1.1667,
+      "q10": 1.4474,
+      "q25": 2.1405,
+      "median": 3.166,
+      "q75": 4.7490000000000006,
+      "q90": 7.901911915302686,
+      "q95": 9.381599999999999,
+      "max": 10.354
+    },
+    "crop_season_event_days": {
+      "tmin_below_0": 0.05970149253731343,
+      "tmax_above_35": 9.283582089552239,
+      "prec_below_1": 105.95522388059702
+    }
+  },
+  "stress_threshold_evidence": {
+    "tmin": {},
+    "tmax": {},
+    "prec": {}
+  },
+  "retrieval": {
+    "retrieval_method": "exact CSV filters + robust scalar regime ranking (no embeddings)",
+    "query": {
+      "country_code": "MX",
+      "crop": "maize",
+      "year_lte": 2021,
+      "coverage_min_gte": 0.9
+    },
+    "information_boundary": "predictor-only climate rows through calibration_end_year",
+    "source": {
+      "path": "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\Climate_rag_knowledge_base\\processed\\climate_rag_metrics.csv",
+      "sha256": "feaa578b3c04570527c33b90dadcd1da990d9ed222fbdfa4377923df369d1ce8",
+      "schema_duplicate_audit": {
+        "year.1": {
+          "canonical": "year",
+          "identical": true
+        },
+        "coverage_min.1": {
+          "canonical": "coverage_min",
+          "identical": true
+        }
+      }
+    },
+    "eligible_row_count": 21,
+    "eligible_year_range": [
+      2001,
+      2021
+    ],
+    "summary": {
+      "mean_temp_c": {
+        "median": 17.02,
+        "q10": 16.35,
+        "q90": 17.57
+      },
+      "mean_daily_tmax_c": {
+        "median": 25.4,
+        "q10": 24.95,
+        "q90": 26.4
+      },
+      "mean_daily_tmin_c": {
+        "median": 9.86,
+        "q10": 9.54,
+        "q90": 10.27
+      },
+      "annual_max_tmax_c": {
+        "median": 33.88,
+        "q10": 32.77,
+        "q90": 34.69
+      },
+      "annual_min_tmin_c": {
+        "median": -2.5,
+        "q10": -3.76,
+        "q90": 0.42
+      },
+      "annual_precip_mm": {
+        "median": 535.61,
+        "q10": 417.9,
+        "q90": 704.01
+      },
+      "daily_precip_p95_mm": {
+        "median": 8.67,
+        "q10": 6.78,
+        "q90": 10.82
+      },
+      "wet_days_ge_1mm": {
+        "median": 89.0,
+        "q10": 75.0,
+        "q90": 106.0
+      },
+      "heavy_precip_days_ge_20mm": {
+        "median": 2.0,
+        "q10": 1.0,
+        "q90": 4.0
+      },
+      "dry_days_lt_1mm": {
+        "median": 276.0,
+        "q10": 259.0,
+        "q90": 291.0
+      },
+      "max_consecutive_dry_days": {
+        "median": 77.0,
+        "q10": 50.0,
+        "q90": 118.0
+      },
+      "frost_days_tmin_lt_0c": {
+        "median": 3.0,
+        "q10": 0.0,
+        "q90": 8.0
+      },
+      "heat_days_tmax_gt_35c": {
+        "median": 0.0,
+        "q10": 0.0,
+        "q90": 0.0
+      },
+      "gdd10_c_day": {
+        "median": 2574.27,
+        "q10": 2348.06,
+        "q90": 2771.22
+      },
+      "mean_relative_humidity_pct": {
+        "median": 54.63,
+        "q10": 53.04,
+        "q90": 59.32
+      },
+      "mean_dewpoint_c": {
+        "median": 5.76,
+        "q10": 4.58,
+        "q90": 7.11
+      },
+      "mean_vpd_kpa_approx": {
+        "median": 0.893,
+        "q10": 0.818,
+        "q90": 0.986
+      },
+      "vpd_p95_kpa_approx": {
+        "median": 1.718,
+        "q10": 1.498,
+        "q90": 1.778
+      },
+      "mean_solar_radiation_mj_m2_day": {
+        "median": 21.7,
+        "q10": 21.19,
+        "q90": 22.24
+      },
+      "annual_solar_radiation_mj_m2": {
+        "median": 7942.37,
+        "q10": 7733.02,
+        "q90": 8125.91
+      },
+      "mean_wind_speed_m_s": {
+        "median": 3.1,
+        "q10": 2.96,
+        "q90": 3.28
+      },
+      "hottest_month": {
+        "median": 5.0,
+        "q10": 5.0,
+        "q90": 6.0
+      },
+      "wettest_month": {
+        "median": 7.0,
+        "q10": 6.0,
+        "q90": 9.0
+      },
+      "driest_month": {
+        "median": 3.0,
+        "q10": 2.0,
+        "q90": 11.0
+      },
+      "monthly_precip_cv": {
+        "median": 1.127,
+        "q10": 1.016,
+        "q90": 1.286
+      }
+    },
+    "retrieved_rows": [
+      {
+        "parent_id": "MX_maize_2004",
+        "country": "Mexico",
+        "country_zh": "墨西哥",
+        "country_code": "MX",
+        "crop": "maize",
+        "year": 2004,
+        "latitude": 22.09599,
+        "longitude": -102.79244,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 366,
+        "mean_temp_c": 16.21,
+        "mean_daily_tmax_c": 24.2,
+        "mean_daily_tmin_c": 9.54,
+        "annual_max_tmax_c": 33.16,
+        "annual_min_tmin_c": -2.66,
+        "annual_precip_mm": 704.01,
+        "daily_precip_p95_mm": 9.88,
+        "wet_days_ge_1mm": 121,
+        "heavy_precip_days_ge_20mm": 3,
+        "dry_days_lt_1mm": 245,
+        "max_consecutive_dry_days": 46,
+        "frost_days_tmin_lt_0c": 9,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 2309.24,
+        "mean_relative_humidity_pct": 61.55,
+        "mean_dewpoint_c": 7.11,
+        "mean_vpd_kpa_approx": 0.727,
+        "vpd_p95_kpa_approx": 1.324,
+        "mean_solar_radiation_mj_m2_day": 21.1,
+        "annual_solar_radiation_mj_m2": 7721.02,
+        "mean_wind_speed_m_s": 3.05,
+        "hottest_month": 5,
+        "wettest_month": 6,
+        "driest_month": 4,
+        "monthly_precip_cv": 1.127,
+        "retrieval_role": "cool_wet",
+        "retrieval_score": 5.574573031882265
+      },
+      {
+        "parent_id": "MX_maize_2011",
+        "country": "Mexico",
+        "country_zh": "墨西哥",
+        "country_code": "MX",
+        "crop": "maize",
+        "year": 2011,
+        "latitude": 22.09599,
+        "longitude": -102.79244,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 17.57,
+        "mean_daily_tmax_c": 26.83,
+        "mean_daily_tmin_c": 9.58,
+        "annual_max_tmax_c": 35.63,
+        "annual_min_tmin_c": -3.76,
+        "annual_precip_mm": 281.06,
+        "daily_precip_p95_mm": 4.69,
+        "wet_days_ge_1mm": 59,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 306,
+        "max_consecutive_dry_days": 118,
+        "frost_days_tmin_lt_0c": 2,
+        "heat_days_tmax_gt_35c": 2,
+        "gdd10_c_day": 2771.22,
+        "mean_relative_humidity_pct": 46.45,
+        "mean_dewpoint_c": 3.15,
+        "mean_vpd_kpa_approx": 1.111,
+        "vpd_p95_kpa_approx": 1.976,
+        "mean_solar_radiation_mj_m2_day": 22.91,
+        "annual_solar_radiation_mj_m2": 8362.35,
+        "mean_wind_speed_m_s": 3.17,
+        "hottest_month": 5,
+        "wettest_month": 9,
+        "driest_month": 3,
+        "monthly_precip_cv": 1.278,
+        "retrieval_role": "hot_dry",
+        "retrieval_score": 11.252796749527118
+      },
+      {
+        "parent_id": "MX_maize_2019",
+        "country": "Mexico",
+        "country_zh": "墨西哥",
+        "country_code": "MX",
+        "crop": "maize",
+        "year": 2019,
+        "latitude": 22.09599,
+        "longitude": -102.79244,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 17.94,
+        "mean_daily_tmax_c": 26.48,
+        "mean_daily_tmin_c": 10.66,
+        "annual_max_tmax_c": 32.95,
+        "annual_min_tmin_c": 0.75,
+        "annual_precip_mm": 423.73,
+        "daily_precip_p95_mm": 6.46,
+        "wet_days_ge_1mm": 83,
+        "heavy_precip_days_ge_20mm": 1,
+        "dry_days_lt_1mm": 282,
+        "max_consecutive_dry_days": 135,
+        "frost_days_tmin_lt_0c": 0,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 2903.45,
+        "mean_relative_humidity_pct": 54.63,
+        "mean_dewpoint_c": 6.56,
+        "mean_vpd_kpa_approx": 0.964,
+        "vpd_p95_kpa_approx": 1.73,
+        "mean_solar_radiation_mj_m2_day": 22.18,
+        "annual_solar_radiation_mj_m2": 8094.48,
+        "mean_wind_speed_m_s": 2.96,
+        "hottest_month": 6,
+        "wettest_month": 8,
+        "driest_month": 4,
+        "monthly_precip_cv": 1.079,
+        "retrieval_role": "long_dry_spell",
+        "retrieval_score": 1.5675675675675675
+      },
+      {
+        "parent_id": "MX_maize_2009",
+        "country": "Mexico",
+        "country_zh": "墨西哥",
+        "country_code": "MX",
+        "crop": "maize",
+        "year": 2009,
+        "latitude": 22.09599,
+        "longitude": -102.79244,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 17.11,
+        "mean_daily_tmax_c": 25.72,
+        "mean_daily_tmin_c": 9.8,
+        "annual_max_tmax_c": 33.83,
+        "annual_min_tmin_c": -0.72,
+        "annual_precip_mm": 490.45,
+        "daily_precip_p95_mm": 6.78,
+        "wet_days_ge_1mm": 84,
+        "heavy_precip_days_ge_20mm": 0,
+        "dry_days_lt_1mm": 281,
+        "max_consecutive_dry_days": 76,
+        "frost_days_tmin_lt_0c": 2,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 2601.33,
+        "mean_relative_humidity_pct": 55.04,
+        "mean_dewpoint_c": 5.76,
+        "mean_vpd_kpa_approx": 0.907,
+        "vpd_p95_kpa_approx": 1.601,
+        "mean_solar_radiation_mj_m2_day": 22.0,
+        "annual_solar_radiation_mj_m2": 8029.73,
+        "mean_wind_speed_m_s": 3.12,
+        "hottest_month": 6,
+        "wettest_month": 9,
+        "driest_month": 2,
+        "monthly_precip_cv": 1.025,
+        "retrieval_role": "typical",
+        "retrieval_score": 0.19244394558072295
+      },
+      {
+        "parent_id": "MX_maize_2001",
+        "country": "Mexico",
+        "country_zh": "墨西哥",
+        "country_code": "MX",
+        "crop": "maize",
+        "year": 2001,
+        "latitude": 22.09599,
+        "longitude": -102.79244,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 17.04,
+        "mean_daily_tmax_c": 25.67,
+        "mean_daily_tmin_c": 9.81,
+        "annual_max_tmax_c": 33.22,
+        "annual_min_tmin_c": -0.53,
+        "annual_precip_mm": 468.54,
+        "daily_precip_p95_mm": 6.97,
+        "wet_days_ge_1mm": 98,
+        "heavy_precip_days_ge_20mm": 0,
+        "dry_days_lt_1mm": 267,
+        "max_consecutive_dry_days": 72,
+        "frost_days_tmin_lt_0c": 2,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 2574.27,
+        "mean_relative_humidity_pct": 53.28,
+        "mean_dewpoint_c": 5.05,
+        "mean_vpd_kpa_approx": 0.936,
+        "vpd_p95_kpa_approx": 1.775,
+        "mean_solar_radiation_mj_m2_day": 21.51,
+        "annual_solar_radiation_mj_m2": 7852.55,
+        "mean_wind_speed_m_s": 3.17,
+        "hottest_month": 5,
+        "wettest_month": 8,
+        "driest_month": 1,
+        "monthly_precip_cv": 1.195,
+        "retrieval_role": "typical_fill",
+        "retrieval_score": 0.2552566169782485
+      },
+      {
+        "parent_id": "MX_maize_2007",
+        "country": "Mexico",
+        "country_zh": "墨西哥",
+        "country_code": "MX",
+        "crop": "maize",
+        "year": 2007,
+        "latitude": 22.09599,
+        "longitude": -102.79244,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 16.79,
+        "mean_daily_tmax_c": 25.09,
+        "mean_daily_tmin_c": 9.77,
+        "annual_max_tmax_c": 32.8,
+        "annual_min_tmin_c": 0.42,
+        "annual_precip_mm": 539.7,
+        "daily_precip_p95_mm": 9.09,
+        "wet_days_ge_1mm": 89,
+        "heavy_precip_days_ge_20mm": 3,
+        "dry_days_lt_1mm": 276,
+        "max_consecutive_dry_days": 51,
+        "frost_days_tmin_lt_0c": 0,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 2481.63,
+        "mean_relative_humidity_pct": 56.44,
+        "mean_dewpoint_c": 6.05,
+        "mean_vpd_kpa_approx": 0.854,
+        "vpd_p95_kpa_approx": 1.578,
+        "mean_solar_radiation_mj_m2_day": 21.6,
+        "annual_solar_radiation_mj_m2": 7884.94,
+        "mean_wind_speed_m_s": 3.1,
+        "hottest_month": 5,
+        "wettest_month": 6,
+        "driest_month": 12,
+        "monthly_precip_cv": 1.334,
+        "retrieval_role": "typical_fill",
+        "retrieval_score": 0.2934030741744211
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "rag1_rag_historical_regime",
+      "agronomic_rationale": "Utilizes the 2001-2021 CSV regime statistics to model broad climatic modes (cool_wet, hot_dry, long_dry_spell), prioritizing robustness against the observed high variance in dry spells and precipitation coefficients of variation.",
+      "candidate_source": "base_qwen_structured_csv_rag",
+      "config": {
+        "gdd_base_temp": {
+          "maize": 10.0
+        },
+        "gdd_upper_limit": {
+          "maize": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -2.5,
+            "label": "tmin<-2.5"
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0,
+            "label": "tmax>35"
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.0,
+            "label": "prec<0"
+          }
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true,
+        "veg_agg_method": "mean",
+        "soil_moisture_agg_method": "mean"
+      }
+    }
+  ]
+}

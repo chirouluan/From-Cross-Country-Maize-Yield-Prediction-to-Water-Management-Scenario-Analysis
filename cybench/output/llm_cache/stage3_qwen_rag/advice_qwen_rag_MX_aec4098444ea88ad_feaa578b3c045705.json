@@ -1,0 +1,109 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "MX04",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad5",
+        "mean_prec5",
+        "mean_rad4",
+        "max_cum_prec6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "High stress signals detected in mean_prec5 (gap 2.97) and max_cum_prec6 (gap 2.03) suggest water deficit. Radiation hazards (mean_rad5, mean_rad4) are present but cannot be directly altered. Conditional advice: Assess irrigation needs to close water proxy gaps; evaluate soil water conservation to retain moisture; monitor crop stage to optimize water use.",
+      "limitations": "Radiation and temperature cannot be changed; water proxy adjustments are modeled estimates requiring agronomist review; local infrastructure and costs not accounted for."
+    },
+    {
+      "adm_id": "MX13",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad9",
+        "mean_tmin9",
+        "mean_ssm9",
+        "mean_cum_cwb6"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review",
+        "sowing_window_review"
+      ],
+      "reasoning": "Extreme temperature hazard (mean_tmin9) and radiation hazard (mean_rad9) detected. Water proxies (mean_ssm9, mean_cum_cwb6) show deficits. Since temperature and radiation cannot be directly modified, conditional advice focuses on selecting stress-tolerant cultivars and reviewing sowing windows to match crop phenology with favorable conditions; field monitoring is critical for adaptive management.",
+      "limitations": "Temperature and radiation are unchangeable; water proxy changes are marginal; local crop stage and agronomist review required."
+    },
+    {
+      "adm_id": "MX23",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad5",
+        "max_cum_prec6",
+        "mean_prec5",
+        "mean_rad4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Significant water proxy deficits in max_cum_prec6 (gap 3.35) and mean_prec5 (gap 4.63) alongside radiation hazards. Conditional advice: Conduct irrigation assessment to mitigate water gaps; implement soil water conservation; monitor crop stage to align with available water; radiation cannot be altered.",
+      "limitations": "Radiation cannot be changed; water proxy adjustments are modeled estimates; local infrastructure and costs not accounted for."
+    },
+    {
+      "adm_id": "MX27",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec6",
+        "mean_prec5",
+        "mean_rad5",
+        "max_cum_prec5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Severe water proxy deficits in max_cum_prec6 (gap 5.77) and max_cum_prec5 (gap 10.50) with radiation hazard (mean_rad5). Conditional advice: Prioritize irrigation assessment and soil water conservation to address extreme water gaps; monitor crop stage; radiation cannot be directly changed.",
+      "limitations": "Radiation cannot be changed; water proxy adjustments are modeled estimates; local infrastructure and costs not accounted for."
+    },
+    {
+      "adm_id": "MX28",
+      "year": 2022,
+      "evidence_features": [
+        "tmax>35p3",
+        "mean_rad4",
+        "mean_rad5",
+        "mean_ssm5"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Temperature hazard (tmax>35p3) and radiation hazards (mean_rad4, mean_rad5) detected. Water proxy (mean_ssm5) shows deficit. Since temperature and radiation cannot be altered, conditional advice focuses on selecting heat-tolerant cultivars, conserving soil water, and monitoring crop stage to avoid peak heat stress.",
+      "limitations": "Temperature and radiation cannot be changed; water proxy adjustments are modeled estimates; local crop stage and agronomist review required."
+    },
+    {
+      "adm_id": "MX31",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad9",
+        "mean_rad5",
+        "mean_rad4",
+        "mean_prec5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "High radiation hazards (mean_rad9, mean_rad5, mean_rad4) and water proxy deficit (mean_prec5). Radiation cannot be changed. Conditional advice: Assess irrigation needs to mitigate water proxy gap; implement soil water conservation; monitor crop stage; radiation exposure is unchangeable.",
+      "limitations": "Radiation cannot be changed; water proxy adjustments are modeled estimates; local infrastructure and costs not accounted for."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

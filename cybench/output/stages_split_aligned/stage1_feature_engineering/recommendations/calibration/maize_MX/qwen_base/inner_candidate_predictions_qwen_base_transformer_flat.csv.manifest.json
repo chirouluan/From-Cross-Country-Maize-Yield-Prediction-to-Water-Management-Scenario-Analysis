@@ -1,0 +1,33 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:31:19.133660+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_predictions",
+  "file": "inner_candidate_predictions_qwen_base_transformer_flat.csv",
+  "sha256": "393fd58741b7d26581c09d7457311e10ac5e61435b65c0f1b330b10e2c037122",
+  "rows": 65,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "sample1_extreme_heat_drought_syndrome",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "sample1_extreme_heat_drought_syndrome": "float32",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "MX",
+    "advisor": "qwen_base",
+    "model": "transformer_flat",
+    "years": [
+      2019
+    ]
+  }
+}

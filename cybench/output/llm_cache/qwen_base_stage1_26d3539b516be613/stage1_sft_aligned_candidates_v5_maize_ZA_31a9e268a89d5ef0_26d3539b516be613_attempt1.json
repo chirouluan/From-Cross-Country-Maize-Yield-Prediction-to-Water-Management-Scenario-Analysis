@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Southern Hemisphere subtropical/semi-arid maize systems exhibit strong summer rainfall deficits with high evaporative demand. Calibration data (2004-2016) reveals robust negative residual associations between yield and extreme heat (tmin<5°C, tmax>31.6°C) and severe precipitation scarcity (prec<0.37mm). The yield distribution is heavily skewed left (median 5.06 t/ha vs mean 5.68 t/ha), indicating frequent low-yield events driven by moisture stress and cold snaps. Feature selection must prioritize thermal stress accumulation (GDD) and antecedent soil moisture deficits to capture the directionally stable yield penalties observed.",
+  "candidates": [
+    {
+      "candidate_id": "cold_snap_accumulation",
+      "agronomic_rationale": "Targets the statistically significant negative yield residuals associated with minimum temperatures below 5°C. In semi-arid summer-rainfall zones, nocturnal cooling below this threshold can induce chilling stress during critical reproductive stages or reduce diurnal temperature range needed for VPD-driven transpiration. This feature captures the frequency/duration of events where tmin < 5°C to quantify thermal stress accumulation.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 45.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 5.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.37
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "extreme_heat_durability",
+      "agronomic_rationale": "Captures the persistent negative yield impact of maximum temperatures exceeding 31.6°C, identified as the 90th percentile threshold with significant residual correlation. High tmax in semi-arid regions accelerates crop senescence and increases vapor pressure deficit beyond plant tolerance, leading to the observed yield penalties. This feature aggregates days where tmax > 31.6°C to measure heat stress exposure.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 45.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 4.36
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 31.58
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.37
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "precip_deficit_frequency",
+      "agronomic_rationale": "Leverages the strongest negative residual signal (r=-0.345) associated with precipitation falling below 0.37 mm/day. Given the semi-arid context and high evaporative demand, days with negligible rainfall (<0.37mm) represent critical soil moisture depletion events that drive the left-skewed yield distribution. This feature counts days where daily precipitation is strictly less than the 25th percentile to quantify moisture stress frequency.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 45.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 4.36
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 31.58
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.37
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

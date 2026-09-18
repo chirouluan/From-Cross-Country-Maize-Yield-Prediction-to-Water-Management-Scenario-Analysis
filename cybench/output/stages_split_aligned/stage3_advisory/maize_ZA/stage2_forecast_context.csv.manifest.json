@@ -1,0 +1,52 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:49:12.047200+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "stage2_forecast_context",
+  "file": "stage2_forecast_context.csv",
+  "sha256": "8b56085462eeb182a7c76fa103ffc7045dc2efd7101e401af26a5e7d61d66f71",
+  "rows": 9,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "stage2_tabpfn_base_prediction",
+    "stage2_tabpfn_base_prediction_variance",
+    "stage2_tabpfn_base_prediction_std",
+    "stage2_tabpfn_base_n_repeats",
+    "stage2_tabpfn_base_split",
+    "stage2_tabpfn_cn_finetuned_prediction",
+    "stage2_tabpfn_cn_finetuned_prediction_variance",
+    "stage2_tabpfn_cn_finetuned_prediction_std",
+    "stage2_tabpfn_cn_finetuned_n_repeats",
+    "stage2_tabpfn_cn_finetuned_split"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "stage2_tabpfn_base_prediction": "float64",
+    "stage2_tabpfn_base_prediction_variance": "float64",
+    "stage2_tabpfn_base_prediction_std": "float64",
+    "stage2_tabpfn_base_n_repeats": "int64",
+    "stage2_tabpfn_base_split": "object",
+    "stage2_tabpfn_cn_finetuned_prediction": "float64",
+    "stage2_tabpfn_cn_finetuned_prediction_variance": "float64",
+    "stage2_tabpfn_cn_finetuned_prediction_std": "float64",
+    "stage2_tabpfn_cn_finetuned_n_repeats": "int64",
+    "stage2_tabpfn_cn_finetuned_split": "object"
+  },
+  "metadata": {
+    "crop": "maize",
+    "country": "ZA",
+    "feature_strategy": "qwen_rag",
+    "training_end_year_exclusive": 2022,
+    "decision_snapshot_rule": "latest_row_with_both_stage2_predictions",
+    "stage1_dataset_sha256": "0318da0803a55a38b4139160ddd882eabac80e0c4120505dbe21005a7b565223",
+    "strategy": "qwen_rag",
+    "stage2_tabpfn_base_sha256": "cca6a3eb4cf5f53eaf8fd8dd61fb6d1da0418d6ccb27e82f9594b43b7e14acc8",
+    "stage2_tabpfn_base_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "stage2_tabpfn_cn_finetuned_sha256": "60cb9fda8ba25897edbb4ffc4e57265a5369a34f947016c721e985f565bc741d",
+    "stage2_tabpfn_cn_finetuned_aggregation": "mean_and_sample_variance_across_5_repeats"
+  }
+}

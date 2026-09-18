@@ -1,0 +1,10 @@
+2026-09-12 14:27:47,781 [DEBUG] matplotlib: matplotlib data path: d:\Anaconda\envs\specllm\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 14:27:47,790 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 14:27:47,808 [DEBUG] matplotlib: interactive is False
+2026-09-12 14:27:47,808 [DEBUG] matplotlib: platform is win32
+2026-09-12 14:27:47,835 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 14:27:47,837 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 14:27:48,751 [DEBUG] matplotlib.pyplot: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+2026-09-12 14:28:28,195 [DEBUG] cybench.models.nn_models: Early stopped at epoch 16
+2026-09-12 14:31:52,215 [DEBUG] cybench.models.nn_models: Early stopped at epoch 18
+2026-09-12 14:34:30,925 [DEBUG] cybench.models.nn_models: Early stopped at epoch 19

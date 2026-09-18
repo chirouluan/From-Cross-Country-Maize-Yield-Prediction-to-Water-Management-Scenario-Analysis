@@ -1,0 +1,62 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:42:45.082284+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "all_repeated_metrics",
+  "file": "metrics_all.csv",
+  "sha256": "89564e04a8b3b7e0707e9aa2cc299b39c3e2ed366f54d9388807bdd77105a6b8",
+  "rows": 600,
+  "columns": [
+    "country",
+    "advisor",
+    "model",
+    "candidate_id",
+    "selected_k",
+    "repeat",
+    "seed",
+    "split",
+    "mape",
+    "normalized_rmse",
+    "r",
+    "r2",
+    "kge"
+  ],
+  "dtypes": {
+    "country": "object",
+    "advisor": "object",
+    "model": "object",
+    "candidate_id": "object",
+    "selected_k": "int64",
+    "repeat": "int64",
+    "seed": "int64",
+    "split": "object",
+    "mape": "float64",
+    "normalized_rmse": "float64",
+    "r": "float64",
+    "r2": "float64",
+    "kge": "float64"
+  },
+  "metadata": {
+    "countries": [
+      "CN",
+      "ZA",
+      "MX",
+      "PT"
+    ],
+    "advisors": [
+      "hardcode",
+      "qwen_base",
+      "qwen_rag"
+    ],
+    "models": [
+      "ridge",
+      "xgboost",
+      "svr",
+      "cnn1d",
+      "transformer_flat"
+    ],
+    "neural_epochs": 50,
+    "repeats": 5,
+    "base_seed": 42
+  }
+}

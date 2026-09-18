@@ -1,0 +1,113 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "MX04",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad5",
+        "mean_prec5",
+        "max_cum_prec6",
+        "max_cum_prec5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if water proxies (mean_prec5, max_cum_prec6, max_cum_prec5) are reduced toward high-yield references, a potential yield gain of 0.1375 is estimated. Radiation hazard (mean_rad5) cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, soil capacity, and water availability."
+    },
+    {
+      "adm_id": "MX13",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad9",
+        "mean_tmin9",
+        "mean_ssm9",
+        "mean_cum_cwb6"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review",
+        "sowing_window_review"
+      ],
+      "reasoning": "Conditional on local crop stage: temperature (mean_tmin9) and radiation (mean_rad9) hazards cannot be directly changed. If soil water proxies (mean_ssm9, mean_cum_cwb6) are managed, a potential yield gain of 0.0479 is estimated.",
+      "limitations": "Data is observational; extreme temperature/radiation values suggest physiological limits; requires agronomist review of cultivar tolerance and sowing timing."
+    },
+    {
+      "adm_id": "MX23",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad5",
+        "mean_prec5",
+        "max_cum_prec6",
+        "mean_cum_cwb6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if water proxies (mean_prec5, max_cum_prec6, mean_cum_cwb6) are reduced toward high-yield references, a potential yield gain of 0.0 is estimated (no gain predicted in this scenario). Radiation hazard (mean_rad5) cannot be directly altered.",
+      "limitations": "Data is observational; no yield gain predicted for this specific proxy adjustment; requires agronomist review of water infrastructure and soil constraints."
+    },
+    {
+      "adm_id": "MX27",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec6",
+        "mean_prec5",
+        "max_cum_prec5",
+        "mean_cum_cwb6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if water proxies (max_cum_prec6, mean_prec5, max_cum_prec5, mean_cum_cwb6) are reduced toward high-yield references, a potential yield gain of 0.0064 is estimated. Radiation hazard cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, soil capacity, and water availability."
+    },
+    {
+      "adm_id": "MX28",
+      "year": 2022,
+      "evidence_features": [
+        "tmax>35p3",
+        "mean_rad5",
+        "mean_rad4",
+        "mean_ssm5",
+        "mean_prec4",
+        "max_cum_prec5"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review",
+        "sowing_window_review",
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage: temperature hazard (tmax>35p3) cannot be directly changed. If water proxies (mean_ssm5, mean_prec4, max_cum_prec5) are reduced toward high-yield references, a potential yield gain of 0.0941 is estimated. Radiation hazards (mean_rad5, mean_rad4) cannot be directly altered.",
+      "limitations": "Data is observational; extreme temperature values suggest physiological limits; requires agronomist review of cultivar tolerance, sowing timing, and water infrastructure."
+    },
+    {
+      "adm_id": "MX31",
+      "year": 2022,
+      "evidence_features": [
+        "mean_rad9",
+        "mean_rad5",
+        "mean_prec5",
+        "max_cum_prec6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if water proxies (mean_prec5, max_cum_prec6) are reduced toward high-yield references, a potential yield gain of 0.3886 is estimated. Radiation hazards (mean_rad9, mean_rad5) cannot be directly altered.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, soil capacity, and water availability."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

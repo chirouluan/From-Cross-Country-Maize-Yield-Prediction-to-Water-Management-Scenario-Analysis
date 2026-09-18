@@ -1,0 +1,38 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:28:48.822907+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_feature_count_scores",
+  "file": "feature_count_scores.csv",
+  "sha256": "5697dbac1aaf0f722141d0bbc6691e4f7c848dfeacbeaebb477b52e99c395018",
+  "rows": 4,
+  "columns": [
+    "selected_k",
+    "mape",
+    "normalized_rmse",
+    "r",
+    "r2",
+    "kge"
+  ],
+  "dtypes": {
+    "selected_k": "int64",
+    "mape": "float64",
+    "normalized_rmse": "float64",
+    "r": "float64",
+    "r2": "float64",
+    "kge": "float64"
+  },
+  "metadata": {
+    "country": "ZA",
+    "years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "candidate_ids": [
+    "rag1_rag_local_profile",
+    "rag1_rag_historical_regime",
+    "rag1_rag_robust_hybrid"
+  ],
+  "selected_k": 60
+}

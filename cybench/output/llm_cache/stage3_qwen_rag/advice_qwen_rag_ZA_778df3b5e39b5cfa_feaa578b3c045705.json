@@ -1,0 +1,117 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZA-A1-0001",
+      "year": 2022,
+      "evidence_features": [
+        "tmin<5p7",
+        "prec<0.5p7",
+        "mean_cum_fpar12",
+        "mean_tavg6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "sowing_window_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture is recoverable via irrigation, assess feasibility to address the water proxy gap (prec<0.5p7). If irrigation is unavailable, review sowing window to avoid further temperature stress (tmin<5p7, mean_tavg6) and monitor crop state (mean_cum_fpar12) for recovery potential.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly altered. Implementation depends on local water infrastructure and agronomist review."
+    },
+    {
+      "adm_id": "ZA-A1-0003",
+      "year": 2022,
+      "evidence_features": [
+        "mean_prec8",
+        "max_cum_prec9",
+        "mean_rad8",
+        "mean_tmin12"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "drainage_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: significant water proxy gaps (mean_prec8, max_cum_prec9) suggest irrigation assessment or soil water conservation. If waterlogging is suspected (high cumulative precipitation), drainage assessment is required. Monitor crop state to track recovery.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly altered. Implementation depends on local water infrastructure and agronomist review."
+    },
+    {
+      "adm_id": "ZA-A1-0004",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_cwb9",
+        "mean_prec8",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: extreme water proxy gaps (max_cum_prec9, mean_prec8) indicate potential waterlogging; drainage assessment and soil water conservation are recommended. Irrigation assessment is conditional on soil recovery potential. Monitor crop state to verify recovery.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly altered. Implementation depends on local water infrastructure and agronomist review."
+    },
+    {
+      "adm_id": "ZA-A1-0005",
+      "year": 2022,
+      "evidence_features": [
+        "mean_cum_fpar12",
+        "mean_cum_cwb9",
+        "mean_cum_fpar11",
+        "mean_cum_ndvi9"
+      ],
+      "actions": [
+        "field_monitoring",
+        "irrigation_assessment",
+        "sowing_window_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: crop state indicators (mean_cum_fpar12, mean_cum_ndvi9) show deviation from high-yield references. Irrigation assessment is recommended if water stress is the limiting factor. Review sowing window to optimize future conditions.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly altered. Implementation depends on local water infrastructure and agronomist review."
+    },
+    {
+      "adm_id": "ZA-A1-0006",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_fpar12",
+        "prec<0.5p8",
+        "mean_prec8",
+        "max_cum_prec8",
+        "prec<0.5p9"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: water proxy gaps (prec<0.5p8, mean_prec8) suggest irrigation assessment or soil water conservation. Monitor crop state (mean_cum_fpar12) to track recovery. Note: max_cum_prec9 is below reference, indicating potential water deficit.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly altered. Implementation depends on local water infrastructure and agronomist review."
+    },
+    {
+      "adm_id": "ZA-A1-0009",
+      "year": 2022,
+      "evidence_features": [
+        "tmax>32p12",
+        "tmax>32p9",
+        "mean_cum_fpar11",
+        "mean_tavg12"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: temperature hazards (tmax>32p12, tmax>32p9) cannot be directly changed. Recommend sowing window review to avoid peak heat and stress-tolerant cultivar review to mitigate thermal stress. Monitor crop state (mean_cum_fpar11) for recovery.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly altered. Implementation depends on local water infrastructure and agronomist review."
+    }
+  ],
+  "overall_limitations": [
+    "Observational scenario, not a field prescription",
+    "Temperature, radiation, and crop state indicators (NDVI/FPAR) cannot be directly changed",
+    "Water proxies are not direct irrigation doses; irrigation feasibility depends on local infrastructure",
+    "Yield effects are conditional estimates based on model scenarios, not guaranteed outcomes",
+    "Implementation requires local agronomist review and assessment of crop stage and costs"
+  ]
+}

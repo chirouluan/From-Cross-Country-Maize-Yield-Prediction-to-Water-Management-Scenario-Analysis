@@ -1,0 +1,108 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "CN014",
+      "year": 2022,
+      "evidence_features": [
+        "prec<0.037p7",
+        "tmax>31.246p7",
+        "mean_tmin5",
+        "median_cum_ndvi3"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, assess irrigation to address the water proxy gap (prec<0.037p7: 1.0 vs 0.0) and monitor for temperature hazards (tmax>31.246p7: 2.0). Review agronomist guidance as temperature and NDVI cannot be directly changed.",
+      "limitations": "Data is observational; implementation depends on local crop stage, infrastructure, and costs. Temperature and radiation cannot be altered."
+    },
+    {
+      "adm_id": "CN022",
+      "year": 2022,
+      "evidence_features": [
+        "prec<0.037p6",
+        "median_cum_ndvi2",
+        "mean_rad3",
+        "mean_ssm6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, assess irrigation to address the water proxy gap (prec<0.037p6: 0.0 vs 2.0) and soil water status (mean_ssm6: 6.0045 vs 5.2532). Monitor crop state (median_cum_ndvi2) and radiation hazards. Review agronomist guidance as temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; implementation depends on local crop stage, infrastructure, and costs. Temperature and radiation cannot be altered."
+    },
+    {
+      "adm_id": "CN023",
+      "year": 2022,
+      "evidence_features": [
+        "prec<0.037p5",
+        "mean_tmin5",
+        "median_cum_ndvi5",
+        "median_cum_fpar6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, assess irrigation to address the water proxy gap (prec<0.037p5: 1.0 vs 2.0). Review sowing window and monitor crop state indicators (median_cum_ndvi5, median_cum_fpar6) for potential recovery. Review agronomist guidance as temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; implementation depends on local crop stage, infrastructure, and costs. Temperature and radiation cannot be altered."
+    },
+    {
+      "adm_id": "CN031",
+      "year": 2022,
+      "evidence_features": [
+        "median_cum_ndvi6",
+        "median_cum_ndvi3",
+        "median_cum_ndvi5",
+        "median_cum_ndvi2"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, review sowing window and monitor crop state indicators (median_cum_ndvi6, median_cum_ndvi3, median_cum_ndvi5, median_cum_ndvi2). Consider stress-tolerant cultivar review to address observed gaps. Review agronomist guidance as temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; implementation depends on local crop stage, infrastructure, and costs. Temperature and radiation cannot be altered."
+    },
+    {
+      "adm_id": "CN061",
+      "year": 2022,
+      "evidence_features": [
+        "prec<0.037p3",
+        "median_cum_ndvi6",
+        "median_cum_fpar6",
+        "median_cum_fpar5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, assess irrigation to address the water proxy gap (prec<0.037p3: 10.0 vs 9.0) and soil water status. Monitor crop state indicators (median_cum_ndvi6, median_cum_fpar6, median_cum_fpar5). Review agronomist guidance as temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; implementation depends on local crop stage, infrastructure, and costs. Temperature and radiation cannot be altered."
+    },
+    {
+      "adm_id": "CN063",
+      "year": 2022,
+      "evidence_features": [
+        "prec<0.037p6",
+        "median_cum_ndvi3",
+        "median_cum_ndvi2",
+        "median_cum_fpar7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, assess irrigation to address the water proxy gap (prec<0.037p6: 3.0 vs 0.0) and soil water status. Monitor crop state indicators (median_cum_ndvi3, median_cum_ndvi2, median_cum_fpar7). Review agronomist guidance as temperature and radiation cannot be directly changed.",
+      "limitations": "Data is observational; implementation depends on local crop stage, infrastructure, and costs. Temperature and radiation cannot be altered."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

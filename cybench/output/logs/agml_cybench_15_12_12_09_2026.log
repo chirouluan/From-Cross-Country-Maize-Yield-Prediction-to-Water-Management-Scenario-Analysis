@@ -1,0 +1,7 @@
+2026-09-12 15:12:15,921 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 15:12:15,924 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:12:15,925 [DEBUG] matplotlib: interactive is False
+2026-09-12 15:12:15,925 [DEBUG] matplotlib: platform is win32
+2026-09-12 15:12:16,053 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:12:16,055 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 15:12:17,386 [DEBUG] matplotlib.pyplot: Loaded backend qtagg version 5.15.10.

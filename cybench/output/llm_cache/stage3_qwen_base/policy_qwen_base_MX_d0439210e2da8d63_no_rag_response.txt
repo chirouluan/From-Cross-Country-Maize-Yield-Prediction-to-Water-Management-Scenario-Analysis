@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.85,
+  "stress_score_threshold": 1.2,
+  "max_water_proxy_shift_fraction": 0.3,
+  "max_actionable_features": 3,
+  "top_reported_stresses": 6,
+  "rationale": "Settings adjusted to conservative levels: reference yield quantile raised to 0.85 to focus on high-performing baselines; stress threshold increased to 1.2 to filter out moderate variability; water proxy shift limited to 0.3 to prevent over-attribution given the absence of irrigation data; actionable features capped at 3 to prioritize the most significant weather and soil drivers; top stresses limited to 6 to ensure clarity without inventing missing management treatments."
+}

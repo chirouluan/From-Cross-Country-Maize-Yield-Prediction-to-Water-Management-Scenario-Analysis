@@ -1,0 +1,26 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:31:45.352611+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_scores",
+  "file": "selection_scores.csv",
+  "sha256": "506c44873519df9a8b09edeff0d6fccf739c30340fe90f2b0a307a255679e2af",
+  "rows": 5,
+  "columns": [
+    "model",
+    "candidate_id",
+    "calibration_mse_mean",
+    "calibration_mse_variance"
+  ],
+  "dtypes": {
+    "model": "object",
+    "candidate_id": "object",
+    "calibration_mse_mean": "float64",
+    "calibration_mse_variance": "float64"
+  },
+  "metadata": {
+    "country": "MX",
+    "advisor": "qwen_rag",
+    "metric": "pooled_mse"
+  }
+}

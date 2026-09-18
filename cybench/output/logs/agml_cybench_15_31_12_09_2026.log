@@ -1,0 +1,14 @@
+2026-09-12 15:31:17,975 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 15:31:17,978 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:31:17,979 [DEBUG] matplotlib: interactive is False
+2026-09-12 15:31:17,979 [DEBUG] matplotlib: platform is win32
+2026-09-12 15:31:18,070 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:31:18,071 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 15:31:18,557 [DEBUG] matplotlib.pyplot: Loaded backend qtagg version 5.15.10.
+2026-09-12 15:31:49,660 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 15:31:49,663 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:31:49,664 [DEBUG] matplotlib: interactive is False
+2026-09-12 15:31:49,664 [DEBUG] matplotlib: platform is win32
+2026-09-12 15:31:49,757 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:31:49,759 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 15:31:50,216 [DEBUG] matplotlib.pyplot: Loaded backend qtagg version 5.15.10.

@@ -1,0 +1,33 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:31:07.565925+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_predictions",
+  "file": "inner_candidate_predictions_qwen_base_svr.csv",
+  "sha256": "fc136c684125b6eca984aeb49e215b816a5da4eed08f5a9848da48a5067dd1b6",
+  "rows": 65,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "sample1_extreme_heat_drought_syndrome",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "sample1_extreme_heat_drought_syndrome": "float64",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "MX",
+    "advisor": "qwen_base",
+    "model": "svr",
+    "years": [
+      2019
+    ]
+  }
+}

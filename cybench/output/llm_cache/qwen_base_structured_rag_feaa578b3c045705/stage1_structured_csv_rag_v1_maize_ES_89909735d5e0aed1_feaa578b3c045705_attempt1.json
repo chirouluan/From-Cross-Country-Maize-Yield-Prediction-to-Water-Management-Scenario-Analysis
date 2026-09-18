@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Mediterranean highland climate exhibits extreme temperature contrasts and highly irregular precipitation (median 456mm, high CV 0.66). Historical records show frequent dry spells (median 36 consecutive days) and frost events (median 63 days), while the crop-season profile indicates severe water stress during the growing season (median CWB -3.14). The absence of directionally stable residual evidence suggests high year-to-year volatility in yield responses to specific weather events, necessitating a hybrid approach that balances local event thresholds with historical regime frequency.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Derives thresholds directly from the 2003-2015 calibration period to capture local event severity (e.g., >5 days of TMAX > 35°C, <1mm precip for 134 days). This configuration isolates the specific stress drivers observed during the model training window without extrapolating from broader historical regimes.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 40
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Utilizes the structured CSV records (2001-2015) to adjust thresholds based on the frequency of historical climate regimes (e.g., 'hot_dry' vs 'cool_wet'). This accounts for the regional variability in precipitation timing and temperature extremes found in the CSV (e.g., max_tmax median 36.36°C, frost median 63 days), providing a regime-aware baseline.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 50
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -5
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 2
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Synthesizes the local crop-season profile event days with historical regime statistics to create robust thresholds. It uses the local profile for daily event sensitivity (e.g., precip < 1mm) but broadens the soil moisture aggregation method to 'max' to account for the high inter-annual variability (CV 0.66) and frequent dry spells (median 36 days) observed in the historical CSV data.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 50
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -5
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "max"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "max"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

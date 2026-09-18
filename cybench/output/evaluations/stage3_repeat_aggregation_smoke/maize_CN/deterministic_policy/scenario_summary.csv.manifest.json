@@ -1,0 +1,37 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-07T04:32:27.798343+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "scenario_summary",
+  "file": "scenario_summary.csv",
+  "sha256": "0d9f7c1a2550be8341d88e53bfbacffaff1cb612a8cadeb76e4934070084ac1e",
+  "rows": 2,
+  "columns": [
+    "scenario",
+    "n_location_years",
+    "mean_predicted_yield",
+    "mean_scenario_gain",
+    "n_stress_signals"
+  ],
+  "dtypes": {
+    "scenario": "object",
+    "n_location_years": "int64",
+    "mean_predicted_yield": "float64",
+    "mean_scenario_gain": "float64",
+    "n_stress_signals": "int64"
+  },
+  "metadata": {
+    "crop": "maize",
+    "country": "CN",
+    "feature_strategy": "qwen_rag",
+    "training_end_year_exclusive": 2013,
+    "decision_snapshot_rule": "latest_row_with_both_stage2_predictions",
+    "stage1_dataset_sha256": "f5adff2995337f53f441e747da56e4fff6550c2587d3f08487254db7db7c963f",
+    "strategy": "qwen_rag",
+    "stage2_tabpfn_base_sha256": "aca73607dcea94989d553e40c38f62ec1b02176a72fce88a28e14b61e36b78f6",
+    "stage2_tabpfn_base_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "stage2_tabpfn_cn_finetuned_sha256": "842fcf6036f83b067201a1212f934baf610c60572c74d34393fa1f11ad50eb2e",
+    "stage2_tabpfn_cn_finetuned_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "policy": "deterministic_policy"
+  }
+}

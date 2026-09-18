@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.85,
+  "stress_score_threshold": 1.2,
+  "max_water_proxy_shift_fraction": 0.3,
+  "max_actionable_features": 3,
+  "top_reported_stresses": 5,
+  "rationale": "Settings tightened to reflect data constraints: reference quantile raised to 0.85 to focus on high-yield stress scenarios given the limited sample size (n=602); stress threshold increased to 1.2 to filter out mild anomalies; water_proxy shift capped at 0.3 to prevent unrealistic counterfactuals since only water is modifiable; actionable features limited to 3 (temperature_hazard, water_proxy, crop_state_indicator) as fertilizer/irrigation/cultivar data are absent; top stresses reduced to 5 to prioritize the most significant drivers (temperature, water, radiation, crop state, fixed context) without inventing missing treatment variables."
+}

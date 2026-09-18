@@ -1,0 +1,454 @@
+2026-09-12 14:49:17,595 [DEBUG] matplotlib: matplotlib data path: d:\Anaconda\envs\specllm\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 14:49:17,605 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 14:49:17,637 [DEBUG] matplotlib: interactive is False
+2026-09-12 14:49:17,637 [DEBUG] matplotlib: platform is win32
+2026-09-12 14:49:17,654 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 14:49:17,656 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 14:49:18,366 [DEBUG] matplotlib.pyplot: Loaded backend module://matplotlib_inline.backend_inline version unknown.
+2026-09-12 14:49:26,302 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): storage.googleapis.com:443
+2026-09-12 14:49:26,586 [DEBUG] tabpfn_common_utils.telemetry.core.config: Failed to download telemetry config: https://storage.googleapis.com/prior-labs-tabpfn-public/config/telemetry.json
+2026-09-12 14:49:26,592 [DEBUG] filelock: Attempting to acquire lock 1959922896272 on C:\Users\35454\AppData\Local\priorlabs\.tabpfn\state.lock
+2026-09-12 14:49:26,592 [DEBUG] filelock: Lock 1959922896272 acquired on C:\Users\35454\AppData\Local\priorlabs\.tabpfn\state.lock
+2026-09-12 14:49:26,597 [DEBUG] filelock: Attempting to release lock 1959922896272 on C:\Users\35454\AppData\Local\priorlabs\.tabpfn\state.lock
+2026-09-12 14:49:26,597 [DEBUG] filelock: Lock 1959922896272 released on C:\Users\35454\AppData\Local\priorlabs\.tabpfn\state.lock
+2026-09-12 14:49:26,961 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:27,104 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): eu.i.posthog.com:443
+2026-09-12 14:49:27,798 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:28,554 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:29,303 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:29,813 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:30,566 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:30,590 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:31,397 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:32,044 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:32,658 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:33,515 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:33,843 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:34,612 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:34,829 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:35,594 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:36,112 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:36,339 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:37,369 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:37,495 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:38,258 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:38,777 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:39,006 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:39,772 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:40,054 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:40,531 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:41,253 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:41,288 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:42,048 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:42,774 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:42,807 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:43,578 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:44,232 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:44,849 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:45,577 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:45,599 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:46,360 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:46,859 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:47,100 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:47,857 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:48,118 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:48,598 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:49,353 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:49,489 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:50,113 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:50,766 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:51,078 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:51,868 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:52,187 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:52,634 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:53,392 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:53,561 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:54,163 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:54,918 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:55,348 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:55,685 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:56,449 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:56,709 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:57,207 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:57,979 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:58,212 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:49:59,462 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:49:59,623 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:00,228 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:00,993 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:01,248 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:01,753 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:02,525 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:02,732 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:03,284 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:04,058 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:04,100 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:04,816 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:05,563 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:05,567 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:06,334 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:07,154 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:07,301 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:08,065 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:08,549 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:08,826 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:09,578 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:10,032 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:10,318 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:11,056 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:11,468 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:11,823 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:12,595 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:13,034 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:13,361 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:14,135 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:14,460 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:14,894 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:15,882 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:16,003 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:16,638 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:17,493 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:17,780 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:18,536 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:19,120 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:19,795 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:20,562 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:20,584 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:21,316 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:22,056 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:22,082 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:22,835 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:23,491 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:23,586 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:24,337 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:25,095 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:25,321 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:26,074 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:26,543 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:26,838 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:27,594 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:27,622 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:28,338 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:28,765 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:29,106 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:29,809 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:29,865 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:30,639 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:30,898 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:31,393 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:32,103 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:32,155 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:32,905 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:33,159 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:33,874 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:34,190 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:34,628 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:35,339 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:35,593 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:36,341 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:36,504 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:37,100 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:37,588 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:38,097 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:38,642 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:39,062 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:39,773 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:39,813 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:40,585 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:40,749 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:41,356 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:41,883 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:42,144 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:42,957 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:43,000 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:43,780 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:44,036 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:44,535 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:45,081 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:45,347 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:46,131 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:46,139 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:46,901 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:47,371 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:47,656 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:48,469 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:48,990 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:49,559 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:49,750 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:50,514 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:50,680 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:51,282 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:51,799 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:52,038 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:52,796 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:52,844 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:53,555 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:53,780 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:54,675 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:54,797 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:55,640 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:55,739 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:56,396 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:56,639 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:57,152 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:57,542 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:57,920 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:58,539 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:50:58,676 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:59,441 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:50:59,536 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:00,201 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:00,434 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:00,951 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:01,415 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:01,718 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:02,494 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:02,642 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:03,252 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:03,641 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:04,013 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:04,617 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:04,823 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:05,579 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:05,748 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:06,336 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:06,758 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:07,105 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:07,727 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:07,862 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:08,628 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:08,806 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:09,393 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:09,812 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:10,165 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:10,815 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:11,311 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:11,794 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:12,065 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:12,835 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:12,918 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:13,586 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:13,914 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:14,349 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:14,942 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:15,108 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:15,868 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:15,986 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:16,630 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:17,038 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:17,410 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:18,033 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:18,171 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:18,931 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:19,055 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:19,689 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:20,076 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:20,448 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:21,198 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:21,198 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:21,956 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:22,283 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:22,716 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:23,411 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:23,463 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:24,449 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:25,149 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:25,438 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:26,301 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:26,429 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:27,200 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:27,395 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:27,999 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:28,453 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:28,803 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:29,511 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:29,574 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:30,368 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:30,662 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:31,179 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:31,641 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:32,036 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:32,664 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:32,802 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:33,604 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:33,659 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:34,454 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:34,661 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:35,249 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:35,695 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:36,057 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:36,811 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:36,812 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:37,619 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:37,920 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:38,423 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:39,007 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:39,274 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:39,891 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:40,028 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:40,813 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:40,905 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:41,715 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:41,786 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:42,635 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:42,687 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:43,477 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:43,719 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:44,268 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:44,726 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:45,124 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:45,599 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:46,128 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:46,510 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:46,979 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:47,353 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:47,820 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:48,559 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:48,710 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:49,477 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:49,539 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:50,324 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:50,565 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:51,115 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:51,499 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:51,927 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:52,443 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:52,769 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:53,334 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:53,623 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:54,256 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:54,417 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:55,164 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:55,262 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:56,055 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:56,109 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:56,961 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:57,051 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:57,775 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:58,083 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:58,637 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:58,982 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:51:59,480 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:51:59,886 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:00,351 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:00,818 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:01,235 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:01,735 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:02,124 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:02,641 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:02,870 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:03,579 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:03,745 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:04,408 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:04,603 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:05,357 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:05,442 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:06,308 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:06,335 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:07,191 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:07,200 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:08,040 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:08,080 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:08,884 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:09,060 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:09,733 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:09,991 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:10,583 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:10,980 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:11,590 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:11,835 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:12,472 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:12,753 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:13,359 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:13,727 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:14,223 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:14,599 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:15,126 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:15,455 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:15,998 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:16,346 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:16,877 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:17,316 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:17,733 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:18,234 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:18,567 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:19,124 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:19,341 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:20,016 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:20,229 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:20,907 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:21,072 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:21,839 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:21,909 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:22,697 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:22,811 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:23,659 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:23,675 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:24,548 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:24,566 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:25,444 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:25,752 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:26,258 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:26,695 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:27,115 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:27,619 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:27,956 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:28,531 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:28,723 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:29,458 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:29,605 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:30,410 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:30,478 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:31,254 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:31,416 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:32,095 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:32,276 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:32,943 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:33,263 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:33,739 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:34,171 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:34,592 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:35,052 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:35,390 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:35,984 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:36,155 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:36,944 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:36,991 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:37,795 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:37,893 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:38,642 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:38,819 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:39,508 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:39,760 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:40,347 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:40,683 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:41,198 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:41,610 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:42,002 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:42,580 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:42,761 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:43,531 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:43,622 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:44,416 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:44,442 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:45,214 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:45,365 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:46,066 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:46,230 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:46,916 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:47,189 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:47,760 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:48,133 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:48,559 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:49,071 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:49,353 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:50,040 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:50,257 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:50,999 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:51,066 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:51,915 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:51,923 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:52,761 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:52,830 [DEBUG] tabpfn.model_loading: Keys in config that were not parsed by architecture config: 
+2026-09-12 14:52:53,619 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+2026-09-12 14:52:54,421 [DEBUG] urllib3.connectionpool: https://eu.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15

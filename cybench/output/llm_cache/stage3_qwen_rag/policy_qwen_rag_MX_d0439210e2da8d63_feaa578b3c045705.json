@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.75,
+  "stress_score_threshold": 0.75,
+  "max_water_proxy_shift_fraction": 0.5,
+  "max_actionable_features": 5,
+  "top_reported_stresses": 8,
+  "rationale": "Settings aligned with dataset constraints: no management treatments (fertilizer, irrigation, cultivar) exist to shift; only water_proxy variables are modifiable. Reference quantile 0.75 and stress threshold 0.75 match the conservative default policy for the 99-row MX maize dataset. Max water shift of 0.5 (50%) allows meaningful counterfactual analysis within the 'water_proxy' feature count (45). Actionable features capped at 5 and top stresses at 8 ensure focus on the dominant predictors (temperature_hazard, water_proxy) without inventing non-existent management levers."
+}

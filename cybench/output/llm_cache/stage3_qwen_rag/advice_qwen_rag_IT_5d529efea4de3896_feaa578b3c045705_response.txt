@@ -1,0 +1,117 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ITF43",
+      "year": 2011,
+      "evidence_features": [
+        "mean_rad2",
+        "mean_rad4",
+        "mean_rad3",
+        "mean_rad7",
+        "max_cum_prec4",
+        "max_cum_prec3",
+        "mean_cum_cwb4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Radiation hazards (mean_rad2, mean_rad4, mean_rad3, mean_rad7) are non-modifiable climatic conditions. However, water proxies indicate potential for yield gain via water management: increasing max_cum_prec4 (0.1862 gain) and mean_cum_cwb4 (0.0806 gain) are modeled options. max_cum_prec3 shows a modeled reduction (0.2453 gain), suggesting drainage or timing adjustments may be beneficial. Local crop stage and infrastructure must be reviewed to validate these water interventions.",
+      "limitations": "Radiation cannot be altered; water proxy changes are modeled scenarios, not guaranteed field outcomes; requires agronomist review of soil capacity and irrigation infrastructure."
+    },
+    {
+      "adm_id": "ITF61",
+      "year": 2020,
+      "evidence_features": [
+        "prec<10p1",
+        "prec<10p7",
+        "mean_rad1",
+        "mean_tavg6",
+        "max_cum_prec1"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Radiation (mean_rad1) and temperature (mean_tavg6) are non-modifiable hazards. Water proxies show modeled yield gains from adjusting precipitation thresholds: increasing prec<10p7 (0.0444 gain) and max_cum_prec1 (0.0209 gain) are suggested. prec<10p1 shows a modeled gain from reduction (0.0378 gain). Implementation depends on local water availability and crop stage.",
+      "limitations": "Temperature and radiation cannot be changed; water proxy adjustments are hypothetical scenarios requiring infrastructure validation; no direct yield causality claimed."
+    },
+    {
+      "adm_id": "ITG2B",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>35p6",
+        "mean_rad1",
+        "max_ssm3",
+        "max_cum_prec3"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature hazard (tmax>35p6) and radiation (mean_rad1) are non-modifiable. Water proxies suggest potential gains: increasing mean_cum_cwb1 (0.0055 gain) and adjusting max_cum_prec3 (0.1346 gain). High tmax indicates heat stress; irrigation or soil conservation may mitigate water loss, though temperature itself cannot be lowered.",
+      "limitations": "Temperature cannot be directly changed; water proxy changes are modeled estimates; requires assessment of irrigation access and soil water retention capacity."
+    },
+    {
+      "adm_id": "ITG2C",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>35p6",
+        "prec<10p7",
+        "max_cum_gdd7",
+        "mean_tmax5",
+        "max_ssm1"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature hazards (tmax>35p6, max_cum_gdd7, mean_tmax5) are non-modifiable. Water proxy prec<10p7 shows a significant modeled gain from reduction (0.4517 gain), suggesting drainage or reduced water input may be beneficial. max_ssm1 shows a small modeled gain from increase (0.0128 gain). Sowing window review may help avoid peak heat stress.",
+      "limitations": "Temperature cannot be altered; water proxy adjustments are scenario-based; requires agronomist validation of soil drainage and phenological timing."
+    },
+    {
+      "adm_id": "ITI12",
+      "year": 2020,
+      "evidence_features": [
+        "max_cum_gdd2",
+        "prec<10p1",
+        "max_cum_gdd1",
+        "tmin<0p4",
+        "max_cum_prec3",
+        "max_cum_prec4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature hazards (max_cum_gdd2, max_cum_gdd1, tmin<0p4) are non-modifiable. Water proxies indicate modeled gains: increasing max_cum_prec3 (0.0399 gain) and max_cum_prec4 (0.0038 gain). Radiation is not a stress feature here. Irrigation assessment is needed to realize water proxy potential.",
+      "limitations": "Temperature cannot be changed; water proxy changes are modeled scenarios; requires infrastructure review."
+    },
+    {
+      "adm_id": "ITI19",
+      "year": 2020,
+      "evidence_features": [
+        "prec<10p7",
+        "mean_rad7",
+        "mean_tavg6",
+        "max_cum_ndvi4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Radiation (mean_rad7) and temperature (mean_tavg6) are non-modifiable. Water proxy prec<10p7 shows a modeled gain from increase (0.0413 gain). max_cum_ndvi4 indicates crop state deviation; field monitoring is recommended to assess if water management can close the gap. No direct yield effect claimed from proxy changes.",
+      "limitations": "Temperature and radiation cannot be altered; water proxy adjustments are hypothetical; requires agronomist review of crop stage and soil moisture dynamics."
+    }
+  ],
+  "overall_limitations": [
+    "Observational scenario analysis, not a field prescription",
+    "Water proxies are modeled adjustments, not guaranteed irrigation doses",
+    "Temperature and radiation hazards cannot be directly modified",
+    "Yield effects are conditional on unverified agronomic implementation",
+    "Local crop stage, infrastructure, costs, and agronomist review are required for validation"
+  ]
+}

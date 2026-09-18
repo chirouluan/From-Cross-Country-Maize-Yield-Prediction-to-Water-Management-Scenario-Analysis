@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "The region exhibits a subtropical/tropical highland profile with significant frost contrasts (median Tmin ~10°C, max -1.4°C to -3.8°C) and pronounced wet/dry seasonality (median annual precip ~535mm, max consecutive dry days up to 135). The crop-season profile indicates frequent water stress (median CWB -4.48 mm) and rare heat stress (median Tmax >35°C events = 0). Historical records confirm high inter-annual variability in precipitation and dry spells, suggesting a configuration robust to moisture limitation is critical.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Leverages the 2014-2021 calibration profile to define event thresholds directly observed in the target region, capturing local frost risks and precipitation variability without external bias.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -1.382
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "max"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "max"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Utilizes the 2001-2021 CSV regime statistics to model broad climatic modes (cool_wet, hot_dry, long_dry_spell), prioritizing robustness against the observed high variance in dry spells and precipitation coefficients of variation.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -2.5
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Combines local calibration event definitions with historical regime medians to balance sensitivity to local extremes (frost/dryness) against long-term regime stability, ensuring coverage across the full 2001-2021 variability spectrum.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -1.382
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "median"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

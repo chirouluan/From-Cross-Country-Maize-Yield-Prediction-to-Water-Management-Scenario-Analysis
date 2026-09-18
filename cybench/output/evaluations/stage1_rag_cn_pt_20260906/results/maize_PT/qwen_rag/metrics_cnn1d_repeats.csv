@@ -1,0 +1,11 @@
+country,advisor,model,candidate_id,selected_k,repeat,seed,split,mape,normalized_rmse,r,r2,kge
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,1,42,train,0.1356,17.9402,0.9043,0.8161,0.8329
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,1,42,test,0.2567,30.016,0.885,0.2424,0.6049
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,2,1051,train,0.1698,17.8146,0.9101,0.8186,0.793
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,2,1051,test,0.2577,30.6707,0.8853,0.209,0.5927
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,3,2060,train,0.1438,17.4005,0.912,0.827,0.8309
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,3,2060,test,0.2685,31.092,0.918,0.1871,0.5823
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,4,3069,train,0.1318,18.6418,0.9008,0.8014,0.827
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,4,3069,test,0.2688,31.9097,0.8735,0.1438,0.5741
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,5,4078,train,0.1659,17.9721,0.9088,0.8154,0.8105
+PT,qwen_rag,cnn1d,rag1_rag_historical_regime,60,5,4078,test,0.2657,32.1482,0.891,0.1309,0.5609

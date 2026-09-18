@@ -1,0 +1,104 @@
+2026-09-12 17:02:54,573 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\envs\specllm\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 17:02:54,576 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 17:02:54,577 [DEBUG] matplotlib: interactive is False
+2026-09-12 17:02:54,577 [DEBUG] matplotlib: platform is win32
+2026-09-12 17:02:54,595 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 17:02:54,597 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 17:02:55,151 [DEBUG] matplotlib.pyplot: Loaded backend tkagg version 8.6.
+2026-09-12 17:02:55,181 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,181 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,182 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,182 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,182 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 1189
+2026-09-12 17:02:55,185 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,186 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,186 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,186 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,186 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 2994
+2026-09-12 17:02:55,199 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,199 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,199 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,199 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,199 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 696
+2026-09-12 17:02:55,201 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,201 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,201 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,201 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,201 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 526
+2026-09-12 17:02:55,202 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,202 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,203 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,203 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,203 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 499
+2026-09-12 17:02:55,204 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,204 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,204 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,204 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,204 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 673
+2026-09-12 17:02:55,205 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,205 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,205 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,205 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,205 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 922
+2026-09-12 17:02:55,207 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,207 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,207 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,207 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,208 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 568
+2026-09-12 17:02:55,208 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:02:55,208 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:02:55,209 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:02:55,209 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:02:55,209 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 626
+2026-09-12 17:02:59,636 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\envs\specllm\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 17:02:59,640 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 17:02:59,641 [DEBUG] matplotlib: interactive is False
+2026-09-12 17:02:59,641 [DEBUG] matplotlib: platform is win32
+2026-09-12 17:02:59,658 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 17:02:59,659 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 17:03:00,229 [DEBUG] matplotlib.pyplot: Loaded backend tkagg version 8.6.
+2026-09-12 17:03:00,260 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,261 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,261 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,261 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,261 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 1189
+2026-09-12 17:03:00,266 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,266 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,266 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,266 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,266 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 2994
+2026-09-12 17:03:00,279 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,279 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,279 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,279 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,279 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 696
+2026-09-12 17:03:00,280 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,281 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,281 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,281 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,281 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 526
+2026-09-12 17:03:00,282 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,282 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,282 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,283 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,283 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 499
+2026-09-12 17:03:00,283 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,284 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,284 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,284 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,284 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 673
+2026-09-12 17:03:00,285 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,285 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,285 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,285 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,285 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 922
+2026-09-12 17:03:00,286 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,286 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,287 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,287 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,287 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 568
+2026-09-12 17:03:00,288 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2026-09-12 17:03:00,288 [DEBUG] PIL.PngImagePlugin: STREAM b'sBIT' 41 4
+2026-09-12 17:03:00,288 [DEBUG] PIL.PngImagePlugin: b'sBIT' 41 4 (unknown)
+2026-09-12 17:03:00,288 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 57 9
+2026-09-12 17:03:00,288 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 78 626

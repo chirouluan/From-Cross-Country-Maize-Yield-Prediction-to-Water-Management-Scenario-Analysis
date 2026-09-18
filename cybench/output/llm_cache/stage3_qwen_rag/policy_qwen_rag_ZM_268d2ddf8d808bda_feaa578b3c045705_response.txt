@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.75,
+  "stress_score_threshold": 0.75,
+  "max_water_proxy_shift_fraction": 0.5,
+  "max_actionable_features": 5,
+  "top_reported_stresses": 8,
+  "rationale": "Settings aligned with dataset constraints: no fertilizer/irrigation/cultivar data exists to support higher actionability counts or complex management shifts. Water proxy is the sole manipulatable variable, capped at 50% shift to prevent unrealistic hydrological extrapolation. Reference quantile and stress threshold set to 0.75 to balance sensitivity to extreme events (e.g., 2016 drought) against statistical robustness given the 994-row sample size. Top 8 stresses selected to cover the dominant predictors (temperature, water, radiation) without overfitting to rare events."
+}

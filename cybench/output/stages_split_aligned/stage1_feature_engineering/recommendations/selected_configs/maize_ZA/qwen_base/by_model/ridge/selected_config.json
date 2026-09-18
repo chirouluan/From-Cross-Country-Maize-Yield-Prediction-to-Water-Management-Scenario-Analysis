@@ -1,0 +1,41 @@
+{
+  "country": "ZA",
+  "advisor": "qwen_base",
+  "model": "ridge",
+  "candidate_id": "sample1_extreme_heat_drought_syndrome",
+  "selection_data": "calibration years only",
+  "selection_rule": "minimum mean pooled calibration MSE across 5 repeats under ridge",
+  "calibration_mse_mean": 1.5040802516671197,
+  "calibration_mse_variance": 0.0,
+  "config": {
+    "gdd_base_temp": {
+      "maize": 0.94
+    },
+    "gdd_upper_limit": {
+      "maize": 31.25
+    },
+    "stress_thresholds": {
+      "tmin": {
+        "operator": "<",
+        "threshold": 0.94,
+        "label": "tmin<0.94"
+      },
+      "tmax": {
+        "operator": ">",
+        "threshold": 31.25,
+        "label": "tmax>31.25"
+      },
+      "prec": {
+        "operator": "<",
+        "threshold": 1.0,
+        "label": "prec<1"
+      }
+    },
+    "include_fpar": true,
+    "include_ndvi": true,
+    "include_soil_moisture": true,
+    "veg_agg_method": "mean",
+    "soil_moisture_agg_method": "mean"
+  },
+  "selected_k": 60
+}

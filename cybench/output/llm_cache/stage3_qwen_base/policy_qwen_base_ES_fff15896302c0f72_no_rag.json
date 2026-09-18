@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.75,
+  "stress_score_threshold": 0.75,
+  "max_water_proxy_shift_fraction": 0.5,
+  "max_actionable_features": 5,
+  "top_reported_stresses": 8,
+  "rationale": "Settings retained at conservative defaults to ensure robustness given the limited dataset size (n=853) and the absence of explicit management treatments. The reference quantile (0.75) and stress threshold (0.75) align with the default policy to identify significant deviations without overfitting. The water proxy shift fraction (0.5) represents the maximum allowable perturbation for the sole modifiable variable, while the actionable feature limit (5) and stress count (8) balance comprehensiveness with statistical significance in a small sample."
+}

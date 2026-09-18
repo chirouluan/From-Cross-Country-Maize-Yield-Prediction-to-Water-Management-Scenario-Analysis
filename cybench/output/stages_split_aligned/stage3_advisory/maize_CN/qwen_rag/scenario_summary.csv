@@ -1,0 +1,3 @@
+scenario,n_location_years,mean_predicted_yield,mean_scenario_gain,n_stress_signals
+S1_observed_conditions,31,5.253103942652328,0.0,917
+S2_bounded_water_recovery,31,5.274550340501793,0.021446397849462253,917

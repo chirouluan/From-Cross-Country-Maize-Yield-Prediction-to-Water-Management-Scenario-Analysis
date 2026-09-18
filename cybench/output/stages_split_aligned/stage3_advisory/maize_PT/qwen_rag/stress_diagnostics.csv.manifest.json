@@ -1,0 +1,49 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T06:03:43.003055+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "stress_diagnostics",
+  "file": "stress_diagnostics.csv",
+  "sha256": "8e4a59dcd0c8f9e041f1effe808e95cbe26356b9e07def22b5bdc17d482a3a6f",
+  "rows": 630,
+  "columns": [
+    "row_index",
+    "adm_id",
+    "year",
+    "feature",
+    "feature_role",
+    "current_value",
+    "high_yield_reference",
+    "standardized_gap",
+    "model_importance",
+    "single_feature_yield_potential",
+    "stress_score"
+  ],
+  "dtypes": {
+    "row_index": "int64",
+    "adm_id": "object",
+    "year": "int64",
+    "feature": "object",
+    "feature_role": "object",
+    "current_value": "float64",
+    "high_yield_reference": "float64",
+    "standardized_gap": "float64",
+    "model_importance": "float64",
+    "single_feature_yield_potential": "float64",
+    "stress_score": "float64"
+  },
+  "metadata": {
+    "crop": "maize",
+    "country": "PT",
+    "feature_strategy": "qwen_rag",
+    "training_end_year_exclusive": 2020,
+    "decision_snapshot_rule": "latest_row_with_both_stage2_predictions",
+    "stage1_dataset_sha256": "eeeba4e8277cc19c42248911cb59b0f52bbcd39ae6095c85b88bc56d5304058c",
+    "strategy": "qwen_rag",
+    "stage2_tabpfn_base_sha256": "75a9db6d76696074e0403e917bea7969466b7e81eae299d0a5c9cdb5feaaec3c",
+    "stage2_tabpfn_base_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "stage2_tabpfn_cn_finetuned_sha256": "aee02e85480861b821baa6412d40072c7d82f6284c1a7e725ee0e555a9f4860d",
+    "stage2_tabpfn_cn_finetuned_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "policy": "qwen_rag"
+  }
+}

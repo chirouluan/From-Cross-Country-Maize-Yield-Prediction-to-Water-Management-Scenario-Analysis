@@ -1,0 +1,24 @@
+{
+  "step": "01_stage1_prepare",
+  "module": "cybench.stages.stage1_feature_engineering.prepare",
+  "command": [
+    "d:\\Anaconda\\envs\\specllm\\python.exe",
+    "-u",
+    "-m",
+    "cybench.stages.stage1_feature_engineering.prepare",
+    "--countries",
+    "CN,ZA,MX,PT",
+    "--advisors",
+    "hardcode,qwen_base,qwen_rag",
+    "--direct-candidates",
+    "--selection-repeats",
+    "5",
+    "--base-seed",
+    "42",
+    "--resume",
+    "--output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage1_feature_engineering\\recommendations"
+  ],
+  "return_code": 0,
+  "elapsed_seconds": 629.9743237495422
+}

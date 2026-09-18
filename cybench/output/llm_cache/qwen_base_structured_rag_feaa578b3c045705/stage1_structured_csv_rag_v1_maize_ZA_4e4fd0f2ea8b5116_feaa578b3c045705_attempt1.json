@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Subtropical to semi-arid Southern Hemisphere region characterized by summer rainfall, high evaporative demand, and strong spatial aridity gradients. Calibration data (2004-2016) indicates frequent water stress (prec < 0.37mm threshold residual < -0.30) and distinct frost/heat event days. Historical CSV retrieval confirms a bimodal regime distribution with 'hot_dry' years (e.g., 2015) showing extreme heat stress and 'cool_wet' years (e.g., 2006) showing high humidity, necessitating a hybrid approach to capture regime frequency.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Leverages the 2004-2016 calibration profile to define daily event thresholds for frost (tmin < 0°C), heat (tmax > 35°C), and moisture deficit (prec < 1mm), capturing the specific frequency of stress events observed in the 115 location-years without external bias.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 35
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "max"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Utilizes the structured CSV regime classification (cool_wet, hot_dry, long_dry_spell) to adjust thresholds dynamically based on the broad climate regime (e.g., lowering precipitation thresholds for 'hot_dry' years like 2015 or increasing GDD limits for 'cool_wet' years like 2006) to account for regime frequency.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 15
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 45
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 5
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 32
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.5
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Combines the local calibration event frequencies with historical regime medians to create robust thresholds (e.g., using median GDD ~2743 and median precipitation CV ~0.89) that balance sensitivity to local extremes while maintaining stability across the 2001-2016 historical window.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 12
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 40
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 4.36
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 31.58
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.37
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

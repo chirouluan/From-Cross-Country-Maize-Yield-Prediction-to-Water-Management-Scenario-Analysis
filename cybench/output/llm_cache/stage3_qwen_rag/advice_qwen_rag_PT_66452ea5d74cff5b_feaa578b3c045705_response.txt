@@ -1,0 +1,91 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "PT11",
+      "year": 2020,
+      "evidence_features": [
+        "median_cum_ndvi1",
+        "median_cum_ndvi2",
+        "median_cum_ndvi3",
+        "max_ssm5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (max_ssm5) is managed to recover from 6.656 to 6.4942 and precipitation deficits are addressed, a potential yield gain of 0.0307 is modeled. Concurrent monitoring of NDVI trends (gaps of 1.3065, 2.1637, 1.7419) is advised to verify crop state recovery.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability. No direct control over NDVI or temperature."
+    },
+    {
+      "adm_id": "PT15",
+      "year": 2020,
+      "evidence_features": [
+        "max_ssm5",
+        "mean_tmin3",
+        "median_cum_ndvi3",
+        "max_ssm6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "drainage_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (max_ssm5, max_ssm6) is adjusted to reduce stress (gaps 0.8748, 0.9693) and temperature hazards (mean_tmin3 gap 0.6307) are managed, a potential yield gain of 0.3485 is modeled. Drainage assessment is recommended given the high water proxy gap.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability. No direct control over NDVI or temperature."
+    },
+    {
+      "adm_id": "PT16",
+      "year": 2020,
+      "evidence_features": [
+        "max_ssm2",
+        "mean_tmin1",
+        "max_cum_gdd2",
+        "mean_tmin7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (max_ssm2) is managed to recover from 5.362 to 5.5485 and sowing timing is reviewed to mitigate temperature hazards (max_cum_gdd2 gap 3.8181), a potential yield gain of 0.1299 is modeled.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability. No direct control over NDVI or temperature."
+    },
+    {
+      "adm_id": "PT17",
+      "year": 2020,
+      "evidence_features": [
+        "mean_tmin3",
+        "tmax>33p6",
+        "mean_tmin8",
+        "mean_tmin7"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if sowing window is reviewed to mitigate temperature hazards (tmax>33p6 gap 0.4, mean_tmin7 gap 3.099), a potential yield gain of 0.0454 is modeled. Cultivar review is advised for heat tolerance.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability. No direct control over NDVI or temperature."
+    },
+    {
+      "adm_id": "PT18",
+      "year": 2020,
+      "evidence_features": [
+        "mean_cum_cwb8",
+        "mean_tmin7",
+        "median_cum_ndvi2",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "drainage_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (mean_cum_cwb8, mean_cum_cwb5) is managed to recover from negative values and precipitation deficits are addressed, a potential yield gain of 0.0959 is modeled. Drainage assessment is recommended given the water proxy context.",
+      "limitations": "Data is observational; implementation requires agronomist review of local costs and water availability. No direct control over NDVI or temperature."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

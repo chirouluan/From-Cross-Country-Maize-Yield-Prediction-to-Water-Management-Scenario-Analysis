@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "The ZM calibration profile (2004-2013) depicts a tropical Southern Hemisphere plateau with distinct dry/wet seasons and low frost risk. Mean temperatures are moderate (tavg ~23°C), but the distribution is skewed with significant heat stress events (tmax >33°C). Yield residuals show a statistically significant negative correlation with extreme tmax events, indicating heat stress is a primary yield-limiting factor rather than low temperature or moisture deficit in the calibrated period.",
+  "candidates": [
+    {
+      "candidate_id": "heat_stress_tmax_95pct",
+      "agronomic_rationale": "Targets the 95th percentile of historical tmax (34.57°C) identified in residual analysis as a strong negative driver of yield. Filters days exceeding this threshold to isolate extreme heat events likely causing pollen sterility or kernel abortion without including moderate heat days that may be physiologically tolerable.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 34.57
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 15.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 34.57
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "heat_stress_tmax_90pct",
+      "agronomic_rationale": "Utilizes the 90th percentile of historical tmax (33.39°C) as the stress threshold. This captures a broader range of heat-stress days compared to the 95th percentile, potentially improving signal-to-noise ratio for yield prediction while maintaining the directionally stable negative residual observed at this threshold level.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 33.39
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 15.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 33.39
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "dry_stress_prec_median",
+      "agronomic_rationale": "Focuses on precipitation deficits relative to the median daily rainfall (1.12 mm) during the dry season. While the calibration shows low overall precipitation, the specific residual evidence highlights temperature; however, this candidate isolates drought stress by flagging days below median rain, complementing the heat stress features for a comprehensive water/heat stress model.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 15.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 30.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.12
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:32:40.688131+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_predictions",
+  "file": "inner_candidate_predictions_qwen_rag_svr.csv",
+  "sha256": "1828739613bda81db1c3520fa16367293d3fb6b7ec1c010ff828aad2d4539394",
+  "rows": 200,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "rag1_rag_historical_regime",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "rag1_rag_historical_regime": "float64",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "PT",
+    "advisor": "qwen_rag",
+    "model": "svr",
+    "years": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ]
+  }
+}

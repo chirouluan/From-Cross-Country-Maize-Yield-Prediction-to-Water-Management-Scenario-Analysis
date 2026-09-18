@@ -1,0 +1,50 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:42:45.095283+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "repeated_metrics_mean_variance",
+  "file": "metrics_summary.csv",
+  "sha256": "cff9238462c36ce056c587098fbdac0f7dfbfe7a56417ca9730154b178591525",
+  "rows": 120,
+  "columns": [
+    "country",
+    "advisor",
+    "model",
+    "candidate_id",
+    "selected_k",
+    "split",
+    "mape_mean",
+    "normalized_rmse_mean",
+    "r_mean",
+    "r2_mean",
+    "kge_mean",
+    "mape_variance",
+    "normalized_rmse_variance",
+    "r_variance",
+    "r2_variance",
+    "kge_variance"
+  ],
+  "dtypes": {
+    "country": "object",
+    "advisor": "object",
+    "model": "object",
+    "candidate_id": "object",
+    "selected_k": "int64",
+    "split": "object",
+    "mape_mean": "float64",
+    "normalized_rmse_mean": "float64",
+    "r_mean": "float64",
+    "r2_mean": "float64",
+    "kge_mean": "float64",
+    "mape_variance": "float64",
+    "normalized_rmse_variance": "float64",
+    "r_variance": "float64",
+    "r2_variance": "float64",
+    "kge_variance": "float64"
+  },
+  "metadata": {
+    "repeats": 5,
+    "variance_ddof": 1,
+    "base_seed": 42
+  }
+}

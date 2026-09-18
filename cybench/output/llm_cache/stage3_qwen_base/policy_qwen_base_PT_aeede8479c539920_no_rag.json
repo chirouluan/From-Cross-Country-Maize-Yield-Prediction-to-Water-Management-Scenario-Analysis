@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.85,
+  "stress_score_threshold": 1.2,
+  "max_water_proxy_shift_fraction": 0.3,
+  "max_actionable_features": 3,
+  "top_reported_stresses": 6,
+  "rationale": "Settings adjusted to conservative levels: reference_yield_quantile raised to 0.85 to focus on high-performing baselines; stress_score_threshold increased to 1.2 to filter out mild anomalies; max_water_proxy_shift_fraction reduced to 0.3 to limit counterfactual water manipulation within realistic bounds; max_actionable_features set to 3 to prioritize the most critical stressors among the available weather, soil, and remote-sensing predictors; top_reported_stresses limited to 6 to ensure clarity given the small dataset size (n=88)."
+}

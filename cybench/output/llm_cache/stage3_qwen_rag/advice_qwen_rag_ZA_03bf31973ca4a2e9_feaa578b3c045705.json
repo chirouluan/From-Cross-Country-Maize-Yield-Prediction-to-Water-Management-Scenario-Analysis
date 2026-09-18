@@ -1,0 +1,109 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZA-A1-0001",
+      "year": 2022,
+      "evidence_features": [
+        "tmin<5p7",
+        "prec<0.5p7",
+        "mean_cum_fpar12",
+        "mean_tavg6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "sowing_window_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture is recoverable, irrigation_assessment may mitigate the water_proxy gap (prec<0.5p7). If temperatures remain low (tmin<5p7), sowing_window_review is needed to align with thermal requirements. Field_monitoring is required to verify crop_state_indicator (mean_cum_fpar12) before committing to interventions.",
+      "limitations": "Data and implementation boundary: temperature_hazard (tmin<5p7, mean_tavg6) and crop_state_indicator (mean_cum_fpar12) cannot be directly changed; observed scenario gain is 0.0189; local agronomist review required."
+    },
+    {
+      "adm_id": "ZA-A1-0003",
+      "year": 2022,
+      "evidence_features": [
+        "mean_prec8",
+        "max_cum_prec9",
+        "mean_rad8",
+        "mean_tmin12"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: significant water_proxy gaps (mean_prec8, max_cum_prec9) suggest irrigation_assessment or soil_water_conservation if water availability can be managed. Temperature hazard (mean_tmin12) and radiation hazard (mean_rad8) cannot be altered; field_monitoring is essential to assess crop response to water recovery.",
+      "limitations": "Data and implementation boundary: temperature_hazard and radiation_hazard cannot be directly changed; observed scenario gain is 0.2677; local agronomist review required."
+    },
+    {
+      "adm_id": "ZA-A1-0004",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_cwb9",
+        "mean_prec8",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: large water_proxy gaps (max_cum_prec9, mean_prec8, max_cum_prec8) indicate potential for irrigation_assessment or soil_water_conservation. Water proxy (mean_cum_cwb9) cannot be directly changed; field_monitoring is required to validate recovery potential.",
+      "limitations": "Data and implementation boundary: water_proxy values cannot be directly changed; observed scenario gain is 0.0393; local agronomist review required."
+    },
+    {
+      "adm_id": "ZA-A1-0005",
+      "year": 2022,
+      "evidence_features": [
+        "mean_cum_fpar12",
+        "mean_cum_cwb9",
+        "mean_cum_fpar11",
+        "mean_cum_ndvi9"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: crop_state_indicator gaps (mean_cum_fpar12, mean_cum_fpar11, mean_cum_ndvi9) suggest stress_tolerant_cultivar_review if growth potential is constrained. Water proxy (mean_cum_cwb9) cannot be directly changed; field_monitoring is required to assess current crop status.",
+      "limitations": "Data and implementation boundary: water_proxy and crop_state_indicator values cannot be directly changed; observed scenario gain is 0.0263; local agronomist review required."
+    },
+    {
+      "adm_id": "ZA-A1-0006",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_fpar12",
+        "prec<0.5p8",
+        "mean_prec8",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: significant water_proxy gaps (max_cum_prec9, prec<0.5p8, mean_prec8, max_cum_prec8) suggest irrigation_assessment or soil_water_conservation. Crop state (mean_cum_fpar12) cannot be directly changed; field_monitoring is required to verify recovery.",
+      "limitations": "Data and implementation boundary: water_proxy and crop_state_indicator values cannot be directly changed; observed scenario gain is 0.2085; local agronomist review required."
+    },
+    {
+      "adm_id": "ZA-A1-0009",
+      "year": 2022,
+      "evidence_features": [
+        "tmax>32p12",
+        "tmax>32p9",
+        "mean_cum_fpar11",
+        "mean_tavg12"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: temperature_hazard gaps (tmax>32p12, tmax>32p9, mean_tavg12) suggest sowing_window_review to avoid heat stress or stress_tolerant_cultivar_review if heat tolerance is needed. Crop state (mean_cum_fpar11) cannot be directly changed; field_monitoring is required to assess crop health.",
+      "limitations": "Data and implementation boundary: temperature_hazard and crop_state_indicator values cannot be directly changed; observed scenario gain is 0.0657; local agronomist review required."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

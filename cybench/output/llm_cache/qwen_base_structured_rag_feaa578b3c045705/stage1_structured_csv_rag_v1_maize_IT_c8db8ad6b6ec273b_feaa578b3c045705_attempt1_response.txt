@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Italy (IT) exhibits a Mediterranean to temperate Alpine gradient. Historical records (2001-2015) indicate a cool-wet regime (mean_temp ~14.6°C, precip ~701mm) and a hot-dry regime (mean_temp ~15.1°C, precip ~551mm) with extreme heat stress potential (tmax >35°C days: 53-15 median). Calibration data (2003-2015) confirms low precipitation frequency (median 0.31mm/day) and cold stress risk (tmin <0°C days: ~20/year). The selected thresholds balance these opposing seasonal stresses while respecting physical limits for maize growth.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Derived strictly from the 2003-2015 calibration period (102 locations, 1135 location-years). Uses local quantiles to define stress thresholds relevant to the specific dataset's distribution, capturing the co-occurrence of cold snaps and summer heat/drought events observed in the training data.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -2.29
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 29.27
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.007
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Constructed from structured CSV records (2001-2015) representing distinct climate regimes. Prioritizes the 'hot_dry' regime (2003) to capture severe water limitation (precip ~551mm, tmax>35°C days: 53) and the 'cool_wet' regime (2010) to capture cold stress risks (tmin<0°C days: 72). Thresholds are set to detect deviations from the historical median behavior of the top-ranked regimes.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 35.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 10.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "max"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "max"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Synthesizes local calibration quantiles with robust historical regime statistics to mitigate overfitting to a single year's noise. Combines the local cold stress threshold (tmin<0°C) with the historical 'hot_dry' extreme heat threshold (tmax>35°C) and a precipitation threshold (prec<1mm) derived from the median dry-day frequency of the cool-wet regime, ensuring coverage of both seasonal extremes.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 8.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 32.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 35.0
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

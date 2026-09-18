@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "Southern Hemisphere subtropical/semi-arid maize production characterized by summer rainfall, high evaporative demand, and severe spatial aridity gradients. The calibration data (2004-2016) reveals a distinct deficit regime where precipitation thresholds <1.0 mm/day consistently yield negative yield residuals, indicating water stress is the primary limiting factor. Thermal constraints are less severe, with tmin thresholds <4.36°C showing negative residuals, suggesting frost risk exists but is secondary to aridity. GDD accumulation must account for the wide diurnal range (tmin mean 12.2°C, tmax mean 25.4°C) typical of this region.",
+  "candidates": [
+    {
+      "candidate_id": "ZAR_Frost_Aridity_Strict",
+      "agronomic_rationale": "Prioritizes the most statistically significant cold stress threshold (tmin < 4.36°C) identified in calibration, which consistently reduces yields. Couples this with the median precipitation threshold (0.367 mm/day) to capture the onset of aridity without over-penalizing minor dry spells, and sets a high tmax limit to avoid penalizing necessary heat accumulation in a hot summer climate.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 8.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 35.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 4.36
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 36.71
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.37
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "ZAR_Dry_Summer_Heat",
+      "agronomic_rationale": "Focuses on the critical aridity regime where precipitation <1.0 mm/day (mean days: 112.41) drives the largest negative yield residuals. This feature captures the chronic water deficit typical of semi-arid zones. It uses a moderate tmin threshold (5.0°C) to balance frost protection with the need for warm soil temperatures, and a high tmax limit (31.58°C) to allow for high evaporative cooling during peak summer heat.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 9.37
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 31.58
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 5.0
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 31.58
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 1.0
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "mean"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "ZAR_Extreme_Heat_Drought",
+      "agronomic_rationale": "Targets the extreme end of the aridity spectrum (prec < 0.01 mm/day) where yield residuals are significantly negative, representing catastrophic drought conditions. This feature is designed to flag years with near-zero rainfall. It pairs this with the highest significant cold threshold (tmin < 2.43°C) to protect against rare freezing events and a very high tmax limit (34.62°C) to account for the upper tail of temperature distribution observed in the calibration max values.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 10.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 34.62
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 2.43
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 34.62
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.01
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

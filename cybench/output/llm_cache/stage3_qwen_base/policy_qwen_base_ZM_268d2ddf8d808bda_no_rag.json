@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.75,
+  "stress_score_threshold": 0.75,
+  "max_water_proxy_shift_fraction": 0.5,
+  "max_actionable_features": 5,
+  "top_reported_stresses": 8,
+  "rationale": "Settings retained at conservative defaults to ensure robustness given the absence of explicit management treatments (fertilizer, irrigation, cultivar). The water_proxy shift fraction is capped at 0.5 to prevent unrealistic counterfactuals derived solely from weather/soil data. Feature limits (5) and stress thresholds (0.75) align with the dataset's feature distribution, prioritizing temperature and water hazards while excluding non-existent management variables."
+}

@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.85,
+  "stress_score_threshold": 1.2,
+  "max_water_proxy_shift_fraction": 0.3,
+  "max_actionable_features": 3,
+  "top_reported_stresses": 6,
+  "rationale": "Conservative settings selected to prevent overfitting to noise in the predictor-only dataset. The reference yield quantile (0.85) is tightened from the default 0.75 to ensure only high-performing historical years serve as baselines, reducing false positives. The stress threshold (1.2) is raised from 0.75 to filter out marginal deviations, focusing only on severe stress events. The water proxy shift fraction (0.3) is reduced from 0.5 to maintain physical plausibility given the limited water_proxy count (35) relative to total rows, avoiding unrealistic counterfactuals. Actionable features are capped at 3 (down from 5) to prioritize the most significant predictors (temperature_hazard, water_proxy, crop_state_indicator) and avoid spurious correlations. Top reported stresses are limited to 6 (down from 8) to ensure the report highlights only the most robust, statistically significant stress drivers identified in the climate RAG."
+}

@@ -1,0 +1,40 @@
+{
+  "country": "PT",
+  "advisor": "qwen_rag",
+  "candidate_id": "rag1_rag_historical_regime",
+  "selection_data": "calibration years only",
+  "selection_rule": "minimum mean pooled calibration MSE across 5 repeats under ridge",
+  "calibration_mse_mean": 3.617381135984644,
+  "calibration_mse_variance": 0.0,
+  "config": {
+    "gdd_base_temp": {
+      "maize": 10.0
+    },
+    "gdd_upper_limit": {
+      "maize": 50.0
+    },
+    "stress_thresholds": {
+      "tmin": {
+        "operator": "<",
+        "threshold": -2.0,
+        "label": "tmin<-2"
+      },
+      "tmax": {
+        "operator": ">",
+        "threshold": 33.0,
+        "label": "tmax>33"
+      },
+      "prec": {
+        "operator": "<",
+        "threshold": 2.0,
+        "label": "prec<2"
+      }
+    },
+    "include_fpar": true,
+    "include_ndvi": true,
+    "include_soil_moisture": true,
+    "veg_agg_method": "median",
+    "soil_moisture_agg_method": "max"
+  },
+  "selected_k": 60
+}

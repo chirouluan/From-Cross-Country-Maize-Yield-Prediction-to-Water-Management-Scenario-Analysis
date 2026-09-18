@@ -1,0 +1,43 @@
+{
+  "completed_at": "2026-09-15T14:07:33.750911",
+  "countries": [
+    "CN",
+    "ZA",
+    "MX",
+    "PT"
+  ],
+  "advisors": [
+    "hardcode",
+    "qwen_base",
+    "qwen_rag"
+  ],
+  "models": [
+    "ridge",
+    "xgboost",
+    "svr",
+    "cnn1d",
+    "transformer_flat"
+  ],
+  "repeats": 5,
+  "base_seed": 42,
+  "audit": [
+    {
+      "stage": "stage1",
+      "files": 60,
+      "expected_files": 60,
+      "invalid_files": 0
+    },
+    {
+      "stage": "stage2",
+      "files": 8,
+      "expected_files": 8,
+      "invalid_files": 0
+    },
+    {
+      "stage": "stage3",
+      "files": 4,
+      "expected_files": 4,
+      "invalid_files": 0
+    }
+  ]
+}

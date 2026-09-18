@@ -1,0 +1,760 @@
+{
+  "prompt_version": "stage1_structured_csv_rag_v1",
+  "advisor": "qwen_rag",
+  "model_variant": "qwen_base",
+  "sampling": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "country": "ZA",
+  "used_fallback": false,
+  "raw_attempts": [
+    {
+      "regional_assessment": "Subtropical to semi-arid Southern Hemisphere region characterized by summer rainfall, high evaporative demand, and strong spatial aridity gradients. Calibration data (2004-2016) indicates frequent water stress (prec < 0.37mm threshold residual < -0.30) and distinct frost/heat event days. Historical CSV retrieval confirms a bimodal regime distribution with 'hot_dry' years (e.g., 2015) showing extreme heat stress and 'cool_wet' years (e.g., 2006) showing high humidity, necessitating a hybrid approach to capture regime frequency.",
+      "candidates": [
+        {
+          "candidate_id": "rag_local_profile",
+          "agronomic_rationale": "Leverages the 2004-2016 calibration profile to define daily event thresholds for frost (tmin < 0°C), heat (tmax > 35°C), and moisture deficit (prec < 1mm), capturing the specific frequency of stress events observed in the 115 location-years without external bias.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 10
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 35
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": 0
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 35
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 1
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "max"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "mean"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        },
+        {
+          "candidate_id": "rag_historical_regime",
+          "agronomic_rationale": "Utilizes the structured CSV regime classification (cool_wet, hot_dry, long_dry_spell) to adjust thresholds dynamically based on the broad climate regime (e.g., lowering precipitation thresholds for 'hot_dry' years like 2015 or increasing GDD limits for 'cool_wet' years like 2006) to account for regime frequency.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 15
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 45
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": 5
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 32
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 0.5
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "mean"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "mean"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        },
+        {
+          "candidate_id": "rag_robust_hybrid",
+          "agronomic_rationale": "Combines the local calibration event frequencies with historical regime medians to create robust thresholds (e.g., using median GDD ~2743 and median precipitation CV ~0.89) that balance sensitivity to local extremes while maintaining stability across the 2001-2016 historical window.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 12
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 40
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": 4.36
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 31.58
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 0.37
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "median"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "mean"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        }
+      ]
+    }
+  ],
+  "climate_profile": {
+    "calibration_end_year": 2016,
+    "n_locations": 9,
+    "n_location_years": 115,
+    "year_range": [
+      2004,
+      2016
+    ],
+    "weather": {
+      "tmin": {
+        "mean": 12.219349205582654,
+        "std": 4.398850958263232,
+        "min": -2.93,
+        "q05": 4.3649,
+        "q10": 5.997,
+        "q25": 9.0735,
+        "median": 12.844,
+        "q75": 15.53,
+        "q90": 17.436,
+        "q95": 18.663700000000002,
+        "max": 24.528
+      },
+      "tmax": {
+        "mean": 25.396053073839763,
+        "std": 5.129740730916037,
+        "min": 5.347,
+        "q05": 16.0308,
+        "q10": 18.3092,
+        "q25": 22.128,
+        "median": 25.909,
+        "q75": 29.032,
+        "q90": 31.581,
+        "q95": 33.0887,
+        "max": 41.979
+      },
+      "tavg": {
+        "mean": 18.037049741633265,
+        "std": 4.635939320942513,
+        "min": 1.678,
+        "q05": 9.8556,
+        "q10": 11.5542,
+        "q25": 14.8015,
+        "median": 18.563,
+        "q75": 21.3245,
+        "q90": 23.6504,
+        "q95": 25.089900000000004,
+        "max": 34.637
+      },
+      "prec": {
+        "mean": 2.2538164871782493,
+        "std": 4.29361023026761,
+        "min": 0.0,
+        "q05": 0.0,
+        "q10": 0.0,
+        "q25": 0.007,
+        "median": 0.367,
+        "q75": 2.4215,
+        "q90": 7.143200000000005,
+        "q95": 11.131800000000002,
+        "max": 60.333
+      },
+      "rad": {
+        "mean": 22008575.11715241,
+        "std": 5728168.998972416,
+        "min": 1653332.125,
+        "q05": 11557848.5,
+        "q10": 14332079.2,
+        "q25": 18141423.0,
+        "median": 22521476.0,
+        "q75": 26438337.0,
+        "q90": 29074383.2,
+        "q95": 30416229.8,
+        "max": 34420024.0
+      },
+      "cwb": {
+        "mean": -2.7943683778432415,
+        "std": 4.955630277143038,
+        "min": -10.682,
+        "q05": -7.421,
+        "q10": -6.798,
+        "q25": -5.6515,
+        "median": -4.056,
+        "q75": -1.8805,
+        "q90": 2.821,
+        "q95": 7.1687,
+        "max": 59.284
+      }
+    },
+    "yield": {
+      "mean": 5.681278260869565,
+      "std": 2.544295899388684,
+      "min": 1.858,
+      "q05": 2.7446,
+      "q10": 3.1231999999999998,
+      "q25": 4.0425,
+      "median": 5.06,
+      "q75": 6.0,
+      "q90": 10.0,
+      "q95": 11.5,
+      "max": 12.0
+    },
+    "crop_season_event_days": {
+      "tmin_below_0": 0.2956521739130435,
+      "tmax_above_35": 3.226086956521739,
+      "prec_below_1": 112.40869565217392
+    }
+  },
+  "stress_threshold_evidence": {
+    "tmin": {
+      "4.36": {
+        "residual_r": -0.2660837069622259,
+        "ci_low": -0.40838921176705206,
+        "ci_high": -0.10639682713014861,
+        "mean_days": 9.0,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "5.0": {
+        "residual_r": -0.20615797326911367,
+        "ci_low": -0.35984087567975315,
+        "ci_high": -0.025485608241812705,
+        "mean_days": 11.91304347826087,
+        "n_location_years": 115,
+        "usable": true
+      }
+    },
+    "tmax": {
+      "31.58": {
+        "residual_r": -0.21901484396813267,
+        "ci_low": -0.42513202039359244,
+        "ci_high": -0.015107780504548944,
+        "mean_days": 18.017391304347825,
+        "n_location_years": 115,
+        "usable": true
+      }
+    },
+    "prec": {
+      "0.01": {
+        "residual_r": -0.27059097222388123,
+        "ci_low": -0.44764985484490466,
+        "ci_high": -0.03128114823671042,
+        "mean_days": 46.756521739130434,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "0.37": {
+        "residual_r": -0.345020209872735,
+        "ci_low": -0.48475128578920124,
+        "ci_high": -0.15348296370183712,
+        "mean_days": 90.14782608695653,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "0.5": {
+        "residual_r": -0.33988017045096447,
+        "ci_low": -0.5299069830042883,
+        "ci_high": -0.15980683233368687,
+        "mean_days": 96.03478260869565,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "1.0": {
+        "residual_r": -0.3515987648447467,
+        "ci_low": -0.5201211196372768,
+        "ci_high": -0.17088482508874545,
+        "mean_days": 112.40869565217392,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "2.0": {
+        "residual_r": -0.3693055649403141,
+        "ci_low": -0.5529423394650279,
+        "ci_high": -0.18978667828011986,
+        "mean_days": 130.08695652173913,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "2.42": {
+        "residual_r": -0.3273851787332866,
+        "ci_low": -0.5479391483791821,
+        "ci_high": -0.11964556596186286,
+        "mean_days": 135.02608695652174,
+        "n_location_years": 115,
+        "usable": true
+      },
+      "5.0": {
+        "residual_r": -0.25629920813744395,
+        "ci_low": -0.42848122357888146,
+        "ci_high": -0.015362744505910192,
+        "mean_days": 153.2,
+        "n_location_years": 115,
+        "usable": true
+      }
+    }
+  },
+  "retrieval": {
+    "retrieval_method": "exact CSV filters + robust scalar regime ranking (no embeddings)",
+    "query": {
+      "country_code": "ZA",
+      "crop": "maize",
+      "year_lte": 2016,
+      "coverage_min_gte": 0.9
+    },
+    "information_boundary": "predictor-only climate rows through calibration_end_year",
+    "source": {
+      "path": "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\Climate_rag_knowledge_base\\processed\\climate_rag_metrics.csv",
+      "sha256": "feaa578b3c04570527c33b90dadcd1da990d9ed222fbdfa4377923df369d1ce8",
+      "schema_duplicate_audit": {
+        "year.1": {
+          "canonical": "year",
+          "identical": true
+        },
+        "coverage_min.1": {
+          "canonical": "coverage_min",
+          "identical": true
+        }
+      }
+    },
+    "eligible_row_count": 16,
+    "eligible_year_range": [
+      2001,
+      2016
+    ],
+    "summary": {
+      "mean_temp_c": {
+        "median": 17.125,
+        "q10": 16.405,
+        "q90": 17.810000000000002
+      },
+      "mean_daily_tmax_c": {
+        "median": 25.845,
+        "q10": 24.795,
+        "q90": 26.564999999999998
+      },
+      "mean_daily_tmin_c": {
+        "median": 9.5,
+        "q10": 9.135,
+        "q90": 10.31
+      },
+      "annual_max_tmax_c": {
+        "median": 36.415,
+        "q10": 35.6,
+        "q90": 38.42
+      },
+      "annual_min_tmin_c": {
+        "median": -4.255,
+        "q10": -5.465,
+        "q90": -2.8200000000000003
+      },
+      "annual_precip_mm": {
+        "median": 542.245,
+        "q10": 387.925,
+        "q90": 678.7049999999999
+      },
+      "daily_precip_p95_mm": {
+        "median": 7.365,
+        "q10": 5.665,
+        "q90": 9.190000000000001
+      },
+      "wet_days_ge_1mm": {
+        "median": 106.0,
+        "q10": 77.0,
+        "q90": 124.5
+      },
+      "heavy_precip_days_ge_20mm": {
+        "median": 2.0,
+        "q10": 1.0,
+        "q90": 4.5
+      },
+      "dry_days_lt_1mm": {
+        "median": 259.5,
+        "q10": 241.0,
+        "q90": 288.5
+      },
+      "max_consecutive_dry_days": {
+        "median": 59.0,
+        "q10": 41.0,
+        "q90": 109.5
+      },
+      "frost_days_tmin_lt_0c": {
+        "median": 16.5,
+        "q10": 9.0,
+        "q90": 28.0
+      },
+      "heat_days_tmax_gt_35c": {
+        "median": 5.0,
+        "q10": 2.0,
+        "q90": 21.0
+      },
+      "gdd10_c_day": {
+        "median": 2743.3050000000003,
+        "q10": 2513.3050000000003,
+        "q90": 2939.2349999999997
+      },
+      "mean_relative_humidity_pct": {
+        "median": 52.724999999999994,
+        "q10": 48.925,
+        "q90": 57.295
+      },
+      "mean_dewpoint_c": {
+        "median": 5.609999999999999,
+        "q10": 4.345,
+        "q90": 6.505
+      },
+      "mean_vpd_kpa_approx": {
+        "median": 0.955,
+        "q10": 0.8625,
+        "q90": 1.095
+      },
+      "vpd_p95_kpa_approx": {
+        "median": 1.7850000000000001,
+        "q10": 1.651,
+        "q90": 2.0615
+      },
+      "mean_solar_radiation_mj_m2_day": {
+        "median": 20.725,
+        "q10": 19.945,
+        "q90": 21.23
+      },
+      "annual_solar_radiation_mj_m2": {
+        "median": 7574.24,
+        "q10": 7280.424999999999,
+        "q90": 7749.68
+      },
+      "mean_wind_speed_m_s": {
+        "median": 3.6399999999999997,
+        "q10": 3.515,
+        "q90": 3.79
+      },
+      "hottest_month": {
+        "median": 2.0,
+        "q10": 1.0,
+        "q90": 12.0
+      },
+      "wettest_month": {
+        "median": 10.5,
+        "q10": 1.0,
+        "q90": 12.0
+      },
+      "driest_month": {
+        "median": 7.0,
+        "q10": 5.0,
+        "q90": 8.0
+      },
+      "monthly_precip_cv": {
+        "median": 0.8905000000000001,
+        "q10": 0.7335,
+        "q90": 0.998
+      }
+    },
+    "retrieved_rows": [
+      {
+        "parent_id": "ZA_maize_2006",
+        "country": "South Africa",
+        "country_zh": "南非",
+        "country_code": "ZA",
+        "crop": "maize",
+        "year": 2006,
+        "latitude": -27.29625,
+        "longitude": 27.73819,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 15.96,
+        "mean_daily_tmax_c": 23.98,
+        "mean_daily_tmin_c": 9.18,
+        "annual_max_tmax_c": 36.42,
+        "annual_min_tmin_c": -2.69,
+        "annual_precip_mm": 774.51,
+        "daily_precip_p95_mm": 11.36,
+        "wet_days_ge_1mm": 139,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 226,
+        "max_consecutive_dry_days": 72,
+        "frost_days_tmin_lt_0c": 28,
+        "heat_days_tmax_gt_35c": 4,
+        "gdd10_c_day": 2354.49,
+        "mean_relative_humidity_pct": 61.68,
+        "mean_dewpoint_c": 7.04,
+        "mean_vpd_kpa_approx": 0.736,
+        "vpd_p95_kpa_approx": 1.556,
+        "mean_solar_radiation_mj_m2_day": 19.36,
+        "annual_solar_radiation_mj_m2": 7068.16,
+        "mean_wind_speed_m_s": 3.46,
+        "hottest_month": 12,
+        "wettest_month": 1,
+        "driest_month": 7,
+        "monthly_precip_cv": 0.928,
+        "retrieval_role": "cool_wet",
+        "retrieval_score": 6.609482935103162
+      },
+      {
+        "parent_id": "ZA_maize_2015",
+        "country": "South Africa",
+        "country_zh": "南非",
+        "country_code": "ZA",
+        "crop": "maize",
+        "year": 2015,
+        "latitude": -27.29625,
+        "longitude": 27.73819,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 18.34,
+        "mean_daily_tmax_c": 27.24,
+        "mean_daily_tmin_c": 10.44,
+        "annual_max_tmax_c": 39.29,
+        "annual_min_tmin_c": -4.34,
+        "annual_precip_mm": 292.13,
+        "daily_precip_p95_mm": 4.86,
+        "wet_days_ge_1mm": 47,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 318,
+        "max_consecutive_dry_days": 41,
+        "frost_days_tmin_lt_0c": 11,
+        "heat_days_tmax_gt_35c": 30,
+        "gdd10_c_day": 3134.24,
+        "mean_relative_humidity_pct": 46.21,
+        "mean_dewpoint_c": 4.26,
+        "mean_vpd_kpa_approx": 1.236,
+        "vpd_p95_kpa_approx": 2.291,
+        "mean_solar_radiation_mj_m2_day": 21.31,
+        "annual_solar_radiation_mj_m2": 7779.63,
+        "mean_wind_speed_m_s": 3.67,
+        "hottest_month": 12,
+        "wettest_month": 3,
+        "driest_month": 8,
+        "monthly_precip_cv": 0.854,
+        "retrieval_role": "hot_dry",
+        "retrieval_score": 21.341712006487228
+      },
+      {
+        "parent_id": "ZA_maize_2010",
+        "country": "South Africa",
+        "country_zh": "南非",
+        "country_code": "ZA",
+        "crop": "maize",
+        "year": 2010,
+        "latitude": -27.29625,
+        "longitude": 27.73819,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 17.39,
+        "mean_daily_tmax_c": 25.76,
+        "mean_daily_tmin_c": 10.16,
+        "annual_max_tmax_c": 35.09,
+        "annual_min_tmin_c": -4.89,
+        "annual_precip_mm": 692.01,
+        "daily_precip_p95_mm": 8.66,
+        "wet_days_ge_1mm": 107,
+        "heavy_precip_days_ge_20mm": 5,
+        "dry_days_lt_1mm": 258,
+        "max_consecutive_dry_days": 117,
+        "frost_days_tmin_lt_0c": 17,
+        "heat_days_tmax_gt_35c": 1,
+        "gdd10_c_day": 2811.17,
+        "mean_relative_humidity_pct": 55.47,
+        "mean_dewpoint_c": 6.39,
+        "mean_vpd_kpa_approx": 0.933,
+        "vpd_p95_kpa_approx": 1.839,
+        "mean_solar_radiation_mj_m2_day": 20.25,
+        "annual_solar_radiation_mj_m2": 7392.45,
+        "mean_wind_speed_m_s": 3.65,
+        "hottest_month": 2,
+        "wettest_month": 12,
+        "driest_month": 7,
+        "monthly_precip_cv": 1.259,
+        "retrieval_role": "long_dry_spell",
+        "retrieval_score": 1.9661016949152543
+      },
+      {
+        "parent_id": "ZA_maize_2012",
+        "country": "South Africa",
+        "country_zh": "南非",
+        "country_code": "ZA",
+        "crop": "maize",
+        "year": 2012,
+        "latitude": -27.29625,
+        "longitude": 27.73819,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 366,
+        "mean_temp_c": 16.89,
+        "mean_daily_tmax_c": 25.69,
+        "mean_daily_tmin_c": 9.28,
+        "annual_max_tmax_c": 36.11,
+        "annual_min_tmin_c": -3.78,
+        "annual_precip_mm": 525.93,
+        "daily_precip_p95_mm": 7.1,
+        "wet_days_ge_1mm": 105,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 261,
+        "max_consecutive_dry_days": 58,
+        "frost_days_tmin_lt_0c": 22,
+        "heat_days_tmax_gt_35c": 6,
+        "gdd10_c_day": 2661.16,
+        "mean_relative_humidity_pct": 51.23,
+        "mean_dewpoint_c": 4.79,
+        "mean_vpd_kpa_approx": 0.98,
+        "vpd_p95_kpa_approx": 1.726,
+        "mean_solar_radiation_mj_m2_day": 20.89,
+        "annual_solar_radiation_mj_m2": 7645.83,
+        "mean_wind_speed_m_s": 3.7,
+        "hottest_month": 1,
+        "wettest_month": 12,
+        "driest_month": 5,
+        "monthly_precip_cv": 0.941,
+        "retrieval_role": "typical",
+        "retrieval_score": 0.23137701025565288
+      },
+      {
+        "parent_id": "ZA_maize_2004",
+        "country": "South Africa",
+        "country_zh": "南非",
+        "country_code": "ZA",
+        "crop": "maize",
+        "year": 2004,
+        "latitude": -27.29625,
+        "longitude": 27.73819,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 366,
+        "mean_temp_c": 17.42,
+        "mean_daily_tmax_c": 26.04,
+        "mean_daily_tmin_c": 10.08,
+        "annual_max_tmax_c": 36.11,
+        "annual_min_tmin_c": -2.95,
+        "annual_precip_mm": 521.05,
+        "daily_precip_p95_mm": 7.33,
+        "wet_days_ge_1mm": 111,
+        "heavy_precip_days_ge_20mm": 1,
+        "dry_days_lt_1mm": 255,
+        "max_consecutive_dry_days": 69,
+        "frost_days_tmin_lt_0c": 13,
+        "heat_days_tmax_gt_35c": 4,
+        "gdd10_c_day": 2811.89,
+        "mean_relative_humidity_pct": 54.13,
+        "mean_dewpoint_c": 6.11,
+        "mean_vpd_kpa_approx": 0.954,
+        "vpd_p95_kpa_approx": 1.8,
+        "mean_solar_radiation_mj_m2_day": 20.54,
+        "annual_solar_radiation_mj_m2": 7516.14,
+        "mean_wind_speed_m_s": 3.54,
+        "hottest_month": 11,
+        "wettest_month": 12,
+        "driest_month": 5,
+        "monthly_precip_cv": 0.8,
+        "retrieval_role": "typical_fill",
+        "retrieval_score": 0.2679328762105927
+      },
+      {
+        "parent_id": "ZA_maize_2013",
+        "country": "South Africa",
+        "country_zh": "南非",
+        "country_code": "ZA",
+        "crop": "maize",
+        "year": 2013,
+        "latitude": -27.29625,
+        "longitude": 27.73819,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 16.67,
+        "mean_daily_tmax_c": 25.46,
+        "mean_daily_tmin_c": 8.97,
+        "annual_max_tmax_c": 36.5,
+        "annual_min_tmin_c": -2.99,
+        "annual_precip_mm": 612.83,
+        "daily_precip_p95_mm": 8.6,
+        "wet_days_ge_1mm": 111,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 254,
+        "max_consecutive_dry_days": 55,
+        "frost_days_tmin_lt_0c": 18,
+        "heat_days_tmax_gt_35c": 4,
+        "gdd10_c_day": 2539.61,
+        "mean_relative_humidity_pct": 52.76,
+        "mean_dewpoint_c": 4.93,
+        "mean_vpd_kpa_approx": 0.942,
+        "vpd_p95_kpa_approx": 1.75,
+        "mean_solar_radiation_mj_m2_day": 21.19,
+        "annual_solar_radiation_mj_m2": 7734.47,
+        "mean_wind_speed_m_s": 3.57,
+        "hottest_month": 1,
+        "wettest_month": 12,
+        "driest_month": 7,
+        "monthly_precip_cv": 0.797,
+        "retrieval_role": "typical_fill",
+        "retrieval_score": 0.3792365810386936
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "rag1_rag_historical_regime",
+      "agronomic_rationale": "Utilizes the structured CSV regime classification (cool_wet, hot_dry, long_dry_spell) to adjust thresholds dynamically based on the broad climate regime (e.g., lowering precipitation thresholds for 'hot_dry' years like 2015 or increasing GDD limits for 'cool_wet' years like 2006) to account for regime frequency.",
+      "candidate_source": "base_qwen_structured_csv_rag",
+      "config": {
+        "gdd_base_temp": {
+          "maize": 15.0
+        },
+        "gdd_upper_limit": {
+          "maize": 45.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 5.0,
+            "label": "tmin<5"
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 32.0,
+            "label": "tmax>32"
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.5,
+            "label": "prec<0.5"
+          }
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true,
+        "veg_agg_method": "mean",
+        "soil_moisture_agg_method": "mean"
+      }
+    }
+  ]
+}

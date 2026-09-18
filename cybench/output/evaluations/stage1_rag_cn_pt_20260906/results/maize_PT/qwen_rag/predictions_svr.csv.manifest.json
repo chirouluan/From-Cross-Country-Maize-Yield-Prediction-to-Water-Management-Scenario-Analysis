@@ -1,0 +1,45 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-06T10:12:22.646315+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "train_test_predictions",
+  "file": "predictions_svr.csv",
+  "sha256": "2b3f3c8cfbf9af4f61746a202706b7c0f3871fc6abe287e715649e4ee5423905",
+  "rows": 440,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "prediction",
+    "split",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "prediction": "float64",
+    "split": "object",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "PT",
+    "advisor": "qwen_rag",
+    "model": "svr",
+    "test_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "candidate_id": "rag1_rag_local_profile",
+    "selected_k": 60,
+    "train_prediction": "in_sample_fit_before_outer_test_per_repeat",
+    "repeats": 5,
+    "base_seed": 42,
+    "neural_epochs": null
+  }
+}

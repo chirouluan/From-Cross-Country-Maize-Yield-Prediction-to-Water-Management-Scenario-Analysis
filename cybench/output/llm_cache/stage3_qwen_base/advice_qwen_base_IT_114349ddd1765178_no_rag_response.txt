@@ -1,0 +1,113 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ITF43",
+      "year": 2011,
+      "evidence_features": [
+        "mean_rad2",
+        "mean_rad4",
+        "mean_rad3",
+        "mean_rad7",
+        "max_cum_prec4",
+        "max_cum_prec3",
+        "mean_cum_cwb4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Radiation hazards (mean_rad2, mean_rad4, mean_rad3, mean_rad7) are environmental constraints that cannot be directly altered. However, water proxies (max_cum_prec4, max_cum_prec3, mean_cum_cwb4) show potential for yield gain via water management. Conditional advice suggests assessing irrigation needs and soil water conservation strategies to mitigate water deficits, pending local crop stage and infrastructure review.",
+      "limitations": "Radiation and temperature cannot be modified; water proxy adjustments are hypothetical and require agronomist validation regarding local soil capacity and irrigation infrastructure."
+    },
+    {
+      "adm_id": "ITF61",
+      "year": 2020,
+      "evidence_features": [
+        "prec<10p1",
+        "prec<10p7",
+        "mean_rad1",
+        "mean_tavg6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature (mean_tavg6) and radiation (mean_rad1) hazards are unchangeable. Water proxies (prec<10p1, prec<10p7) indicate deficits relative to high-yield references. Conditional advice recommends irrigation assessment to address precipitation shortfalls, contingent on local crop stage and water availability.",
+      "limitations": "Temperature and radiation are fixed environmental variables; water proxy changes are model-based estimates requiring field verification of irrigation feasibility."
+    },
+    {
+      "adm_id": "ITG2B",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>35p6",
+        "mean_rad1",
+        "max_ssm3",
+        "max_cum_prec3"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature hazard (tmax>35p6) and radiation hazard (mean_rad1) cannot be directly changed. Water proxies (max_ssm3, max_cum_prec3) show gaps from high-yield references. Conditional advice suggests irrigation assessment and soil water conservation to mitigate moisture stress, subject to local crop stage and infrastructure constraints.",
+      "limitations": "Temperature extremes and radiation levels are immutable; water management strategies depend on local soil properties and existing irrigation infrastructure."
+    },
+    {
+      "adm_id": "ITG2C",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>35p6",
+        "prec<10p7",
+        "max_cum_gdd7",
+        "mean_tmax5"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature hazards (tmax>35p6, max_cum_gdd7, mean_tmax5) cannot be altered. Water proxy (prec<10p7) indicates a significant deficit. Conditional advice recommends irrigation assessment and sowing window review to optimize planting dates for water availability, pending agronomist review of local conditions.",
+      "limitations": "Temperature variables are fixed; water proxy adjustments are theoretical and require validation of local irrigation capacity and crop phenology."
+    },
+    {
+      "adm_id": "ITI12",
+      "year": 2020,
+      "evidence_features": [
+        "max_cum_gdd2",
+        "prec<10p1",
+        "max_cum_gdd1",
+        "tmin<0p4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature hazards (max_cum_gdd2, max_cum_gdd1, tmin<0p4) are unchangeable. Water proxy (prec<10p1) shows a deficit. Conditional advice suggests irrigation assessment and sowing window review to align crop development with available moisture, subject to local infrastructure and crop stage.",
+      "limitations": "Temperature and radiation cannot be modified; water proxy changes are model predictions requiring field verification of irrigation feasibility."
+    },
+    {
+      "adm_id": "ITI19",
+      "year": 2020,
+      "evidence_features": [
+        "prec<10p7",
+        "mean_rad7",
+        "mean_tavg6",
+        "max_cum_ndvi4"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "Temperature (mean_tavg6) and radiation (mean_rad7) hazards cannot be changed. Water proxy (prec<10p7) indicates a deficit. Crop state indicator (max_cum_ndvi4) suggests current growth status. Conditional advice recommends irrigation assessment to address water deficits, pending local crop stage and infrastructure review.",
+      "limitations": "Temperature and radiation are fixed; water proxy adjustments are hypothetical and require agronomist validation regarding local soil capacity and irrigation infrastructure."
+    }
+  ],
+  "overall_limitations": [
+    "Observational scenario, not a field prescription",
+    "Temperature, radiation, and crop state indicators cannot be directly altered",
+    "Water proxy adjustments are model-based estimates and do not guarantee yield recovery",
+    "Local crop stage, infrastructure availability, costs, and agronomist review are required for implementation"
+  ]
+}

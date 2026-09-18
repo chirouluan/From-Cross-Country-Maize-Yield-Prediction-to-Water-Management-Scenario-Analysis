@@ -1,0 +1,132 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZM-A2-0206",
+      "year": 2017,
+      "evidence_features": [
+        "prec<1.117p2",
+        "tmax>34.574p10",
+        "mean_ssm12",
+        "mean_rad10"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "drainage_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture (mean_ssm12) is below reference and precipitation (prec<1.117p2) is low, irrigation assessment is warranted. Temperature hazard (tmax>34.574p10) and radiation (mean_rad10) cannot be directly altered; focus on water management to capture potential yield gain of 0.0641.",
+      "limitations": "Data is observational; implementation requires agronomist review of costs, soil type, and water availability."
+    },
+    {
+      "adm_id": "ZM-A2-0208",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>34.574p11",
+        "tmax>34.574p10",
+        "max_cum_gdd2",
+        "mean_tavg10",
+        "mean_ssm10",
+        "mean_ssm2",
+        "mean_cum_cwb11",
+        "max_cum_prec11"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "field_monitoring",
+        "soil_water_conservation",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage: high temperature hazards (tmax>34.574p10/p11) and GDD exceedances suggest reviewing sowing windows to avoid peak heat. Water proxies (mean_ssm10, mean_cum_cwb11) indicate potential for soil water conservation or irrigation assessment if infrastructure exists. Yield gain potential is 0.0323.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly changed; requires agronomist review of cultivar options and water infrastructure."
+    },
+    {
+      "adm_id": "ZM-A2-0512",
+      "year": 2017,
+      "evidence_features": [
+        "tmax>34.574p10",
+        "mean_tavg10",
+        "mean_tmax10",
+        "mean_ssm10",
+        "mean_ssm8",
+        "mean_prec1",
+        "mean_ssm1"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: significant temperature hazards (tmax>34.574p10, mean_tmax10) and water deficits (mean_ssm10, mean_prec1) suggest irrigation assessment and sowing window review to mitigate heat stress. Yield gain potential is 0.0609.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly changed; requires agronomist review of costs and water availability."
+    },
+    {
+      "adm_id": "ZM-A2-0808",
+      "year": 2017,
+      "evidence_features": [
+        "prec<1.117p12",
+        "mean_rad12",
+        "max_cum_gdd2",
+        "mean_cum_cwb1",
+        "mean_cum_cwb2",
+        "mean_prec2",
+        "mean_ssm10"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "drainage_assessment",
+        "soil_water_conservation",
+        "field_monitoring"
+      ],
+      "reasoning": "Conditional on local crop stage: severe water deficits (prec<1.117p12, mean_cum_cwb1) suggest irrigation assessment or soil water conservation. Radiation hazard (mean_rad12) cannot be changed. Yield gain potential is 0.0731.",
+      "limitations": "Data is observational; implementation requires agronomist review of infrastructure and costs."
+    },
+    {
+      "adm_id": "ZM-A2-1007",
+      "year": 2017,
+      "evidence_features": [
+        "max_cum_prec8",
+        "tmax>34.574p10",
+        "mean_ssm2",
+        "mean_tmax2"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "field_monitoring",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage: low precipitation (max_cum_prec8) and temperature hazards (tmax>34.574p10) suggest sowing window review to align with moisture availability. Yield gain potential is 0.0276.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly changed; requires agronomist review."
+    },
+    {
+      "adm_id": "ZM-A2-1012",
+      "year": 2017,
+      "evidence_features": [
+        "max_cum_prec8",
+        "tmax>34.574p10",
+        "mean_tmax10",
+        "mean_tavg1",
+        "max_cum_prec8",
+        "prec<1.117p10",
+        "mean_ssm11",
+        "mean_cum_cwb10",
+        "prec<1.117p11"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "field_monitoring",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage: low precipitation (max_cum_prec8, prec<1.117p10/p11) and temperature hazards (tmax>34.574p10, mean_tmax10) suggest sowing window review. Yield gain potential is 0.0164.",
+      "limitations": "Data is observational; temperature and radiation cannot be directly changed; requires agronomist review."
+    }
+  ],
+  "overall_limitations": [
+    "Observational scenario, not a field prescription",
+    "Temperature, radiation, and NDVI/FPAR cannot be directly changed",
+    "Water proxies are not equivalent to specific irrigation doses",
+    "Yield effects are conditional estimates, not guaranteed outcomes",
+    "Implementation requires local crop stage, infrastructure, costs, and agronomist review"
+  ]
+}

@@ -1,0 +1,6 @@
+model,candidate_id,calibration_mse_mean,calibration_mse_variance
+ridge,sample1_extreme_heat_drought_syndrome,0.7319434517917222,0.0
+xgboost,sample1_extreme_heat_drought_syndrome,0.6214854050365435,5.966608895616007e-05
+svr,sample1_extreme_heat_drought_syndrome,0.7492631483917878,0.0
+cnn1d,sample1_extreme_heat_drought_syndrome,0.8250989502898932,0.0005737048867066044
+transformer_flat,sample1_extreme_heat_drought_syndrome,0.9791839190752709,0.0015309332985542843

@@ -1,0 +1,41 @@
+{
+  "country": "CN",
+  "advisor": "qwen_rag",
+  "model": "xgboost",
+  "candidate_id": "rag1_rag_robust_hybrid",
+  "selection_data": "calibration years only",
+  "selection_rule": "minimum mean pooled calibration MSE across 5 repeats under xgboost",
+  "calibration_mse_mean": 0.6299629251235789,
+  "calibration_mse_variance": 5.642848698924505e-05,
+  "config": {
+    "gdd_base_temp": {
+      "maize": 5.0
+    },
+    "gdd_upper_limit": {
+      "maize": 30.0
+    },
+    "stress_thresholds": {
+      "tmin": {
+        "operator": "<",
+        "threshold": -7.802549999999999,
+        "label": "tmin<-7.802549999999999"
+      },
+      "tmax": {
+        "operator": ">",
+        "threshold": 38.866,
+        "label": "tmax>38.866"
+      },
+      "prec": {
+        "operator": "<",
+        "threshold": 0.037,
+        "label": "prec<0.037"
+      }
+    },
+    "include_fpar": true,
+    "include_ndvi": true,
+    "include_soil_moisture": true,
+    "veg_agg_method": "median",
+    "soil_moisture_agg_method": "median"
+  },
+  "selected_k": 60
+}

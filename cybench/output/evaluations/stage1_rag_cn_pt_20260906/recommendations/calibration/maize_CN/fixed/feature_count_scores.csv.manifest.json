@@ -1,0 +1,38 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-06T09:53:42.305125+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_feature_count_scores",
+  "file": "feature_count_scores.csv",
+  "sha256": "1696213d923aa38a002eb5e803423ca26c9c59bb9a4777bf4467c53a4b5da1eb",
+  "rows": 4,
+  "columns": [
+    "selected_k",
+    "mape",
+    "normalized_rmse",
+    "r",
+    "r2",
+    "kge"
+  ],
+  "dtypes": {
+    "selected_k": "int64",
+    "mape": "float64",
+    "normalized_rmse": "float64",
+    "r": "float64",
+    "r2": "float64",
+    "kge": "float64"
+  },
+  "metadata": {
+    "country": "CN",
+    "years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:46:48.200637+00:00",
+  "stage": "stage3_advisory",
+  "artifact": "stress_diagnostics",
+  "file": "stress_diagnostics.csv",
+  "sha256": "9cecf4907897b89598aabd8afca9e10f92f34c8cd467b8d7343e1f112db06c21",
+  "rows": 3100,
+  "columns": [
+    "row_index",
+    "adm_id",
+    "year",
+    "feature",
+    "feature_role",
+    "current_value",
+    "high_yield_reference",
+    "standardized_gap",
+    "model_importance",
+    "single_feature_yield_potential",
+    "stress_score"
+  ],
+  "dtypes": {
+    "row_index": "int64",
+    "adm_id": "object",
+    "year": "int64",
+    "feature": "object",
+    "feature_role": "object",
+    "current_value": "float64",
+    "high_yield_reference": "float64",
+    "standardized_gap": "float64",
+    "model_importance": "float64",
+    "single_feature_yield_potential": "float64",
+    "stress_score": "float64"
+  },
+  "metadata": {
+    "crop": "maize",
+    "country": "CN",
+    "feature_strategy": "qwen_rag",
+    "training_end_year_exclusive": 2013,
+    "decision_snapshot_rule": "latest_row_with_both_stage2_predictions",
+    "stage1_dataset_sha256": "54e0d7bee83f753dd9d1f41fd1ee65cd8443e4d0751f5dacae53027cb7e2d2ce",
+    "strategy": "qwen_rag",
+    "stage2_tabpfn_base_sha256": "8e918e19d8c8ea8247c5b6a98a2704b0b2f8ead65177f7303f1a7416a75d6ee7",
+    "stage2_tabpfn_base_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "stage2_tabpfn_cn_finetuned_sha256": "f4e6bf10e2fbadffae9435def8d7ce79345fd26d375c81436c404670228148b7",
+    "stage2_tabpfn_cn_finetuned_aggregation": "mean_and_sample_variance_across_5_repeats",
+    "policy": "qwen_rag"
+  }
+}

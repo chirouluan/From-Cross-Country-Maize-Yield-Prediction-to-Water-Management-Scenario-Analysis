@@ -1,0 +1,110 @@
+2026-09-12 15:43:13,650 [DEBUG] matplotlib: matplotlib data path: D:\Anaconda\Lib\site-packages\matplotlib\mpl-data
+2026-09-12 15:43:13,653 [DEBUG] matplotlib: CONFIGDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:43:13,654 [DEBUG] matplotlib: interactive is False
+2026-09-12 15:43:13,654 [DEBUG] matplotlib: platform is win32
+2026-09-12 15:43:13,689 [DEBUG] matplotlib: CACHEDIR=C:\Users\35454\.matplotlib
+2026-09-12 15:43:13,691 [DEBUG] matplotlib.font_manager: Using fontManager instance from C:\Users\35454\.matplotlib\fontlist-v390.json
+2026-09-12 15:43:14,159 [DEBUG] matplotlib.pyplot: Loaded backend qtagg version 5.15.10.
+2026-09-12 15:43:22,673 [WARNING] cybench.models.naive_models: No matching group found; predicting global average
+2026-09-12 15:43:24,815 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=20,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:24,821 [DEBUG] cybench.models.sklearn_models: Selected 20 Features
+2026-09-12 15:43:24,821 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd11', 'max_cum_gdd12', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec11', 'max_cum_prec12', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4']
+2026-09-12 15:43:24,821 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:24,821 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 20}
+2026-09-12 15:43:25,599 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(alpha=0.1), max_features=25,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:25,604 [DEBUG] cybench.models.sklearn_models: Selected 25 Features
+2026-09-12 15:43:25,604 [DEBUG] cybench.models.sklearn_models: ['f0', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19', 'f20', 'f21', 'f22', 'f26', 'f34']
+2026-09-12 15:43:25,605 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:25,605 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 0.1, 'selector__max_features': 25}
+2026-09-12 15:43:27,762 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=20,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:27,767 [DEBUG] cybench.models.sklearn_models: Selected 20 Features
+2026-09-12 15:43:27,767 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd11', 'max_cum_gdd12', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec11', 'max_cum_prec12', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4']
+2026-09-12 15:43:27,767 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:27,767 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 20}
+2026-09-12 15:43:30,154 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=20,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:30,160 [DEBUG] cybench.models.sklearn_models: Selected 20 Features
+2026-09-12 15:43:30,161 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd11', 'max_cum_gdd12', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec11', 'max_cum_prec12', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4']
+2026-09-12 15:43:30,161 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:30,161 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 20}
+2026-09-12 15:43:32,587 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=20,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:32,592 [DEBUG] cybench.models.sklearn_models: Selected 20 Features
+2026-09-12 15:43:32,592 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd6', 'max_cum_gdd7', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec6', 'max_cum_prec7', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4']
+2026-09-12 15:43:32,592 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:32,592 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 20}
+2026-09-12 15:43:34,227 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=20,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:34,232 [DEBUG] cybench.models.sklearn_models: Selected 20 Features
+2026-09-12 15:43:34,232 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd6', 'max_cum_gdd7', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec6', 'max_cum_prec7', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4']
+2026-09-12 15:43:34,232 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:34,232 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 20}
+2026-09-12 15:43:35,359 [DEBUG] cybench.models.nn_models: Running setting 1/4
+2026-09-12 15:43:36,276 [DEBUG] cybench.models.nn_models: For setting 1/4, average validation loss: 137.84448699951173
+2026-09-12 15:43:36,276 [DEBUG] cybench.models.nn_models: Settings: {'lr': 0.0001, 'weight_decay': 0.0001}
+2026-09-12 15:43:36,277 [DEBUG] cybench.models.nn_models: Running setting 2/4
+2026-09-12 15:43:37,203 [DEBUG] cybench.models.nn_models: For setting 2/4, average validation loss: 133.5321075439453
+2026-09-12 15:43:37,203 [DEBUG] cybench.models.nn_models: Settings: {'lr': 0.0001, 'weight_decay': 1e-05}
+2026-09-12 15:43:37,203 [DEBUG] cybench.models.nn_models: Running setting 3/4
+2026-09-12 15:43:38,085 [DEBUG] cybench.models.nn_models: For setting 3/4, average validation loss: 137.17759399414064
+2026-09-12 15:43:38,085 [DEBUG] cybench.models.nn_models: Settings: {'lr': 1e-05, 'weight_decay': 0.0001}
+2026-09-12 15:43:38,085 [DEBUG] cybench.models.nn_models: Running setting 4/4
+2026-09-12 15:43:39,005 [DEBUG] cybench.models.nn_models: For setting 4/4, average validation loss: 134.57993774414064
+2026-09-12 15:43:39,005 [DEBUG] cybench.models.nn_models: Settings: {'lr': 1e-05, 'weight_decay': 1e-05}
+2026-09-12 15:43:42,898 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=20,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:42,903 [DEBUG] cybench.models.sklearn_models: Selected 20 Features
+2026-09-12 15:43:42,903 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd6', 'max_cum_gdd7', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec6', 'max_cum_prec7', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4']
+2026-09-12 15:43:42,903 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:42,903 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 20}
+2026-09-12 15:43:45,167 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=25,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:45,172 [DEBUG] cybench.models.sklearn_models: Selected 25 Features
+2026-09-12 15:43:45,172 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd6', 'max_cum_gdd7', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec6', 'max_cum_prec7', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4', 'mean_cum_cwb5', 'mean_cum_cwb6', 'mean_cum_cwb7', 'mean_prec1', 'mean_prec2']
+2026-09-12 15:43:45,172 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:45,172 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 25}
+2026-09-12 15:43:47,967 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=25,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=5.0))])
+2026-09-12 15:43:47,972 [DEBUG] cybench.models.sklearn_models: Selected 25 Features
+2026-09-12 15:43:47,972 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd6', 'max_cum_gdd7', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec6', 'max_cum_prec7', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4', 'mean_cum_cwb5', 'mean_cum_cwb6', 'mean_cum_cwb7', 'mean_prec1', 'mean_prec2']
+2026-09-12 15:43:47,972 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:47,972 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 5.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 25}
+2026-09-12 15:43:50,166 [DEBUG] cybench.models.sklearn_models: Pipeline(steps=[('scaler', StandardScaler()),
+                ('selector',
+                 SelectFromModel(estimator=Lasso(), max_features=25,
+                                 threshold='median')),
+                ('estimator', Ridge(alpha=10.0))])
+2026-09-12 15:43:50,171 [DEBUG] cybench.models.sklearn_models: Selected 25 Features
+2026-09-12 15:43:50,172 [DEBUG] cybench.models.sklearn_models: ['awc', 'bulk_density', 'max_cum_gdd1', 'max_cum_gdd2', 'max_cum_gdd3', 'max_cum_gdd4', 'max_cum_gdd5', 'max_cum_gdd6', 'max_cum_gdd7', 'max_cum_prec1', 'max_cum_prec2', 'max_cum_prec3', 'max_cum_prec4', 'max_cum_prec5', 'max_cum_prec6', 'max_cum_prec7', 'mean_cum_cwb1', 'mean_cum_cwb2', 'mean_cum_cwb3', 'mean_cum_cwb4', 'mean_cum_cwb5', 'mean_cum_cwb6', 'mean_cum_cwb7', 'mean_prec1', 'mean_prec2']
+2026-09-12 15:43:50,172 [DEBUG] cybench.models.sklearn_models: Optimal Hyperparameters
+2026-09-12 15:43:50,172 [DEBUG] cybench.models.sklearn_models: {'estimator__alpha': 10.0, 'selector__estimator__alpha': 1.0, 'selector__max_features': 25}

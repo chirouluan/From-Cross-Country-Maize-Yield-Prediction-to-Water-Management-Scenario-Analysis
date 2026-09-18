@@ -1,0 +1,38 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-06T10:13:13.725280+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "macro_summary",
+  "file": "macro_summary.csv",
+  "sha256": "f1e036d3ae70e19447bad295b78c0e8131e416257ddd15858af3047cb27d85c2",
+  "rows": 10,
+  "columns": [
+    "model",
+    "advisor",
+    "mean_nrmse",
+    "median_nrmse",
+    "mean_r2",
+    "mean_mape",
+    "mean_kge"
+  ],
+  "dtypes": {
+    "model": "object",
+    "advisor": "object",
+    "mean_nrmse": "float64",
+    "median_nrmse": "float64",
+    "mean_r2": "float64",
+    "mean_mape": "float64",
+    "mean_kge": "float64"
+  },
+  "metadata": {
+    "rows": 20,
+    "countries": [
+      "CN",
+      "PT"
+    ],
+    "advisors": [
+      "fixed",
+      "qwen_rag"
+    ]
+  }
+}

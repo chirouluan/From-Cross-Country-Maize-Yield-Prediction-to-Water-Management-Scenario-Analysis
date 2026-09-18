@@ -1,0 +1,53 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "MX04",
+      "year": 2022,
+      "evidence_features": ["mean_rad5", "mean_prec5", "mean_rad4", "max_cum_prec6"],
+      "actions": ["irrigation_assessment", "soil_water_conservation", "field_monitoring"],
+      "reasoning": "High stress signals detected in radiation (mean_rad5, mean_rad4) and water proxies (mean_prec5, max_cum_prec6). Conditional adaptation involves assessing irrigation potential to mitigate water proxy deficits and conserving soil water, while monitoring radiation impacts. Local crop stage and agronomist review are required.",
+      "limitations": "Radiation and temperature cannot be directly altered; water proxy changes are modeled estimates, not direct irrigation doses; infrastructure and costs not specified."
+    },
+    {
+      "adm_id": "MX13",
+      "year": 2022,
+      "evidence_features": ["mean_rad9", "mean_tmin9", "mean_ssm9", "mean_cum_cwb6"],
+      "actions": ["field_monitoring", "stress_tolerant_cultivar_review", "sowing_window_review"],
+      "reasoning": "Extreme stress signals in radiation (mean_rad9), temperature (mean_tmin9), and water proxies (mean_ssm9, mean_cum_cwb6). Conditional adaptation focuses on reviewing cultivar tolerance and sowing windows to align with thermal constraints, alongside field monitoring. Local crop stage and agronomist review are needed.",
+      "limitations": "Temperature and radiation cannot be directly changed; water proxy adjustments are modeled scenarios, not direct irrigation; infrastructure and costs not specified."
+    },
+    {
+      "adm_id": "MX23",
+      "year": 2022,
+      "evidence_features": ["mean_rad5", "max_cum_prec6", "mean_prec5", "mean_rad4"],
+      "actions": ["irrigation_assessment", "soil_water_conservation", "field_monitoring"],
+      "reasoning": "Significant stress in radiation (mean_rad5, mean_rad4) and water proxies (max_cum_prec6, mean_prec5). Conditional adaptation requires irrigation assessment to address water deficits and soil conservation, with monitoring for radiation effects. Local crop stage and agronomist review are required.",
+      "limitations": "Radiation and temperature cannot be directly altered; water proxy changes are modeled estimates, not direct irrigation doses; infrastructure and costs not specified."
+    },
+    {
+      "adm_id": "MX27",
+      "year": 2022,
+      "evidence_features": ["max_cum_prec6", "mean_prec5", "mean_rad5", "max_cum_prec5"],
+      "actions": ["irrigation_assessment", "soil_water_conservation", "field_monitoring"],
+      "reasoning": "High stress in water proxies (max_cum_prec6, mean_prec5, max_cum_prec5) and radiation (mean_rad5). Conditional adaptation involves irrigation assessment and soil water conservation to mitigate deficits, with monitoring. Local crop stage and agronomist review are needed.",
+      "limitations": "Radiation and temperature cannot be directly altered; water proxy changes are modeled estimates, not direct irrigation doses; infrastructure and costs not specified."
+    },
+    {
+      "adm_id": "MX28",
+      "year": 2022,
+      "evidence_features": ["tmax>35p3", "mean_rad4", "mean_rad5", "mean_ssm5"],
+      "actions": ["field_monitoring", "stress_tolerant_cultivar_review", "sowing_window_review"],
+      "reasoning": "Critical temperature hazard (tmax>35p3) and radiation stress (mean_rad4, mean_rad5) alongside water proxy deficit (mean_ssm5). Conditional adaptation prioritizes cultivar review and sowing window adjustments for heat tolerance, with monitoring. Local crop stage and agronomist review are required.",
+      "limitations": "Temperature and radiation cannot be directly altered; water proxy changes are modeled estimates, not direct irrigation doses; infrastructure and costs not specified."
+    },
+    {
+      "adm_id": "MX31",
+      "year": 2022,
+      "evidence_features": ["mean_rad9", "mean_rad5", "mean_rad4", "mean_prec5"],
+      "actions": ["irrigation_assessment", "soil_water_conservation", "field_monitoring"],
+      "reasoning": "Severe radiation stress (mean_rad9, mean_rad5, mean_rad4) and water proxy deficit (mean_prec5). Conditional adaptation requires irrigation assessment and soil conservation to address water limits, with monitoring for radiation impacts. Local crop stage and agronomist review are needed.",
+      "limitations": "Radiation and temperature cannot be directly altered; water proxy changes are modeled estimates, not direct irrigation doses; infrastructure and costs not specified."
+    }
+  ],
+  "overall_limitations": ["observational scenario, not a field prescription"]
+}

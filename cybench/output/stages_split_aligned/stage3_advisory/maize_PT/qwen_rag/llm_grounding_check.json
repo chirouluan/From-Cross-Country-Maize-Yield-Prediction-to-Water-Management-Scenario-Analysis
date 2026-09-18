@@ -1,0 +1,6 @@
+{
+  "schema_valid": 1,
+  "grounded_recommendation_ratio": 1.0,
+  "n_recommendations": 5,
+  "n_grounded_recommendations": 5
+}

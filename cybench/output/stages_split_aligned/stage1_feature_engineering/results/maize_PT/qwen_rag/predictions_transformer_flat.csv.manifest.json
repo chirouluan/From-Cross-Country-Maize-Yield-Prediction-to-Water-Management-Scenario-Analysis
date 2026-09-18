@@ -1,0 +1,45 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:42:45.070284+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "train_test_predictions",
+  "file": "predictions_transformer_flat.csv",
+  "sha256": "24e2d88600cf131653cb9b2d6b0dc771637ec41f17ef07d450349ac0bf1621f7",
+  "rows": 440,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "prediction",
+    "split",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "prediction": "float32",
+    "split": "object",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "PT",
+    "advisor": "qwen_rag",
+    "model": "transformer_flat",
+    "test_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "candidate_id": "rag1_rag_historical_regime",
+    "selected_k": 60,
+    "train_prediction": "in_sample_fit_before_outer_test_per_repeat",
+    "repeats": 5,
+    "base_seed": 42,
+    "neural_epochs": 50
+  }
+}

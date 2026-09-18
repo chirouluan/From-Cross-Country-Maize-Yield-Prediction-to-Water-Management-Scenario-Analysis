@@ -1,0 +1,109 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZA-A1-0001",
+      "year": 2022,
+      "evidence_features": [
+        "prec<1p7",
+        "mean_ssm12",
+        "max_cum_fpar12",
+        "prec<1p6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Evidence indicates water stress via low precipitation proxies (prec<1p6, prec<1p7) and elevated soil moisture status (mean_ssm12). While crop state indicators (max_cum_fpar12) show deviation from high-yield references, these cannot be directly altered. Conditional adaptation focuses on managing water availability through irrigation assessment and conservation practices.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed. Data is observational; no direct causality claimed between feature adjustment and yield."
+    },
+    {
+      "adm_id": "ZA-A1-0003",
+      "year": 2022,
+      "evidence_features": [
+        "prec<1p8",
+        "mean_tmin12",
+        "mean_rad8",
+        "mean_cum_cwb9"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Stress signals include water deficits (prec<1p8, mean_cum_cwb9), temperature hazard (mean_tmin12), and radiation hazard (mean_rad8). Adaptation is conditional on irrigation feasibility for water recovery and sowing/cultivar reviews for temperature/radiation constraints.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed. Data is observational; no direct causality claimed between feature adjustment and yield."
+    },
+    {
+      "adm_id": "ZA-A1-0004",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "max_cum_prec8",
+        "mean_rad8",
+        "mean_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "High water proxies (max_cum_prec9, max_cum_prec8, mean_prec8) indicate potential waterlogging or saturation risks. Radiation hazard (mean_rad8) is present but unchangeable. Actions focus on drainage assessment and water management.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed. Data is observational; no direct causality claimed between feature adjustment and yield."
+    },
+    {
+      "adm_id": "ZA-A1-0005",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_fpar11",
+        "max_cum_fpar12",
+        "max_cum_ndvi9",
+        "max_cum_ndvi12"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Evidence consists solely of crop state indicators (FPAR, NDVI) showing deviation from high-yield references. As these are observational proxies for crop health, direct intervention is limited to monitoring and reviewing cultivar tolerance.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed. Data is observational; no direct causality claimed between feature adjustment and yield."
+    },
+    {
+      "adm_id": "ZA-A1-0006",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "max_cum_prec8",
+        "prec<1p8",
+        "mean_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Significant water stress indicated by high cumulative precipitation proxies and low mean_prec8. Adaptation is conditional on irrigation assessment and soil conservation strategies to mitigate water-related yield gaps.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed. Data is observational; no direct causality claimed between feature adjustment and yield."
+    },
+    {
+      "adm_id": "ZA-A1-0009",
+      "year": 2022,
+      "evidence_features": [
+        "prec<1p9",
+        "mean_ssm12",
+        "max_cum_fpar9",
+        "max_cum_ndvi9"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Water stress signals (prec<1p9, mean_ssm12) combined with crop state indicators (max_cum_fpar9, max_cum_ndvi9) suggest yield potential is constrained by water availability. Actions focus on water management and monitoring.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed. Data is observational; no direct causality claimed between feature adjustment and yield."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

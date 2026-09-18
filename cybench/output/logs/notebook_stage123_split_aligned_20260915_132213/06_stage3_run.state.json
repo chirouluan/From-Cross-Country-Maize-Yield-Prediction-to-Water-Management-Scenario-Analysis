@@ -1,0 +1,26 @@
+{
+  "step": "06_stage3_run",
+  "module": "cybench.stages.stage3_advisory.run",
+  "command": [
+    "d:\\Anaconda\\envs\\specllm\\python.exe",
+    "-u",
+    "-m",
+    "cybench.stages.stage3_advisory.run",
+    "--countries",
+    "CN,ZA,MX,PT",
+    "--repeats",
+    "5",
+    "--base-seed",
+    "42",
+    "--advisors",
+    "qwen_rag",
+    "--stage1-output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage1_feature_engineering",
+    "--stage2-output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage2_tabpfn_transfer\\evaluation",
+    "--output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage3_advisory"
+  ],
+  "return_code": 0,
+  "elapsed_seconds": 1257.236349105835
+}

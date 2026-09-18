@@ -1,0 +1,116 @@
+{
+  "regional_assessment": "East Asian monsoon regime exhibits strong north-south thermal gradients and high interannual rainfall variability. Calibration data (2003-2016) indicates frequent low-temperature stress (tmin q05: -7.8°C) and precipitation deficits (prec q25: 0.037 mm/day), while historical CSV records (2001-2016) reveal extreme hydrological variance (dry_days median: 306 vs wet_days median: 59) and distinct regimes (cool_wet vs hot_dry). Residual stress evidence is unavailable, necessitating reliance on calibration event thresholds for daily event detection and CSV regime frequency for broad climate classification.",
+  "candidates": [
+    {
+      "candidate_id": "rag_local_profile",
+      "agronomic_rationale": "Calibration-only profile (2003-2016) provides direct thresholds for daily stress events observed during the maize growing season. It captures the frequency of frost (tmin < 0°C) and drought (prec < 1 mm) conditions prevalent in the calibration set, ensuring event detection aligns with the specific climatic reality of the 31 locations studied.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -4.027
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 31.246
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.037
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "mean"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_historical_regime",
+      "agronomic_rationale": "Structured CSV records (2001-2016) define broad climate regimes (cool_wet, hot_dry, long_dry_spell) without yield labels. This configuration uses CSV-derived annual aggregates (e.g., frost_days, gdd10_c_day) to classify years into these regimes, enabling the assessment of temperature and water limitation frequency across the monsoon gradient.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 6.32
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 35.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.395
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 36.485
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 6.425
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "median"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    },
+    {
+      "candidate_id": "rag_robust_hybrid",
+      "agronomic_rationale": "Hybrid approach combines calibration daily event thresholds (prec < 0.037 mm, tmin < -7.8°C) with CSV annual regime metrics (frost_days, max_consecutive_dry_days) to address the lack of residual stress evidence. It uses calibration extremes for daily stress triggers and CSV medians for robust annual regime aggregation.",
+      "config": {
+        "gdd_base_temp": {
+          "crop": "maize",
+          "recommended": 5.0
+        },
+        "gdd_upper_limit": {
+          "crop": "maize",
+          "recommended": 30.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": -7.802549999999999
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 38.866
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 0.037
+          }
+        },
+        "veg_agg_method": {
+          "recommended": "median"
+        },
+        "soil_moisture_agg_method": {
+          "recommended": "median"
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true
+      }
+    }
+  ]
+}

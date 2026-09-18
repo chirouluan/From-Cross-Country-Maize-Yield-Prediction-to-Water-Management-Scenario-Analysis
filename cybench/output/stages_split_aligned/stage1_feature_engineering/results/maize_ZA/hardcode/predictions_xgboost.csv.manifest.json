@@ -1,0 +1,46 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:37:28.535297+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "train_test_predictions",
+  "file": "predictions_xgboost.csv",
+  "sha256": "7ac8eaac7f7eaae1feeca3258b4dddc22dbd32ded1107b12f7af8ab3ed10896f",
+  "rows": 835,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "prediction",
+    "split",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "prediction": "float32",
+    "split": "object",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "ZA",
+    "advisor": "hardcode",
+    "model": "xgboost",
+    "test_years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "candidate_id": "baseline",
+    "selected_k": 60,
+    "train_prediction": "in_sample_fit_before_outer_test_per_repeat",
+    "repeats": 5,
+    "base_seed": 42,
+    "neural_epochs": null
+  }
+}

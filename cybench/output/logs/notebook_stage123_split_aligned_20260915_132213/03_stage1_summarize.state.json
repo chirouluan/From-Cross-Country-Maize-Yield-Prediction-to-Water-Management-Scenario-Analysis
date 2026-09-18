@@ -1,0 +1,16 @@
+{
+  "step": "03_stage1_summarize",
+  "module": "cybench.stages.stage1_feature_engineering.summarize",
+  "command": [
+    "d:\\Anaconda\\envs\\specllm\\python.exe",
+    "-u",
+    "-m",
+    "cybench.stages.stage1_feature_engineering.summarize",
+    "--input",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage1_feature_engineering\\results\\metrics_all.csv",
+    "--output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage1_feature_engineering\\results"
+  ],
+  "return_code": 0,
+  "elapsed_seconds": 5.287412166595459
+}

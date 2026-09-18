@@ -1,0 +1,16 @@
+model,candidate_id,calibration_mse_mean,calibration_mse_variance
+ridge,rag1_rag_local_profile,3.1520301331583274,0.0
+ridge,rag1_rag_historical_regime,3.617381135984644,0.0
+ridge,rag1_rag_robust_hybrid,3.7046964784283816,0.0
+xgboost,rag1_rag_local_profile,4.9132046572188255,0.020971143603056998
+xgboost,rag1_rag_historical_regime,4.744199600398917,0.015929531201056484
+xgboost,rag1_rag_robust_hybrid,4.952166575780563,0.013665520222971187
+svr,rag1_rag_local_profile,4.748778897853071,0.0
+svr,rag1_rag_historical_regime,5.143178885223771,0.0
+svr,rag1_rag_robust_hybrid,5.311482777304187,0.0
+cnn1d,rag1_rag_local_profile,14.91436738960889,4.289593800678114
+cnn1d,rag1_rag_historical_regime,13.465373982636617,6.125710625192599
+cnn1d,rag1_rag_robust_hybrid,14.01758559792587,9.270610626454323
+transformer_flat,rag1_rag_local_profile,26.102771180828558,9.9611083133693
+transformer_flat,rag1_rag_historical_regime,26.229796629197686,14.316809822657076
+transformer_flat,rag1_rag_robust_hybrid,26.25667563936397,14.47945715844401

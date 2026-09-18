@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "cybench"
+version = "0.0.0"
+description = "A dataset and benchmark for subnational crop yield forecasting, with coverage of major crop growing countries of the world for maize and wheat"
+authors = ["AgML <agmlcybench@gmail.com>"]
+license = "EUPL"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+matplotlib = "^3.9.0"
+scikit-learn = "^1.5.0"
+statsmodels = "^0.14.2"
+flake8 = "^7.0.0"
+tqdm = "^4.66.4"
+pandas = "^2.2.2"
+datetime = "^5.5"
+pytest = "^8.2.2"
+pyyaml = "^6.0.1"
+comet-ml = "^3.43.1"
+seaborn = "^0.13.2"
+pymannkendall = "^1.4.3"
+rasterio = "^1.4.3"
+geopandas = "^1.0.1"
+pandocfilters = "^1.5.1"
+sphinx-rtd-theme = "^3.0.2"
+pathlib = "^1.0.1"
+tsai = "^0.4.0"
+pytest-cov = "^6.0.0"
+numpy = "^1.26.4"
+torch = "^2.2.2"
+urllib3 = "^2.3.0"
+sphinx = "7.4.7"
+fastcore = "1.7.29"
+xgboost = ">=2.1.4"
+
+[tool.poetry.group.llm]
+optional = true
+
+[tool.poetry.group.llm.dependencies]
+transformers = ">=4.51"
+accelerate = ">=1.0"
+bitsandbytes = ">=0.45"
+
+[tool.poetry.group.tabpfn]
+optional = true
+
+[tool.poetry.group.tabpfn.dependencies]
+tabpfn = ">=2.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["data", "data_preparation", "cybench/output", "LLM", "tabpfn_3"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

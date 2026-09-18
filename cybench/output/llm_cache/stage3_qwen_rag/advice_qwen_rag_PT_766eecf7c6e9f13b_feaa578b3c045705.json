@@ -1,0 +1,95 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "PT11",
+      "year": 2020,
+      "evidence_features": [
+        "mean_cum_ndvi3",
+        "mean_cum_ndvi1",
+        "mean_cum_ndvi2",
+        "mean_rad7"
+      ],
+      "actions": [
+        "field_monitoring",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "High stress signals detected in crop state indicators (NDVI) and radiation hazard. Since NDVI and radiation cannot be directly altered, conditional advice focuses on monitoring crop status and reviewing cultivar tolerance to mitigate yield potential loss.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT15",
+      "year": 2020,
+      "evidence_features": [
+        "mean_tmin3",
+        "mean_cum_ndvi3",
+        "mean_cum_fpar7",
+        "mean_cum_fpar2"
+      ],
+      "actions": [
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Stress detected in temperature (tmin) and crop state (NDVI, FPAR). While temperature cannot be changed, water proxies indicate potential for recovery via irrigation or conservation. Conditional advice suggests assessing irrigation needs and soil water conservation if infrastructure permits.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT16",
+      "year": 2020,
+      "evidence_features": [
+        "mean_ssm1",
+        "mean_tavg7",
+        "mean_rad7",
+        "max_cum_gdd6"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Stress signals present in water proxy (SSM), temperature (tavg, GDD), and radiation. Water proxy indicates potential for recovery via irrigation or conservation. Temperature and radiation cannot be directly changed. Conditional advice suggests assessing drainage and irrigation options.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT17",
+      "year": 2020,
+      "evidence_features": [
+        "mean_tmin3",
+        "mean_cum_cwb5",
+        "mean_cum_cwb6",
+        "mean_tmin8",
+        "mean_tmin7"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Stress signals detected in temperature (tmin) and water proxy (CWB). Temperature cannot be changed, but water proxy suggests potential for recovery via irrigation or conservation. Conditional advice suggests assessing drainage and irrigation options.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT18",
+      "year": 2020,
+      "evidence_features": [
+        "mean_cum_cwb8",
+        "mean_ssm4",
+        "mean_tmin7",
+        "mean_tmin3"
+      ],
+      "actions": [
+        "drainage_assessment",
+        "field_monitoring",
+        "irrigation_assessment",
+        "soil_water_conservation"
+      ],
+      "reasoning": "Stress signals detected in temperature (tmin) and water proxy (CWB, SSM). Temperature cannot be changed, but water proxy suggests potential for recovery via irrigation or conservation. Conditional advice suggests assessing drainage and irrigation options.",
+      "limitations": "Local crop stage, infrastructure, costs and agronomist review are needed."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

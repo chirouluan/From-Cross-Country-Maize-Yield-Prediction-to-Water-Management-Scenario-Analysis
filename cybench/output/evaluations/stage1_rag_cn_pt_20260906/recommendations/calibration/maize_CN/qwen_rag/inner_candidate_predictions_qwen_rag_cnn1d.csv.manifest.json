@@ -1,0 +1,44 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-06T10:00:45.162501+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "calibration_candidate_predictions",
+  "file": "inner_candidate_predictions_qwen_rag_cnn1d.csv",
+  "sha256": "72835f77fe20758e98e2dcc82ceb848512122a48a625caae5f7fa1825ab5f976",
+  "rows": 1225,
+  "columns": [
+    "adm_id",
+    "year",
+    "yield",
+    "rag1_rag_local_profile",
+    "rag1_rag_historical_regime",
+    "rag1_rag_robust_hybrid",
+    "repeat",
+    "seed"
+  ],
+  "dtypes": {
+    "adm_id": "object",
+    "year": "int64",
+    "yield": "float64",
+    "rag1_rag_local_profile": "float32",
+    "rag1_rag_historical_regime": "float32",
+    "rag1_rag_robust_hybrid": "float32",
+    "repeat": "int64",
+    "seed": "int64"
+  },
+  "metadata": {
+    "country": "CN",
+    "advisor": "qwen_rag",
+    "model": "cnn1d",
+    "years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ]
+  }
+}

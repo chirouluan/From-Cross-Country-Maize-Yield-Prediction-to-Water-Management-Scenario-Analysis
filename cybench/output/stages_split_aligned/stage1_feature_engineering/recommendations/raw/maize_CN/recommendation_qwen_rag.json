@@ -1,0 +1,677 @@
+{
+  "prompt_version": "stage1_structured_csv_rag_v1",
+  "advisor": "qwen_rag",
+  "model_variant": "qwen_base",
+  "sampling": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "country": "CN",
+  "used_fallback": false,
+  "raw_attempts": [
+    {
+      "regional_assessment": "East Asian monsoon regime exhibits strong north-south thermal gradients and high interannual rainfall variability. Calibration data (2003-2016) indicates frequent low-temperature stress (tmin q05: -7.8°C) and precipitation deficits (prec q25: 0.037 mm/day), while historical CSV records (2001-2016) reveal extreme hydrological variance (dry_days median: 306 vs wet_days median: 59) and distinct regimes (cool_wet vs hot_dry). Residual stress evidence is unavailable, necessitating reliance on calibration event thresholds for daily event detection and CSV regime frequency for broad climate classification.",
+      "candidates": [
+        {
+          "candidate_id": "rag_local_profile",
+          "agronomic_rationale": "Calibration-only profile (2003-2016) provides direct thresholds for daily stress events observed during the maize growing season. It captures the frequency of frost (tmin < 0°C) and drought (prec < 1 mm) conditions prevalent in the calibration set, ensuring event detection aligns with the specific climatic reality of the 31 locations studied.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 5.0
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 30.0
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": -4.027
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 31.246
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 0.037
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "median"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "mean"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        },
+        {
+          "candidate_id": "rag_historical_regime",
+          "agronomic_rationale": "Structured CSV records (2001-2016) define broad climate regimes (cool_wet, hot_dry, long_dry_spell) without yield labels. This configuration uses CSV-derived annual aggregates (e.g., frost_days, gdd10_c_day) to classify years into these regimes, enabling the assessment of temperature and water limitation frequency across the monsoon gradient.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 6.32
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 35.0
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": 0.395
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 36.485
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 6.425
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "median"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "median"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        },
+        {
+          "candidate_id": "rag_robust_hybrid",
+          "agronomic_rationale": "Hybrid approach combines calibration daily event thresholds (prec < 0.037 mm, tmin < -7.8°C) with CSV annual regime metrics (frost_days, max_consecutive_dry_days) to address the lack of residual stress evidence. It uses calibration extremes for daily stress triggers and CSV medians for robust annual regime aggregation.",
+          "config": {
+            "gdd_base_temp": {
+              "crop": "maize",
+              "recommended": 5.0
+            },
+            "gdd_upper_limit": {
+              "crop": "maize",
+              "recommended": 30.0
+            },
+            "stress_thresholds": {
+              "tmin": {
+                "operator": "<",
+                "threshold": -7.802549999999999
+              },
+              "tmax": {
+                "operator": ">",
+                "threshold": 38.866
+              },
+              "prec": {
+                "operator": "<",
+                "threshold": 0.037
+              }
+            },
+            "veg_agg_method": {
+              "recommended": "median"
+            },
+            "soil_moisture_agg_method": {
+              "recommended": "median"
+            },
+            "include_fpar": true,
+            "include_ndvi": true,
+            "include_soil_moisture": true
+          }
+        }
+      ]
+    }
+  ],
+  "climate_profile": {
+    "calibration_end_year": 2016,
+    "n_locations": 31,
+    "n_location_years": 422,
+    "year_range": [
+      2003,
+      2016
+    ],
+    "weather": {
+      "tmin": {
+        "mean": 8.61273451550675,
+        "std": 9.400660742172796,
+        "min": -30.275,
+        "q05": -7.802549999999999,
+        "q10": -4.027,
+        "q25": 2.207,
+        "median": 9.6435,
+        "q75": 16.14875,
+        "q90": 19.823,
+        "q95": 21.667549999999995,
+        "max": 28.876
+      },
+      "tmax": {
+        "mean": 18.695848508680815,
+        "std": 9.281260490154686,
+        "min": -22.333,
+        "q05": 2.1209000000000007,
+        "q10": 5.8769,
+        "q25": 12.174,
+        "median": 20.263,
+        "q75": 25.99,
+        "q90": 29.572,
+        "q95": 31.246,
+        "max": 38.866
+      },
+      "tavg": {
+        "mean": 13.531968051639709,
+        "std": 9.246089623440826,
+        "min": -26.314,
+        "q05": -2.8720999999999997,
+        "q10": 0.9369000000000006,
+        "q25": 7.115,
+        "median": 14.894,
+        "q75": 20.94675,
+        "q90": 24.365,
+        "q95": 25.992549999999994,
+        "max": 32.058
+      },
+      "prec": {
+        "mean": 2.788055275263392,
+        "std": 5.45967190741751,
+        "min": 0.0,
+        "q05": 0.0,
+        "q10": 0.0,
+        "q25": 0.037,
+        "median": 0.531,
+        "q75": 2.93875,
+        "q90": 8.43,
+        "q95": 13.439549999999995,
+        "max": 91.687
+      },
+      "rad": {
+        "mean": 17399053.5143456,
+        "std": 6405074.833031582,
+        "min": 810624.75,
+        "q05": 5938809.225,
+        "q10": 8316922.9,
+        "q25": 12768895.25,
+        "median": 17913551.0,
+        "q75": 22576557.5,
+        "q90": 25612471.599999998,
+        "q95": 26841058.8,
+        "max": 31264946.0
+      },
+      "cwb": {
+        "mean": -0.6676994064401247,
+        "std": 6.036060622393711,
+        "min": -9.843,
+        "q05": -6.107,
+        "q10": -5.475,
+        "q25": -4.022,
+        "median": -2.063,
+        "q75": 0.126,
+        "q90": 5.77,
+        "q95": 10.929,
+        "max": 90.4
+      }
+    },
+    "yield": {
+      "mean": 5.342063981042655,
+      "std": 1.243921121290138,
+      "min": 1.854,
+      "q05": 3.749,
+      "q10": 3.9674,
+      "q25": 4.46275,
+      "median": 5.1995000000000005,
+      "q75": 5.9845,
+      "q90": 6.9655000000000005,
+      "q95": 7.46095,
+      "max": 10.211
+    },
+    "crop_season_event_days": {
+      "tmin_below_0": 30.253554502369667,
+      "tmax_above_35": 0.5853080568720379,
+      "prec_below_1": 93.69668246445498
+    }
+  },
+  "stress_threshold_evidence": {
+    "tmin": {},
+    "tmax": {},
+    "prec": {}
+  },
+  "retrieval": {
+    "retrieval_method": "exact CSV filters + robust scalar regime ranking (no embeddings)",
+    "query": {
+      "country_code": "CN",
+      "crop": "maize",
+      "year_lte": 2016,
+      "coverage_min_gte": 0.9
+    },
+    "information_boundary": "predictor-only climate rows through calibration_end_year",
+    "source": {
+      "path": "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\Climate_rag_knowledge_base\\processed\\climate_rag_metrics.csv",
+      "sha256": "feaa578b3c04570527c33b90dadcd1da990d9ed222fbdfa4377923df369d1ce8",
+      "schema_duplicate_audit": {
+        "year.1": {
+          "canonical": "year",
+          "identical": true
+        },
+        "coverage_min.1": {
+          "canonical": "coverage_min",
+          "identical": true
+        }
+      }
+    },
+    "eligible_row_count": 16,
+    "eligible_year_range": [
+      2001,
+      2016
+    ],
+    "summary": {
+      "mean_temp_c": {
+        "median": 6.32,
+        "q10": 5.225,
+        "q90": 6.859999999999999
+      },
+      "mean_daily_tmax_c": {
+        "median": 13.135,
+        "q10": 11.625,
+        "q90": 13.465
+      },
+      "mean_daily_tmin_c": {
+        "median": 0.395,
+        "q10": -0.43499999999999994,
+        "q90": 1.065
+      },
+      "annual_max_tmax_c": {
+        "median": 36.485,
+        "q10": 34.22,
+        "q90": 37.885
+      },
+      "annual_min_tmin_c": {
+        "median": -24.799999999999997,
+        "q10": -27.855,
+        "q90": -21.115
+      },
+      "annual_precip_mm": {
+        "median": 373.115,
+        "q10": 322.13,
+        "q90": 517.415
+      },
+      "daily_precip_p95_mm": {
+        "median": 6.425000000000001,
+        "q10": 4.43,
+        "q90": 7.975
+      },
+      "wet_days_ge_1mm": {
+        "median": 59.0,
+        "q10": 51.5,
+        "q90": 72.5
+      },
+      "heavy_precip_days_ge_20mm": {
+        "median": 2.5,
+        "q10": 1.5,
+        "q90": 5.0
+      },
+      "dry_days_lt_1mm": {
+        "median": 306.0,
+        "q10": 292.5,
+        "q90": 314.0
+      },
+      "max_consecutive_dry_days": {
+        "median": 59.5,
+        "q10": 44.0,
+        "q90": 87.5
+      },
+      "frost_days_tmin_lt_0c": {
+        "median": 177.0,
+        "q10": 171.5,
+        "q90": 186.5
+      },
+      "heat_days_tmax_gt_35c": {
+        "median": 2.0,
+        "q10": 0.0,
+        "q90": 5.5
+      },
+      "gdd10_c_day": {
+        "median": 1464.7800000000002,
+        "q10": 1399.495,
+        "q90": 1547.3
+      },
+      "mean_relative_humidity_pct": {
+        "median": 55.445,
+        "q10": 51.245,
+        "q90": 59.540000000000006
+      },
+      "mean_dewpoint_c": {
+        "median": -3.17,
+        "q10": -4.14,
+        "q90": -2.37
+      },
+      "mean_vpd_kpa_approx": {
+        "median": 0.587,
+        "q10": 0.5025,
+        "q90": 0.6505000000000001
+      },
+      "vpd_p95_kpa_approx": {
+        "median": 1.4184999999999999,
+        "q10": 1.286,
+        "q90": 1.722
+      },
+      "mean_solar_radiation_mj_m2_day": {
+        "median": 14.93,
+        "q10": 14.565000000000001,
+        "q90": 15.370000000000001
+      },
+      "annual_solar_radiation_mj_m2": {
+        "median": 5450.605,
+        "q10": 5319.27,
+        "q90": 5617.5599999999995
+      },
+      "mean_wind_speed_m_s": {
+        "median": 5.205,
+        "q10": 5.0,
+        "q90": 5.4
+      },
+      "hottest_month": {
+        "median": 7.0,
+        "q10": 7.0,
+        "q90": 7.5
+      },
+      "wettest_month": {
+        "median": 7.0,
+        "q10": 6.0,
+        "q90": 7.0
+      },
+      "driest_month": {
+        "median": 2.0,
+        "q10": 1.0,
+        "q90": 12.0
+      },
+      "monthly_precip_cv": {
+        "median": 1.1055000000000001,
+        "q10": 1.0150000000000001,
+        "q90": 1.323
+      }
+    },
+    "retrieved_rows": [
+      {
+        "parent_id": "CN_maize_2010",
+        "country": "China",
+        "country_zh": "中国",
+        "country_code": "CN",
+        "crop": "maize",
+        "year": 2010,
+        "latitude": 41.95616,
+        "longitude": 119.82276,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 4.92,
+        "mean_daily_tmax_c": 11.29,
+        "mean_daily_tmin_c": -0.71,
+        "annual_max_tmax_c": 36.02,
+        "annual_min_tmin_c": -25.57,
+        "annual_precip_mm": 572.19,
+        "daily_precip_p95_mm": 10.7,
+        "wet_days_ge_1mm": 73,
+        "heavy_precip_days_ge_20mm": 6,
+        "dry_days_lt_1mm": 292,
+        "max_consecutive_dry_days": 54,
+        "frost_days_tmin_lt_0c": 195,
+        "heat_days_tmax_gt_35c": 2,
+        "gdd10_c_day": 1418.22,
+        "mean_relative_humidity_pct": 58.45,
+        "mean_dewpoint_c": -3.36,
+        "mean_vpd_kpa_approx": 0.498,
+        "vpd_p95_kpa_approx": 1.346,
+        "mean_solar_radiation_mj_m2_day": 14.4,
+        "annual_solar_radiation_mj_m2": 5254.55,
+        "mean_wind_speed_m_s": 5.37,
+        "hottest_month": 7,
+        "wettest_month": 7,
+        "driest_month": 12,
+        "monthly_precip_cv": 0.962,
+        "retrieval_role": "cool_wet",
+        "retrieval_score": 7.675575907997588
+      },
+      {
+        "parent_id": "CN_maize_2001",
+        "country": "China",
+        "country_zh": "中国",
+        "country_code": "CN",
+        "crop": "maize",
+        "year": 2001,
+        "latitude": 41.95616,
+        "longitude": 119.82276,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 6.35,
+        "mean_daily_tmax_c": 13.24,
+        "mean_daily_tmin_c": 0.32,
+        "annual_max_tmax_c": 37.17,
+        "annual_min_tmin_c": -28.21,
+        "annual_precip_mm": 324.53,
+        "daily_precip_p95_mm": 4.09,
+        "wet_days_ge_1mm": 54,
+        "heavy_precip_days_ge_20mm": 3,
+        "dry_days_lt_1mm": 311,
+        "max_consecutive_dry_days": 97,
+        "frost_days_tmin_lt_0c": 171,
+        "heat_days_tmax_gt_35c": 9,
+        "gdd10_c_day": 1594.33,
+        "mean_relative_humidity_pct": 51.26,
+        "mean_dewpoint_c": -4.3,
+        "mean_vpd_kpa_approx": 0.673,
+        "vpd_p95_kpa_approx": 1.834,
+        "mean_solar_radiation_mj_m2_day": 15.34,
+        "annual_solar_radiation_mj_m2": 5599.04,
+        "mean_wind_speed_m_s": 5.17,
+        "hottest_month": 7,
+        "wettest_month": 7,
+        "driest_month": 12,
+        "monthly_precip_cv": 1.314,
+        "retrieval_role": "hot_dry",
+        "retrieval_score": 3.816378401920782
+      },
+      {
+        "parent_id": "CN_maize_2014",
+        "country": "China",
+        "country_zh": "中国",
+        "country_code": "CN",
+        "crop": "maize",
+        "year": 2014,
+        "latitude": 41.95616,
+        "longitude": 119.82276,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 7.0,
+        "mean_daily_tmax_c": 13.63,
+        "mean_daily_tmin_c": 1.13,
+        "annual_max_tmax_c": 36.03,
+        "annual_min_tmin_c": -20.83,
+        "annual_precip_mm": 405.71,
+        "daily_precip_p95_mm": 7.54,
+        "wet_days_ge_1mm": 52,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 313,
+        "max_consecutive_dry_days": 88,
+        "frost_days_tmin_lt_0c": 172,
+        "heat_days_tmax_gt_35c": 1,
+        "gdd10_c_day": 1465.64,
+        "mean_relative_humidity_pct": 55.51,
+        "mean_dewpoint_c": -2.3,
+        "mean_vpd_kpa_approx": 0.588,
+        "vpd_p95_kpa_approx": 1.437,
+        "mean_solar_radiation_mj_m2_day": 14.83,
+        "annual_solar_radiation_mj_m2": 5412.09,
+        "mean_wind_speed_m_s": 4.86,
+        "hottest_month": 7,
+        "wettest_month": 6,
+        "driest_month": 11,
+        "monthly_precip_cv": 1.103,
+        "retrieval_role": "long_dry_spell",
+        "retrieval_score": 1.4430379746835442
+      },
+      {
+        "parent_id": "CN_maize_2006",
+        "country": "China",
+        "country_zh": "中国",
+        "country_code": "CN",
+        "crop": "maize",
+        "year": 2006,
+        "latitude": 41.95616,
+        "longitude": 119.82276,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 6.25,
+        "mean_daily_tmax_c": 12.91,
+        "mean_daily_tmin_c": 0.37,
+        "annual_max_tmax_c": 34.14,
+        "annual_min_tmin_c": -26.77,
+        "annual_precip_mm": 358.31,
+        "daily_precip_p95_mm": 5.72,
+        "wet_days_ge_1mm": 53,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 312,
+        "max_consecutive_dry_days": 70,
+        "frost_days_tmin_lt_0c": 180,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 1461.05,
+        "mean_relative_humidity_pct": 53.95,
+        "mean_dewpoint_c": -3.49,
+        "mean_vpd_kpa_approx": 0.583,
+        "vpd_p95_kpa_approx": 1.4,
+        "mean_solar_radiation_mj_m2_day": 14.75,
+        "annual_solar_radiation_mj_m2": 5383.99,
+        "mean_wind_speed_m_s": 5.08,
+        "hottest_month": 8,
+        "wettest_month": 6,
+        "driest_month": 12,
+        "monthly_precip_cv": 1.332,
+        "retrieval_role": "typical",
+        "retrieval_score": 0.33217127022813486
+      },
+      {
+        "parent_id": "CN_maize_2015",
+        "country": "China",
+        "country_zh": "中国",
+        "country_code": "CN",
+        "crop": "maize",
+        "year": 2015,
+        "latitude": 41.95616,
+        "longitude": 119.82276,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 6.72,
+        "mean_daily_tmax_c": 13.21,
+        "mean_daily_tmin_c": 1.0,
+        "annual_max_tmax_c": 34.19,
+        "annual_min_tmin_c": -23.23,
+        "annual_precip_mm": 372.98,
+        "daily_precip_p95_mm": 6.44,
+        "wet_days_ge_1mm": 72,
+        "heavy_precip_days_ge_20mm": 0,
+        "dry_days_lt_1mm": 293,
+        "max_consecutive_dry_days": 46,
+        "frost_days_tmin_lt_0c": 177,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 1482.75,
+        "mean_relative_humidity_pct": 56.13,
+        "mean_dewpoint_c": -2.58,
+        "mean_vpd_kpa_approx": 0.587,
+        "vpd_p95_kpa_approx": 1.604,
+        "mean_solar_radiation_mj_m2_day": 14.9,
+        "annual_solar_radiation_mj_m2": 5438.84,
+        "mean_wind_speed_m_s": 5.01,
+        "hottest_month": 7,
+        "wettest_month": 6,
+        "driest_month": 3,
+        "monthly_precip_cv": 1.085,
+        "retrieval_role": "typical_fill",
+        "retrieval_score": 0.3332198145768872
+      },
+      {
+        "parent_id": "CN_maize_2011",
+        "country": "China",
+        "country_zh": "中国",
+        "country_code": "CN",
+        "crop": "maize",
+        "year": 2011,
+        "latitude": 41.95616,
+        "longitude": 119.82276,
+        "source_id": "nasa_power_daily",
+        "coverage_min": 1.0,
+        "valid_days": 365,
+        "mean_temp_c": 5.67,
+        "mean_daily_tmax_c": 12.2,
+        "mean_daily_tmin_c": -0.08,
+        "annual_max_tmax_c": 34.25,
+        "annual_min_tmin_c": -25.38,
+        "annual_precip_mm": 351.16,
+        "daily_precip_p95_mm": 5.86,
+        "wet_days_ge_1mm": 59,
+        "heavy_precip_days_ge_20mm": 2,
+        "dry_days_lt_1mm": 306,
+        "max_consecutive_dry_days": 56,
+        "frost_days_tmin_lt_0c": 181,
+        "heat_days_tmax_gt_35c": 0,
+        "gdd10_c_day": 1350.99,
+        "mean_relative_humidity_pct": 57.52,
+        "mean_dewpoint_c": -3.09,
+        "mean_vpd_kpa_approx": 0.521,
+        "vpd_p95_kpa_approx": 1.3,
+        "mean_solar_radiation_mj_m2_day": 15.04,
+        "annual_solar_radiation_mj_m2": 5489.55,
+        "mean_wind_speed_m_s": 5.19,
+        "hottest_month": 7,
+        "wettest_month": 7,
+        "driest_month": 1,
+        "monthly_precip_cv": 1.479,
+        "retrieval_role": "typical_fill",
+        "retrieval_score": 0.3987849990153315
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "rag1_rag_historical_regime",
+      "agronomic_rationale": "Structured CSV records (2001-2016) define broad climate regimes (cool_wet, hot_dry, long_dry_spell) without yield labels. This configuration uses CSV-derived annual aggregates (e.g., frost_days, gdd10_c_day) to classify years into these regimes, enabling the assessment of temperature and water limitation frequency across the monsoon gradient.",
+      "candidate_source": "base_qwen_structured_csv_rag",
+      "config": {
+        "gdd_base_temp": {
+          "maize": 6.32
+        },
+        "gdd_upper_limit": {
+          "maize": 35.0
+        },
+        "stress_thresholds": {
+          "tmin": {
+            "operator": "<",
+            "threshold": 0.395,
+            "label": "tmin<0.395"
+          },
+          "tmax": {
+            "operator": ">",
+            "threshold": 36.485,
+            "label": "tmax>36.485"
+          },
+          "prec": {
+            "operator": "<",
+            "threshold": 6.425,
+            "label": "prec<6.425"
+          }
+        },
+        "include_fpar": true,
+        "include_ndvi": true,
+        "include_soil_moisture": true,
+        "veg_agg_method": "median",
+        "soil_moisture_agg_method": "median"
+      }
+    }
+  ]
+}

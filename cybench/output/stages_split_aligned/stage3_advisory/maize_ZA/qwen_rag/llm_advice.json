@@ -1,0 +1,124 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "ZA-A1-0001",
+      "year": 2022,
+      "evidence_features": [
+        "tmin<5p7",
+        "prec<0.5p7",
+        "mean_cum_fpar12",
+        "mean_tavg6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: if soil moisture is recoverable, irrigation_assessment may mitigate the water proxy gap (prec<0.5p7). If temperature hazards (tmin<5p7, mean_tavg6) are primary drivers, sowing_window_review and stress_tolerant_cultivar_review are prioritized. Field_monitoring is required to validate the standardized_gap before action.",
+      "limitations": "Data is observational; implementation depends on local costs, agronomist review, and physical infrastructure constraints."
+    },
+    {
+      "adm_id": "ZA-A1-0003",
+      "year": 2022,
+      "evidence_features": [
+        "mean_prec8",
+        "max_cum_prec9",
+        "mean_rad8",
+        "mean_tmin12"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: significant water proxy gaps (mean_prec8, max_cum_prec9) suggest irrigation_assessment or soil_water_conservation if water is available. Temperature hazard (mean_tmin12) and radiation deficits (mean_rad8) suggest sowing_window_review and stress_tolerant_cultivar_review. Field_monitoring is needed to confirm stress signals.",
+      "limitations": "Data is observational; implementation depends on local costs, agronomist review, and physical infrastructure constraints."
+    },
+    {
+      "adm_id": "ZA-A1-0004",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_cwb9",
+        "mean_prec8",
+        "max_cum_prec8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: extreme water proxy gaps (max_cum_prec9, mean_prec8, max_cum_prec8) indicate irrigation_assessment or soil_water_conservation is critical if water can be supplied. Field_monitoring is required to verify soil water status before committing to conservation measures.",
+      "limitations": "Data is observational; implementation depends on local costs, agronomist review, and physical infrastructure constraints."
+    },
+    {
+      "adm_id": "ZA-A1-0005",
+      "year": 2022,
+      "evidence_features": [
+        "mean_cum_fpar12",
+        "mean_cum_cwb9",
+        "mean_cum_fpar11",
+        "mean_cum_ndvi9"
+      ],
+      "actions": [
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: evidence shows crop state indicators (mean_cum_fpar12, mean_cum_fpar11, mean_cum_ndvi9) and water proxy (mean_cum_cwb9) deviations. Since temperature and radiation are not directly changeable, focus on sowing_window_review and stress_tolerant_cultivar_review. Irrigation_assessment is conditional on water availability for the cwb9 gap. Field_monitoring is essential.",
+      "limitations": "Data is observational; implementation depends on local costs, agronomist review, and physical infrastructure constraints."
+    },
+    {
+      "adm_id": "ZA-A1-0006",
+      "year": 2022,
+      "evidence_features": [
+        "max_cum_prec9",
+        "mean_cum_fpar12",
+        "prec<0.5p8",
+        "mean_prec8",
+        "max_cum_prec8",
+        "prec<0.5p9"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "soil_water_conservation",
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: multiple water proxy gaps (max_cum_prec9, prec<0.5p8, mean_prec8, max_cum_prec8, prec<0.5p9) suggest irrigation_assessment or soil_water_conservation if water is available. Radiation gap (mean_cum_fpar12) suggests sowing_window_review. Field_monitoring is required to validate stress signals.",
+      "limitations": "Data is observational; implementation depends on local costs, agronomist review, and physical infrastructure constraints."
+    },
+    {
+      "adm_id": "ZA-A1-0009",
+      "year": 2022,
+      "evidence_features": [
+        "tmax>32p12",
+        "tmax>32p9",
+        "mean_cum_fpar11",
+        "mean_tavg12",
+        "mean_ssm12",
+        "prec<0.5p10",
+        "mean_prec1",
+        "mean_ssm11",
+        "max_cum_prec12"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring",
+        "sowing_window_review",
+        "stress_tolerant_cultivar_review"
+      ],
+      "reasoning": "Conditional on local crop stage and infrastructure: temperature hazards (tmax>32p12, tmax>32p9) and water proxy gaps (prec<0.5p10, mean_prec1, mean_ssm12, max_cum_prec12) suggest irrigation_assessment if water is available. Radiation gap (mean_cum_fpar11) suggests sowing_window_review. Field_monitoring is required to validate stress signals.",
+      "limitations": "Data is observational; implementation depends on local costs, agronomist review, and physical infrastructure constraints."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}

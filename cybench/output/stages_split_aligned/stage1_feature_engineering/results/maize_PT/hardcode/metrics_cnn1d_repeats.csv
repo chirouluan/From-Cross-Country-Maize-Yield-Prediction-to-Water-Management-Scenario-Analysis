@@ -1,0 +1,11 @@
+country,advisor,model,candidate_id,selected_k,repeat,seed,split,mape,normalized_rmse,r,r2,kge
+PT,hardcode,cnn1d,baseline,60,1,42,train,0.1379,17.0982,0.9134,0.8329,0.8259
+PT,hardcode,cnn1d,baseline,60,1,42,test,0.2492,29.8965,0.8941,0.2484,0.6094
+PT,hardcode,cnn1d,baseline,60,2,1051,train,0.1305,17.4573,0.9127,0.8258,0.8369
+PT,hardcode,cnn1d,baseline,60,2,1051,test,0.2501,30.0213,0.8942,0.2421,0.5967
+PT,hardcode,cnn1d,baseline,60,3,2060,train,0.1532,17.8092,0.9061,0.8188,0.8089
+PT,hardcode,cnn1d,baseline,60,3,2060,test,0.2428,28.6768,0.9139,0.3085,0.6174
+PT,hardcode,cnn1d,baseline,60,4,3069,train,0.1563,18.5282,0.8978,0.8038,0.7941
+PT,hardcode,cnn1d,baseline,60,4,3069,test,0.2554,31.0928,0.9072,0.187,0.5865
+PT,hardcode,cnn1d,baseline,60,5,4078,train,0.1458,17.3297,0.9111,0.8284,0.8243
+PT,hardcode,cnn1d,baseline,60,5,4078,test,0.2696,32.8642,0.8535,0.0918,0.5442

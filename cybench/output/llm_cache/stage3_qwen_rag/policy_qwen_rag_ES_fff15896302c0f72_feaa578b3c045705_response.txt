@@ -1,0 +1,8 @@
+{
+  "reference_yield_quantile": 0.75,
+  "stress_score_threshold": 0.75,
+  "max_water_proxy_shift_fraction": 0.5,
+  "max_actionable_features": 5,
+  "top_reported_stresses": 8,
+  "rationale": "Settings aligned with conservative analysis of predictor-only data (no management treatments). Reference quantile 0.75 and stress threshold 0.75 ensure focus on high-yield, high-stress scenarios within the historical 'cool_wet' to 'hot_dry' regimes. Max water proxy shift of 0.5 allows significant counterfactual exploration of precipitation/VPD without inventing irrigation data. Actionable features limited to 5 (temperature, radiation, water proxies, crop state) to reflect the absence of fertilizer/irrigation levers. Top 8 stresses prioritize the dominant hazards identified in the dataset: temperature hazard (48 instances), water proxy (40 instances), and crop state indicators (16 instances)."
+}

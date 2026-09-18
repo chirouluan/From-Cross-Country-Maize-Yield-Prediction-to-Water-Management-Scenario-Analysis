@@ -1,0 +1,37 @@
+{
+  "artifact_schema_version": 1,
+  "created_at_utc": "2026-09-15T05:42:49.762025+00:00",
+  "stage": "stage1_feature_engineering",
+  "artifact": "nrmse_wide",
+  "file": "nrmse_by_country_model.csv",
+  "sha256": "7fdd1559d2fdb716aae5e75ba8200af2627f7c6eedcfec89f87eebed1d78aafa",
+  "rows": 20,
+  "columns": [
+    "country",
+    "model",
+    "hardcode",
+    "qwen_base",
+    "qwen_rag"
+  ],
+  "dtypes": {
+    "country": "object",
+    "model": "object",
+    "hardcode": "float64",
+    "qwen_base": "float64",
+    "qwen_rag": "float64"
+  },
+  "metadata": {
+    "rows": 60,
+    "countries": [
+      "CN",
+      "MX",
+      "PT",
+      "ZA"
+    ],
+    "advisors": [
+      "hardcode",
+      "qwen_base",
+      "qwen_rag"
+    ]
+  }
+}

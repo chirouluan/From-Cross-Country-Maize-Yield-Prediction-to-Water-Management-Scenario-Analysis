@@ -1,0 +1,25 @@
+{
+  "step": "05_stage2_run",
+  "module": "cybench.stages.stage2_tabpfn_transfer.run",
+  "command": [
+    "d:\\Anaconda\\envs\\specllm\\python.exe",
+    "-u",
+    "-m",
+    "cybench.stages.stage2_tabpfn_transfer.run",
+    "--countries",
+    "CN,ZA,MX,PT",
+    "--device",
+    "cuda",
+    "--repeats",
+    "5",
+    "--base-seed",
+    "42",
+    "--resume",
+    "--stage1-output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage1_feature_engineering",
+    "--output-dir",
+    "C:\\Users\\35454\\Downloads\\AgML-CY-Bench-main\\cybench\\output\\stages_split_aligned\\stage2_tabpfn_transfer\\evaluation"
+  ],
+  "return_code": 0,
+  "elapsed_seconds": 225.2957775592804
+}

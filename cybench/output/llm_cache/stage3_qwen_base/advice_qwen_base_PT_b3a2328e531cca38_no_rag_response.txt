@@ -1,0 +1,97 @@
+{
+  "recommendations": [
+    {
+      "adm_id": "PT11",
+      "year": 2020,
+      "evidence_features": [
+        "median_cum_ndvi3",
+        "median_cum_ndvi1",
+        "median_cum_ndvi2",
+        "mean_rad7",
+        "max_ssm5",
+        "prec<2p5",
+        "mean_prec6"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, irrigation assessment is conditional on the water proxy 'max_ssm5' showing a gap of 0.8843 and 'prec<2p5' showing a gap of 1.5. Field monitoring is recommended to verify the observed deficits in crop state indicators ('median_cum_ndvi1', 'median_cum_ndvi2', 'median_cum_ndvi3') and radiation hazard ('mean_rad7').",
+      "limitations": "Water proxy adjustments are not direct irrigation doses; temperature/radiation and NDVI/FPAR cannot be directly changed. Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT15",
+      "year": 2020,
+      "evidence_features": [
+        "max_ssm5",
+        "mean_tmax3",
+        "median_cum_ndvi3",
+        "max_ssm6",
+        "prec<2p8"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, irrigation assessment is conditional on the water proxy 'max_ssm5' showing a gap of 0.8843 and 'prec<2p8' showing a gap of 0.8843. Field monitoring is recommended to verify the observed deficit in crop state indicator 'median_cum_ndvi3' and temperature hazard 'mean_tmax3'.",
+      "limitations": "Water proxy adjustments are not direct irrigation doses; temperature/radiation and NDVI/FPAR cannot be directly changed. Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT16",
+      "year": 2020,
+      "evidence_features": [
+        "max_cum_gdd2",
+        "max_ssm2",
+        "mean_tmin1",
+        "max_ssm5",
+        "mean_prec2",
+        "mean_cum_cwb3"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, irrigation assessment is conditional on the water proxy 'max_ssm2' showing a gap of 1.0129 and 'mean_prec2' showing a gap of 1.0539. Sowing window review is recommended due to the significant temperature hazard in 'max_cum_gdd2'. Field monitoring is recommended to verify crop state and water status.",
+      "limitations": "Water proxy adjustments are not direct irrigation doses; temperature/radiation and NDVI/FPAR cannot be directly changed. Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT17",
+      "year": 2020,
+      "evidence_features": [
+        "tmax>33p6",
+        "mean_tmin3",
+        "mean_tmin8",
+        "mean_tmin7",
+        "prec<2p8",
+        "max_cum_prec2"
+      ],
+      "actions": [
+        "sowing_window_review",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, sowing window review is conditional on the temperature hazard 'tmax>33p6' showing a gap of 0.6222. Field monitoring is recommended to verify the observed deficits in temperature hazards ('mean_tmin3', 'mean_tmin8', 'mean_tmin7') and water proxies ('prec<2p8', 'max_cum_prec2').",
+      "limitations": "Water proxy adjustments are not direct irrigation doses; temperature/radiation and NDVI/FPAR cannot be directly changed. Local crop stage, infrastructure, costs and agronomist review are needed."
+    },
+    {
+      "adm_id": "PT18",
+      "year": 2020,
+      "evidence_features": [
+        "prec<2p8",
+        "mean_cum_cwb8",
+        "mean_tmin7",
+        "tmax>33p6",
+        "mean_cum_cwb7"
+      ],
+      "actions": [
+        "irrigation_assessment",
+        "field_monitoring"
+      ],
+      "reasoning": "If local crop stage and infrastructure permit, irrigation assessment is conditional on the water proxy 'prec<2p8' showing a gap of 1000000000.0 and 'mean_cum_cwb8' showing a gap of 7.1835. Field monitoring is recommended to verify the observed deficits in water proxies ('mean_cum_cwb7') and temperature hazards ('mean_tmin7', 'tmax>33p6').",
+      "limitations": "Water proxy adjustments are not direct irrigation doses; temperature/radiation and NDVI/FPAR cannot be directly changed. Local crop stage, infrastructure, costs and agronomist review are needed."
+    }
+  ],
+  "overall_limitations": [
+    "observational scenario, not a field prescription"
+  ]
+}
