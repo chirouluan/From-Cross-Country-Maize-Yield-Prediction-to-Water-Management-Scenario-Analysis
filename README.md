@@ -1,4 +1,4 @@
-# CY-Bench 三阶段农业 AI 框架
+# 三阶段农业 AI 框架
 
 ![Graphical Abstract](graphical_abstract.png)
 
