@@ -1,0 +1,85 @@
+cybench.stages.stage1\_feature\_engineering package
+===================================================
+
+Submodules
+----------
+
+cybench.stages.stage1\_feature\_engineering.adaptive module
+-----------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.adaptive
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.advisors module
+-----------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.advisors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.estimators module
+-------------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.estimators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.evidence module
+-----------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.evidence
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.prepare module
+----------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.prepare
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.rag\_retrieval module
+-----------------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.rag_retrieval
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.run module
+------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.run
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.selection module
+------------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.selection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage1\_feature\_engineering.summarize module
+------------------------------------------------------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering.summarize
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cybench.stages.stage1_feature_engineering
+   :members:
+   :undoc-members:
+   :show-inheritance:

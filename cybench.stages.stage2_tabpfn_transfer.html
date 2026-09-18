@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cybench.stages.stage2_tabpfn_transfer package &mdash; AgML-crop-yield-forecasting  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AgML-crop-yield-forecasting
+              <img src="_static/agml-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">cybench.stages.stage2_tabpfn_transfer package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.stage2_tabpfn_transfer.prepare_cn_data">cybench.stages.stage2_tabpfn_transfer.prepare_cn_data module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.export_cn_data"><code class="docutils literal notranslate"><span class="pre">export_cn_data()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage2_tabpfn_transfer.run">cybench.stages.stage2_tabpfn_transfer.run module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.run.checkpoint_sha256"><code class="docutils literal notranslate"><span class="pre">checkpoint_sha256()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.run.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.run.make_tabpfn"><code class="docutils literal notranslate"><span class="pre">make_tabpfn()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.run.read_stage1_features"><code class="docutils literal notranslate"><span class="pre">read_stage1_features()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.run.run_stage2"><code class="docutils literal notranslate"><span class="pre">run_stage2()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage2_tabpfn_transfer.run.validate_checkpoints"><code class="docutils literal notranslate"><span class="pre">validate_checkpoints()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage2_tabpfn_transfer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AgML-crop-yield-forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">cybench.stages.stage2_tabpfn_transfer package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cybench.stages.stage2_tabpfn_transfer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cybench-stages-stage2-tabpfn-transfer-package">
+<h1>cybench.stages.stage2_tabpfn_transfer package<a class="headerlink" href="#cybench-stages-stage2-tabpfn-transfer-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.stage2_tabpfn_transfer.prepare_cn_data">
+<span id="cybench-stages-stage2-tabpfn-transfer-prepare-cn-data-module"></span><h2>cybench.stages.stage2_tabpfn_transfer.prepare_cn_data module<a class="headerlink" href="#module-cybench.stages.stage2_tabpfn_transfer.prepare_cn_data" title="Link to this heading"></a></h2>
+<p>Export leakage-safe China data for an external TabPFN continuation run.</p>
+<p>TabPFN continuation training depends on the specific TabPFN training code and
+checkpoint format. This command owns the CY-Bench side of that boundary: it
+creates immutable train/validation tables and a provenance manifest. The
+trainer must write its resulting checkpoint path/hash back into that manifest.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.export_cn_data">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.</span></span><span class="sig-name descname"><span class="pre">export_cn_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage1_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Path('/home/runner/work/From-Cross-Country-Maize-Yield-Prediction-to-Water-Management-Scenario-Analysis/From-Cross-Country-Maize-Yield-Prediction-to-Water-Management-Scenario-Analysis/cybench/output/stages/stage1_feature_engineering')</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.export_cn_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.main">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage2_tabpfn_transfer.run">
+<span id="cybench-stages-stage2-tabpfn-transfer-run-module"></span><h2>cybench.stages.stage2_tabpfn_transfer.run module<a class="headerlink" href="#module-cybench.stages.stage2_tabpfn_transfer.run" title="Link to this heading"></a></h2>
+<p>Compare default and CN-adapted TabPFN checkpoints across target countries.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.run.checkpoint_sha256">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.run.</span></span><span class="sig-name descname"><span class="pre">checkpoint_sha256</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.run.checkpoint_sha256" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.run.main">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.run.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.run.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.run.make_tabpfn">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.run.</span></span><span class="sig-name descname"><span class="pre">make_tabpfn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checkpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.run.make_tabpfn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.run.read_stage1_features">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.run.</span></span><span class="sig-name descname"><span class="pre">read_stage1_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage1_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.run.read_stage1_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.run.run_stage2">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.run.</span></span><span class="sig-name descname"><span class="pre">run_stage2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_checkpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">finetuned_checkpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage1_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Path('/home/runner/work/From-Cross-Country-Maize-Yield-Prediction-to-Water-Management-Scenario-Analysis/From-Cross-Country-Maize-Yield-Prediction-to-Water-Management-Scenario-Analysis/cybench/output/stages/stage1_feature_engineering')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.run.run_stage2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage2_tabpfn_transfer.run.validate_checkpoints">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage2_tabpfn_transfer.run.</span></span><span class="sig-name descname"><span class="pre">validate_checkpoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">finetuned</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage2_tabpfn_transfer.run.validate_checkpoints" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage2_tabpfn_transfer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cybench.stages.stage2_tabpfn_transfer" title="Link to this heading"></a></h2>
+<p>Stage 2: CN-adapted TabPFN cross-country transfer study.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Wageningen University and Research.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #28242c; */
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #124400;
+    }
+  </style>
+
+
+</body>
+</html>

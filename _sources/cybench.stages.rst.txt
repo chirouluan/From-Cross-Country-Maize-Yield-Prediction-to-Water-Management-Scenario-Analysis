@@ -1,0 +1,71 @@
+cybench.stages package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   cybench.stages.stage1_feature_engineering
+   cybench.stages.stage2_tabpfn_transfer
+   cybench.stages.stage3_advisory
+
+Submodules
+----------
+
+cybench.stages.artifacts module
+-------------------------------
+
+.. automodule:: cybench.stages.artifacts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.config module
+----------------------------
+
+.. automodule:: cybench.stages.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.data module
+--------------------------
+
+.. automodule:: cybench.stages.data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.evaluation module
+--------------------------------
+
+.. automodule:: cybench.stages.evaluation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.regressors module
+--------------------------------
+
+.. automodule:: cybench.stages.regressors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.runtime module
+-----------------------------
+
+.. automodule:: cybench.stages.runtime
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cybench.stages
+   :members:
+   :undoc-members:
+   :show-inheritance:

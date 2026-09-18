@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cybench.stages.stage1_feature_engineering package &mdash; AgML-crop-yield-forecasting  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AgML-crop-yield-forecasting
+              <img src="_static/agml-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">cybench.stages.stage1_feature_engineering package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.adaptive">cybench.stages.stage1_feature_engineering.adaptive module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive._candidate_thresholds"><code class="docutils literal notranslate"><span class="pre">_candidate_thresholds()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive._finite_summary"><code class="docutils literal notranslate"><span class="pre">_finite_summary()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive.baseline_candidate"><code class="docutils literal notranslate"><span class="pre">baseline_candidate()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive.calibration_inner_years"><code class="docutils literal notranslate"><span class="pre">calibration_inner_years()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive.calibration_stress_evidence"><code class="docutils literal notranslate"><span class="pre">calibration_stress_evidence()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive.calibration_weather_and_labels"><code class="docutils literal notranslate"><span class="pre">calibration_weather_and_labels()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive.evaluate_candidate_configs"><code class="docutils literal notranslate"><span class="pre">evaluate_candidate_configs()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.adaptive.regional_climate_profile"><code class="docutils literal notranslate"><span class="pre">regional_climate_profile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench-stages-stage1-feature-engineering-advisors-module">cybench.stages.stage1_feature_engineering.advisors module</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.estimators">cybench.stages.stage1_feature_engineering.estimators module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor"><code class="docutils literal notranslate"><span class="pre">FlatNeuralRegressor</span></code></a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.fit"><code class="docutils literal notranslate"><span class="pre">FlatNeuralRegressor.fit()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.predict"><code class="docutils literal notranslate"><span class="pre">FlatNeuralRegressor.predict()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.estimators.flat_neural_regressor"><code class="docutils literal notranslate"><span class="pre">flat_neural_regressor()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.evidence">cybench.stages.stage1_feature_engineering.evidence module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.evidence._bootstrap_ci"><code class="docutils literal notranslate"><span class="pre">_bootstrap_ci()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.evidence._two_way_residual"><code class="docutils literal notranslate"><span class="pre">_two_way_residual()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.evidence.prompt_evidence"><code class="docutils literal notranslate"><span class="pre">prompt_evidence()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.evidence.residualized_stress_evidence"><code class="docutils literal notranslate"><span class="pre">residualized_stress_evidence()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench-stages-stage1-feature-engineering-prepare-module">cybench.stages.stage1_feature_engineering.prepare module</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.rag_retrieval">cybench.stages.stage1_feature_engineering.rag_retrieval module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._read_metrics"><code class="docutils literal notranslate"><span class="pre">_read_metrics()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._representative_rows"><code class="docutils literal notranslate"><span class="pre">_representative_rows()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._robust_z"><code class="docutils literal notranslate"><span class="pre">_robust_z()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._sha256"><code class="docutils literal notranslate"><span class="pre">_sha256()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.rag_retrieval.retrieval_rows_frame"><code class="docutils literal notranslate"><span class="pre">retrieval_rows_frame()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.rag_retrieval.retrieve_climate_metrics"><code class="docutils literal notranslate"><span class="pre">retrieve_climate_metrics()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.run">cybench.stages.stage1_feature_engineering.run module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.run._factory"><code class="docutils literal notranslate"><span class="pre">_factory()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.run._load_json"><code class="docutils literal notranslate"><span class="pre">_load_json()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.run.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.run.run_stage1"><code class="docutils literal notranslate"><span class="pre">run_stage1()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.selection">cybench.stages.stage1_feature_engineering.selection module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.selection._bounded"><code class="docutils literal notranslate"><span class="pre">_bounded()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.selection.expand_candidates"><code class="docutils literal notranslate"><span class="pre">expand_candidates()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.selection.extended_inner_years"><code class="docutils literal notranslate"><span class="pre">extended_inner_years()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.selection.reduced_regressor"><code class="docutils literal notranslate"><span class="pre">reduced_regressor()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering.summarize">cybench.stages.stage1_feature_engineering.summarize module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.summarize.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage1_feature_engineering.summarize.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage1_feature_engineering">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AgML-crop-yield-forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">cybench.stages.stage1_feature_engineering package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cybench.stages.stage1_feature_engineering.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cybench-stages-stage1-feature-engineering-package">
+<h1>cybench.stages.stage1_feature_engineering package<a class="headerlink" href="#cybench-stages-stage1-feature-engineering-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.adaptive">
+<span id="cybench-stages-stage1-feature-engineering-adaptive-module"></span><h2>cybench.stages.stage1_feature_engineering.adaptive module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.adaptive" title="Link to this heading"></a></h2>
+<p>Leakage-safe evidence and inner validation for adaptive Stage 1 features.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive._candidate_thresholds">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">_candidate_thresholds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weather</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive._candidate_thresholds" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive._finite_summary">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">_finite_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive._finite_summary" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive.baseline_candidate">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">baseline_candidate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive.baseline_candidate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive.calibration_inner_years">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">calibration_inner_years</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive.calibration_inner_years" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive.calibration_stress_evidence">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">calibration_stress_evidence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive.calibration_stress_evidence" title="Link to this definition"></a></dt>
+<dd><p>Correlate candidate stress-day counts with yield inside calibration only.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive.calibration_weather_and_labels">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">calibration_weather_and_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive.calibration_weather_and_labels" title="Link to this definition"></a></dt>
+<dd><p>Return daily weather and targets restricted to the outer calibration period.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive.evaluate_candidate_configs">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">evaluate_candidate_configs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">candidates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regressors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimator_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive.evaluate_candidate_configs" title="Link to this definition"></a></dt>
+<dd><p>Select one LLM candidate by mean inner-fold NRMSE across regressors.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.adaptive.regional_climate_profile">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.adaptive.</span></span><span class="sig-name descname"><span class="pre">regional_climate_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.adaptive.regional_climate_profile" title="Link to this definition"></a></dt>
+<dd><p>Build a country profile using calibration predictors and labels only.</p>
+</dd></dl>
+
+</section>
+<section id="cybench-stages-stage1-feature-engineering-advisors-module">
+<h2>cybench.stages.stage1_feature_engineering.advisors module<a class="headerlink" href="#cybench-stages-stage1-feature-engineering-advisors-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.estimators">
+<span id="cybench-stages-stage1-feature-engineering-estimators-module"></span><h2>cybench.stages.stage1_feature_engineering.estimators module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.estimators" title="Link to this heading"></a></h2>
+<p>Adapters for the five Stage 1 downstream regression models.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.estimators.</span></span><span class="sig-name descname"><span class="pre">FlatNeuralRegressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Expose CY-Bench flat neural models through fit(X, y)/predict(X).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.fit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.predict" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.estimators.flat_neural_regressor">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.estimators.</span></span><span class="sig-name descname"><span class="pre">flat_neural_regressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.estimators.flat_neural_regressor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.evidence">
+<span id="cybench-stages-stage1-feature-engineering-evidence-module"></span><h2>cybench.stages.stage1_feature_engineering.evidence module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.evidence" title="Link to this heading"></a></h2>
+<p>Residualized, direction-aware calibration evidence for LLM prompts.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.evidence._bootstrap_ci">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.evidence.</span></span><span class="sig-name descname"><span class="pre">_bootstrap_ci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.evidence._bootstrap_ci" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.evidence._two_way_residual">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.evidence.</span></span><span class="sig-name descname"><span class="pre">_two_way_residual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.evidence._two_way_residual" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.evidence.prompt_evidence">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.evidence.</span></span><span class="sig-name descname"><span class="pre">prompt_evidence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evidence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.evidence.prompt_evidence" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.evidence.residualized_stress_evidence">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.evidence.</span></span><span class="sig-name descname"><span class="pre">residualized_stress_evidence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.evidence.residualized_stress_evidence" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="cybench-stages-stage1-feature-engineering-prepare-module">
+<h2>cybench.stages.stage1_feature_engineering.prepare module<a class="headerlink" href="#cybench-stages-stage1-feature-engineering-prepare-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.rag_retrieval">
+<span id="cybench-stages-stage1-feature-engineering-rag-retrieval-module"></span><h2>cybench.stages.stage1_feature_engineering.rag_retrieval module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.rag_retrieval" title="Link to this heading"></a></h2>
+<p>Leakage-safe structured retrieval from the climate RAG metrics table.</p>
+<p>This module deliberately uses relational filters and transparent scalar rankings.
+It does not create embeddings or perform vector-database similarity search.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.rag_retrieval._read_metrics">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.rag_retrieval.</span></span><span class="sig-name descname"><span class="pre">_read_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._read_metrics" title="Link to this definition"></a></dt>
+<dd><p>Read the generated CSV and validate pandas-renamed duplicate columns.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.rag_retrieval._representative_rows">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.rag_retrieval.</span></span><span class="sig-name descname"><span class="pre">_representative_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._representative_rows" title="Link to this definition"></a></dt>
+<dd><p>Select auditable climate regimes, then fill remaining slots by typicality.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.rag_retrieval._robust_z">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.rag_retrieval.</span></span><span class="sig-name descname"><span class="pre">_robust_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._robust_z" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.rag_retrieval._sha256">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.rag_retrieval.</span></span><span class="sig-name descname"><span class="pre">_sha256</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.rag_retrieval._sha256" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.rag_retrieval.retrieval_rows_frame">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.rag_retrieval.</span></span><span class="sig-name descname"><span class="pre">retrieval_rows_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retrieval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.rag_retrieval.retrieval_rows_frame" title="Link to this definition"></a></dt>
+<dd><p>Return retrieved evidence as a flat table for artifact inspection.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.rag_retrieval.retrieve_climate_metrics">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.rag_retrieval.</span></span><span class="sig-name descname"><span class="pre">retrieve_climate_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.rag_retrieval.retrieve_climate_metrics" title="Link to this definition"></a></dt>
+<dd><p>Query target-country historical climate rows without using future years.</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.run">
+<span id="cybench-stages-stage1-feature-engineering-run-module"></span><h2>cybench.stages.stage1_feature_engineering.run module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.run" title="Link to this heading"></a></h2>
+<p>Run the canonical Stage 1 multi-model feature-parameter experiment.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.run._factory">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.run.</span></span><span class="sig-name descname"><span class="pre">_factory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.run._factory" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.run._load_json">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.run.</span></span><span class="sig-name descname"><span class="pre">_load_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.run._load_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.run.main">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.run.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.run.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.run.run_stage1">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.run.</span></span><span class="sig-name descname"><span class="pre">run_stage1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">countries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">advisors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.run.run_stage1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.selection">
+<span id="cybench-stages-stage1-feature-engineering-selection-module"></span><h2>cybench.stages.stage1_feature_engineering.selection module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.selection" title="Link to this heading"></a></h2>
+<p>Candidate expansion and calibration-only parameter selection.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.selection._bounded">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.selection.</span></span><span class="sig-name descname"><span class="pre">_bounded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.selection._bounded" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.selection.expand_candidates">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.selection.</span></span><span class="sig-name descname"><span class="pre">expand_candidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">report</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">budget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.selection.expand_candidates" title="Link to this definition"></a></dt>
+<dd><p>Expand each point recommendation into deterministic low/mid/high variants.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.selection.extended_inner_years">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.selection.</span></span><span class="sig-name descname"><span class="pre">extended_inner_years</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_train_years</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_validation_years</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.selection.extended_inner_years" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.selection.reduced_regressor">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.selection.</span></span><span class="sig-name descname"><span class="pre">reduced_regressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.selection.reduced_regressor" title="Link to this definition"></a></dt>
+<dd><p>Fit univariate feature selection inside each temporal training fold.</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering.summarize">
+<span id="cybench-stages-stage1-feature-engineering-summarize-module"></span><h2>cybench.stages.stage1_feature_engineering.summarize module<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering.summarize" title="Link to this heading"></a></h2>
+<p>Validate and summarize canonical Stage 1 results.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.summarize.main">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.summarize.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.summarize.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage1_feature_engineering.summarize.summarize">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage1_feature_engineering.summarize.</span></span><span class="sig-name descname"><span class="pre">summarize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage1_feature_engineering.summarize.summarize" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage1_feature_engineering">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cybench.stages.stage1_feature_engineering" title="Link to this heading"></a></h2>
+<p>Stage 1: multi-model validation of hard-coded, Base-Qwen and structured-RAG features.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Wageningen University and Research.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #28242c; */
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #124400;
+    }
+  </style>
+
+
+</body>
+</html>

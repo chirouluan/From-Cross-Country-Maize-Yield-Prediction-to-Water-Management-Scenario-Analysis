@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cybench.stages package &mdash; AgML-crop-yield-forecasting  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AgML-crop-yield-forecasting
+              <img src="_static/agml-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">cybench.stages package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.artifacts">cybench.stages.artifacts module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.artifacts.file_sha256"><code class="docutils literal notranslate"><span class="pre">file_sha256()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.manifest_path"><code class="docutils literal notranslate"><span class="pre">manifest_path()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.read_dataframe_artifact"><code class="docutils literal notranslate"><span class="pre">read_dataframe_artifact()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.read_stage1_dataset"><code class="docutils literal notranslate"><span class="pre">read_stage1_dataset()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.read_stage2_predictions"><code class="docutils literal notranslate"><span class="pre">read_stage2_predictions()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.stage1_dataset_path"><code class="docutils literal notranslate"><span class="pre">stage1_dataset_path()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.stage2_prediction_path"><code class="docutils literal notranslate"><span class="pre">stage2_prediction_path()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.artifacts.write_dataframe_artifact"><code class="docutils literal notranslate"><span class="pre">write_dataframe_artifact()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.config">cybench.stages.config module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.config.LLMVariant"><code class="docutils literal notranslate"><span class="pre">LLMVariant</span></code></a><ul>
+<li><a class="reference internal" href="#cybench.stages.config.LLMVariant.model_dir"><code class="docutils literal notranslate"><span class="pre">LLMVariant.model_dir</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.config.LLMVariant.name"><code class="docutils literal notranslate"><span class="pre">LLMVariant.name</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench.stages.config.qwen_base_variant"><code class="docutils literal notranslate"><span class="pre">qwen_base_variant()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.config.require_file"><code class="docutils literal notranslate"><span class="pre">require_file()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.config.stage_output_dir"><code class="docutils literal notranslate"><span class="pre">stage_output_dir()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.config.tabpfn_checkpoints"><code class="docutils literal notranslate"><span class="pre">tabpfn_checkpoints()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.config.validate_llm_variant"><code class="docutils literal notranslate"><span class="pre">validate_llm_variant()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.data">cybench.stages.data module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.data.build_feature_table"><code class="docutils literal notranslate"><span class="pre">build_feature_table()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.data.chronological_test_years"><code class="docutils literal notranslate"><span class="pre">chronological_test_years()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.data.feature_columns"><code class="docutils literal notranslate"><span class="pre">feature_columns()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.data.finite_rows"><code class="docutils literal notranslate"><span class="pre">finite_rows()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.data.labels_table"><code class="docutils literal notranslate"><span class="pre">labels_table()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.data.load_country_dataset"><code class="docutils literal notranslate"><span class="pre">load_country_dataset()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.data.merge_features_labels"><code class="docutils literal notranslate"><span class="pre">merge_features_labels()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.evaluation">cybench.stages.evaluation module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.evaluation.evaluate_temporal_folds"><code class="docutils literal notranslate"><span class="pre">evaluate_temporal_folds()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.evaluation.metric_row"><code class="docutils literal notranslate"><span class="pre">metric_row()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.evaluation.metrics_from_prediction_frame"><code class="docutils literal notranslate"><span class="pre">metrics_from_prediction_frame()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.evaluation.predict_training_fit"><code class="docutils literal notranslate"><span class="pre">predict_training_fit()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.evaluation.repeat_seed"><code class="docutils literal notranslate"><span class="pre">repeat_seed()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.evaluation.summarize_repeated_metrics"><code class="docutils literal notranslate"><span class="pre">summarize_repeated_metrics()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.regressors">cybench.stages.regressors module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.regressors.make_regressor"><code class="docutils literal notranslate"><span class="pre">make_regressor()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.runtime">cybench.stages.runtime module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.runtime.initialize_torch_before_data_libraries"><code class="docutils literal notranslate"><span class="pre">initialize_torch_before_data_libraries()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AgML-crop-yield-forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">cybench.stages package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cybench.stages.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cybench-stages-package">
+<h1>cybench.stages package<a class="headerlink" href="#cybench-stages-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html">cybench.stages.stage1_feature_engineering package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.adaptive">cybench.stages.stage1_feature_engineering.adaptive module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive._candidate_thresholds"><code class="docutils literal notranslate"><span class="pre">_candidate_thresholds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive._finite_summary"><code class="docutils literal notranslate"><span class="pre">_finite_summary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive.baseline_candidate"><code class="docutils literal notranslate"><span class="pre">baseline_candidate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive.calibration_inner_years"><code class="docutils literal notranslate"><span class="pre">calibration_inner_years()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive.calibration_stress_evidence"><code class="docutils literal notranslate"><span class="pre">calibration_stress_evidence()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive.calibration_weather_and_labels"><code class="docutils literal notranslate"><span class="pre">calibration_weather_and_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive.evaluate_candidate_configs"><code class="docutils literal notranslate"><span class="pre">evaluate_candidate_configs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.adaptive.regional_climate_profile"><code class="docutils literal notranslate"><span class="pre">regional_climate_profile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench-stages-stage1-feature-engineering-advisors-module">cybench.stages.stage1_feature_engineering.advisors module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.estimators">cybench.stages.stage1_feature_engineering.estimators module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor"><code class="docutils literal notranslate"><span class="pre">FlatNeuralRegressor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.fit"><code class="docutils literal notranslate"><span class="pre">FlatNeuralRegressor.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.estimators.FlatNeuralRegressor.predict"><code class="docutils literal notranslate"><span class="pre">FlatNeuralRegressor.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.estimators.flat_neural_regressor"><code class="docutils literal notranslate"><span class="pre">flat_neural_regressor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.evidence">cybench.stages.stage1_feature_engineering.evidence module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.evidence._bootstrap_ci"><code class="docutils literal notranslate"><span class="pre">_bootstrap_ci()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.evidence._two_way_residual"><code class="docutils literal notranslate"><span class="pre">_two_way_residual()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.evidence.prompt_evidence"><code class="docutils literal notranslate"><span class="pre">prompt_evidence()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.evidence.residualized_stress_evidence"><code class="docutils literal notranslate"><span class="pre">residualized_stress_evidence()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench-stages-stage1-feature-engineering-prepare-module">cybench.stages.stage1_feature_engineering.prepare module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.rag_retrieval">cybench.stages.stage1_feature_engineering.rag_retrieval module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.rag_retrieval._read_metrics"><code class="docutils literal notranslate"><span class="pre">_read_metrics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.rag_retrieval._representative_rows"><code class="docutils literal notranslate"><span class="pre">_representative_rows()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.rag_retrieval._robust_z"><code class="docutils literal notranslate"><span class="pre">_robust_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.rag_retrieval._sha256"><code class="docutils literal notranslate"><span class="pre">_sha256()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.rag_retrieval.retrieval_rows_frame"><code class="docutils literal notranslate"><span class="pre">retrieval_rows_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.rag_retrieval.retrieve_climate_metrics"><code class="docutils literal notranslate"><span class="pre">retrieve_climate_metrics()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.run">cybench.stages.stage1_feature_engineering.run module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.run._factory"><code class="docutils literal notranslate"><span class="pre">_factory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.run._load_json"><code class="docutils literal notranslate"><span class="pre">_load_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.run.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.run.run_stage1"><code class="docutils literal notranslate"><span class="pre">run_stage1()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.selection">cybench.stages.stage1_feature_engineering.selection module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.selection._bounded"><code class="docutils literal notranslate"><span class="pre">_bounded()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.selection.expand_candidates"><code class="docutils literal notranslate"><span class="pre">expand_candidates()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.selection.extended_inner_years"><code class="docutils literal notranslate"><span class="pre">extended_inner_years()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.selection.reduced_regressor"><code class="docutils literal notranslate"><span class="pre">reduced_regressor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering.summarize">cybench.stages.stage1_feature_engineering.summarize module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.summarize.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#cybench.stages.stage1_feature_engineering.summarize.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage1_feature_engineering.html#module-cybench.stages.stage1_feature_engineering">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html">cybench.stages.stage2_tabpfn_transfer package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#module-cybench.stages.stage2_tabpfn_transfer.prepare_cn_data">cybench.stages.stage2_tabpfn_transfer.prepare_cn_data module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.export_cn_data"><code class="docutils literal notranslate"><span class="pre">export_cn_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.prepare_cn_data.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#module-cybench.stages.stage2_tabpfn_transfer.run">cybench.stages.stage2_tabpfn_transfer.run module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.run.checkpoint_sha256"><code class="docutils literal notranslate"><span class="pre">checkpoint_sha256()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.run.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.run.make_tabpfn"><code class="docutils literal notranslate"><span class="pre">make_tabpfn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.run.read_stage1_features"><code class="docutils literal notranslate"><span class="pre">read_stage1_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.run.run_stage2"><code class="docutils literal notranslate"><span class="pre">run_stage2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#cybench.stages.stage2_tabpfn_transfer.run.validate_checkpoints"><code class="docutils literal notranslate"><span class="pre">validate_checkpoints()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage2_tabpfn_transfer.html#module-cybench.stages.stage2_tabpfn_transfer">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cybench.stages.stage3_advisory.html">cybench.stages.stage3_advisory package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench-stages-stage3-advisory-llm-module">cybench.stages.stage3_advisory.llm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#module-cybench.stages.stage3_advisory.models">cybench.stages.stage3_advisory.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel.estimator"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.estimator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel.features"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel.importance"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.importance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel.predict"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel.residual_quantile"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.residual_quantile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.YieldResponseModel.validation_metrics"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.validation_metrics</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models._estimator"><code class="docutils literal notranslate"><span class="pre">_estimator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.models.fit_yield_response_model"><code class="docutils literal notranslate"><span class="pre">fit_yield_response_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#module-cybench.stages.stage3_advisory.optimizer">cybench.stages.stage3_advisory.optimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_actionable_features"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.max_actionable_features</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_water_proxy_shift_fraction"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.max_water_proxy_shift_fraction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.reference_yield_quantile"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.reference_yield_quantile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.stress_score_threshold"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.stress_score_threshold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.top_reported_stresses"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.top_reported_stresses</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer._historical_reference"><code class="docutils literal notranslate"><span class="pre">_historical_reference()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer._predict_row"><code class="docutils literal notranslate"><span class="pre">_predict_row()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.diagnose_stress"><code class="docutils literal notranslate"><span class="pre">diagnose_stress()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.optimize_recovery_scenario"><code class="docutils literal notranslate"><span class="pre">optimize_recovery_scenario()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.policy_dict"><code class="docutils literal notranslate"><span class="pre">policy_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.sanitize_policy"><code class="docutils literal notranslate"><span class="pre">sanitize_policy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.scenario_summary"><code class="docutils literal notranslate"><span class="pre">scenario_summary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.optimizer.select_current_conditions"><code class="docutils literal notranslate"><span class="pre">select_current_conditions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench-stages-stage3-advisory-run-module">cybench.stages.stage3_advisory.run module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#module-cybench.stages.stage3_advisory.schema">cybench.stages.stage3_advisory.schema module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.CountryYieldData"><code class="docutils literal notranslate"><span class="pre">CountryYieldData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.CountryYieldData.country"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.country</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.CountryYieldData.feature_columns"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.feature_columns</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.CountryYieldData.frame"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.frame</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.CountryYieldData.lineage"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.lineage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.attach_stage2_predictions"><code class="docutils literal notranslate"><span class="pre">attach_stage2_predictions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.feature_role"><code class="docutils literal notranslate"><span class="pre">feature_role()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.load_stage1_yield_data"><code class="docutils literal notranslate"><span class="pre">load_stage1_yield_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cybench.stages.stage3_advisory.html#cybench.stages.stage3_advisory.schema.validate_yield_frame"><code class="docutils literal notranslate"><span class="pre">validate_yield_frame()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cybench.stages.stage3_advisory.html#module-cybench.stages.stage3_advisory">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.artifacts">
+<span id="cybench-stages-artifacts-module"></span><h2>cybench.stages.artifacts module<a class="headerlink" href="#module-cybench.stages.artifacts" title="Link to this heading"></a></h2>
+<p>Versioned, checksum-verified tabular artifacts shared between stages.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.file_sha256">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">file_sha256</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cybench.stages.artifacts.file_sha256" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.manifest_path">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">manifest_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#cybench.stages.artifacts.manifest_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.read_dataframe_artifact">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">read_dataframe_artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_checksum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.artifacts.read_dataframe_artifact" title="Link to this definition"></a></dt>
+<dd><p>Read an artifact only after its manifest and identity pass validation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.read_stage1_dataset">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">read_stage1_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage1_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'hardcoded'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.artifacts.read_stage1_dataset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.read_stage2_predictions">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">read_stage2_predictions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage2_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'stage2_tabpfn_transfer'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.artifacts.read_stage2_predictions" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.stage1_dataset_path">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">stage1_dataset_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage1_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#cybench.stages.artifacts.stage1_dataset_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.stage2_prediction_path">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">stage2_prediction_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage2_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#cybench.stages.artifacts.stage2_prediction_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.artifacts.write_dataframe_artifact">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.artifacts.</span></span><span class="sig-name descname"><span class="pre">write_dataframe_artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.artifacts.write_dataframe_artifact" title="Link to this definition"></a></dt>
+<dd><p>Write a CSV and an adjacent immutable-description manifest.</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages.config">
+<span id="cybench-stages-config-module"></span><h2>cybench.stages.config module<a class="headerlink" href="#module-cybench.stages.config" title="Link to this heading"></a></h2>
+<p>Shared configuration for the three research stages.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cybench.stages.config.LLMVariant">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cybench.stages.config.</span></span><span class="sig-name descname"><span class="pre">LLMVariant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'str'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Path'</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.config.LLMVariant" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.config.LLMVariant.model_dir">
+<span class="sig-name descname"><span class="pre">model_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#cybench.stages.config.LLMVariant.model_dir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.config.LLMVariant.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#cybench.stages.config.LLMVariant.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.config.qwen_base_variant">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.config.</span></span><span class="sig-name descname"><span class="pre">qwen_base_variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cybench.stages.config.LLMVariant" title="cybench.stages.config.LLMVariant"><span class="pre">LLMVariant</span></a></span></span><a class="headerlink" href="#cybench.stages.config.qwen_base_variant" title="Link to this definition"></a></dt>
+<dd><p>Return the canonical Base Qwen used by both plain and RAG branches.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.config.require_file">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.config.</span></span><span class="sig-name descname"><span class="pre">require_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#cybench.stages.config.require_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.config.stage_output_dir">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.config.</span></span><span class="sig-name descname"><span class="pre">stage_output_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#cybench.stages.config.stage_output_dir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.config.tabpfn_checkpoints">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.config.</span></span><span class="sig-name descname"><span class="pre">tabpfn_checkpoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">finetuned</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Path</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.config.tabpfn_checkpoints" title="Link to this definition"></a></dt>
+<dd><p>Return configured original and agronomy-finetuned TabPFN checkpoints.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.config.validate_llm_variant">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.config.</span></span><span class="sig-name descname"><span class="pre">validate_llm_variant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.config.LLMVariant" title="cybench.stages.config.LLMVariant"><span class="pre">LLMVariant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#cybench.stages.config.validate_llm_variant" title="Link to this definition"></a></dt>
+<dd><p>Require a loadable full Qwen model directory, not an adapter-only folder.</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages.data">
+<span id="cybench-stages-data-module"></span><h2>cybench.stages.data module<a class="headerlink" href="#module-cybench.stages.data" title="Link to this heading"></a></h2>
+<p>Shared, leakage-aware data preparation helpers.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.build_feature_table">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">build_feature_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cybench.datasets.html#cybench.datasets.dataset.Dataset" title="cybench.datasets.dataset.Dataset"><span class="pre">Dataset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.data.build_feature_table" title="Link to this definition"></a></dt>
+<dd><p>Create one expert-feature row per location-year from an aligned Dataset.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.chronological_test_years">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">chronological_test_years</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">years</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.data.chronological_test_years" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.feature_columns">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">feature_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.data.feature_columns" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.finite_rows">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">finite_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#cybench.stages.data.finite_rows" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.labels_table">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">labels_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cybench.datasets.html#cybench.datasets.dataset.Dataset" title="cybench.datasets.dataset.Dataset"><span class="pre">Dataset</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.data.labels_table" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.load_country_dataset">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">load_country_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="cybench.datasets.html#cybench.datasets.dataset.Dataset" title="cybench.datasets.dataset.Dataset"><span class="pre">Dataset</span></a></span></span><a class="headerlink" href="#cybench.stages.data.load_country_dataset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.data.merge_features_labels">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.data.</span></span><span class="sig-name descname"><span class="pre">merge_features_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cybench.datasets.html#cybench.datasets.dataset.Dataset" title="cybench.datasets.dataset.Dataset"><span class="pre">Dataset</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.data.merge_features_labels" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.evaluation">
+<span id="cybench-stages-evaluation-module"></span><h2>cybench.stages.evaluation module<a class="headerlink" href="#module-cybench.stages.evaluation" title="Link to this heading"></a></h2>
+<p>Consistent temporal evaluation used by Stage 1 and Stage 2.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.evaluation.evaluate_temporal_folds">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.evaluation.</span></span><span class="sig-name descname"><span class="pre">evaluate_temporal_folds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimator_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_years</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.evaluation.evaluate_temporal_folds" title="Link to this definition"></a></dt>
+<dd><p>Fit one estimator per held-out year and return pooled metrics/predictions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.evaluation.metric_row">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.evaluation.</span></span><span class="sig-name descname"><span class="pre">metric_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">metadata</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.evaluation.metric_row" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.evaluation.metrics_from_prediction_frame">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.evaluation.</span></span><span class="sig-name descname"><span class="pre">metrics_from_prediction_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.evaluation.metrics_from_prediction_frame" title="Link to this definition"></a></dt>
+<dd><p>Calculate the standard metrics for one saved train or test prediction set.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.evaluation.predict_training_fit">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.evaluation.</span></span><span class="sig-name descname"><span class="pre">predict_training_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimator_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_years</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.evaluation.predict_training_fit" title="Link to this definition"></a></dt>
+<dd><p>Fit once before the outer-test boundary and predict that same training set.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.evaluation.repeat_seed">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.evaluation.</span></span><span class="sig-name descname"><span class="pre">repeat_seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cybench.stages.evaluation.repeat_seed" title="Link to this definition"></a></dt>
+<dd><p>Return a stable, well-separated seed for a one-based repeat index.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.evaluation.summarize_repeated_metrics">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.evaluation.</span></span><span class="sig-name descname"><span class="pre">summarize_repeated_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.evaluation.summarize_repeated_metrics" title="Link to this definition"></a></dt>
+<dd><p>Summarize repeated metrics with sample variance (ddof=1).</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages.regressors">
+<span id="cybench-stages-regressors-module"></span><h2>cybench.stages.regressors module<a class="headerlink" href="#module-cybench.stages.regressors" title="Link to this heading"></a></h2>
+<p>Regression model registry for validating Stage 1 feature configurations.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.regressors.make_regressor">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.regressors.</span></span><span class="sig-name descname"><span class="pre">make_regressor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.regressors.make_regressor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.runtime">
+<span id="cybench-stages-runtime-module"></span><h2>cybench.stages.runtime module<a class="headerlink" href="#module-cybench.stages.runtime" title="Link to this heading"></a></h2>
+<p>Runtime initialization shared by GPU-backed stage entry points.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.runtime.initialize_torch_before_data_libraries">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.runtime.</span></span><span class="sig-name descname"><span class="pre">initialize_torch_before_data_libraries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.runtime.initialize_torch_before_data_libraries" title="Link to this definition"></a></dt>
+<dd><p>Initialize CUDA PyTorch before Pandas on Windows.</p>
+<p>Some Conda environments expose incompatible DLL search paths after NumPy or
+Pandas is imported. Keeping the added-directory handles alive and importing
+Torch first prevents c10.dll initialization failures in Qwen and TabPFN.</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cybench.stages" title="Link to this heading"></a></h2>
+<p>Three-stage research pipeline built on top of CY-Bench.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Wageningen University and Research.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #28242c; */
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #124400;
+    }
+  </style>
+
+
+</body>
+</html>

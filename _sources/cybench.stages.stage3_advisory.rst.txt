@@ -1,0 +1,53 @@
+cybench.stages.stage3\_advisory package
+=======================================
+
+Submodules
+----------
+
+cybench.stages.stage3\_advisory.llm module
+------------------------------------------
+
+.. automodule:: cybench.stages.stage3_advisory.llm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage3\_advisory.models module
+---------------------------------------------
+
+.. automodule:: cybench.stages.stage3_advisory.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage3\_advisory.optimizer module
+------------------------------------------------
+
+.. automodule:: cybench.stages.stage3_advisory.optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage3\_advisory.run module
+------------------------------------------
+
+.. automodule:: cybench.stages.stage3_advisory.run
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage3\_advisory.schema module
+---------------------------------------------
+
+.. automodule:: cybench.stages.stage3_advisory.schema
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cybench.stages.stage3_advisory
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>三阶段农业 AI 框架 &mdash; AgML-crop-yield-forecasting  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AgML-crop-yield-forecasting
+              <img src="_static/agml-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">三阶段农业 AI 框架</a><ul>
+<li><a class="reference internal" href="#id1">主流程</a><ul>
+<li><a class="reference internal" href="#stage-1-base-qwen-rag">Stage 1：Base Qwen + 结构化气候 RAG</a></li>
+<li><a class="reference internal" href="#stage-2-tabpfn">Stage 2：TabPFN 跨国家预测</a></li>
+<li><a class="reference internal" href="#stage-3">Stage 3：风险诊断与条件性建议</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">五次重复协议</a></li>
+<li><a class="reference internal" href="#id3">主要目录</a></li>
+<li><a class="reference internal" href="#id4">模型权重</a></li>
+<li><a class="reference internal" href="#id5">测试</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AgML-crop-yield-forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">三阶段农业 AI 框架</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/README.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ai">
+<h1>三阶段农业 AI 框架<a class="headerlink" href="#ai" title="Link to this heading"></a></h1>
+<img alt="Graphical Abstract" src="https://raw.githubusercontent.com/WUR-AI/AgML-CY-Bench/main/graphical_abstract.png" />
+<p>本项目研究结构化气候 RAG 特征工程、TabPFN 跨国家产量预测，以及有证据约束的农业风险诊断与建议。</p>
+<section id="id1">
+<h2>主流程<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="stage-1-base-qwen-rag">
+<span id="stage-1base-qwen-rag"></span><h3>Stage 1：Base Qwen + 结构化气候 RAG<a class="headerlink" href="#stage-1-base-qwen-rag" title="Link to this heading"></a></h3>
+<p>Stage 1 直接查询 <code class="docutils literal notranslate"><span class="pre">Climate_rag_knowledge_base/processed/climate_rag_metrics.csv</span></code>。检索器先按作物、国家和校准截止年份过滤，再选择典型、热旱、冷湿和长干旱历史年份。它不创建 embedding，也不使用向量数据库。</p>
+<p>Base Qwen3.5-9B 综合以下证据生成候选特征参数：</p>
+<ul class="simple">
+<li><p>目标国家校准期的生长季气候画像；</p></li>
+<li><p>校准期胁迫—产量残差证据；</p></li>
+<li><p>CSV 检索得到的历史气候型及统计摘要。</p></li>
+</ul>
+<p>候选配置只在校准年份上筛选，最终外层测试年份不会参与检索或参数选择。评估模型包括 Ridge、XGBoost、SVR、CNN1D 和 TransformerFlat。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">cybench</span><span class="p">.</span><span class="n">stages</span><span class="p">.</span><span class="n">stage1_feature_engineering</span><span class="p">.</span><span class="n">prepare</span> <span class="p">-</span><span class="n">-regenerate-llm</span>
+<span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">cybench</span><span class="p">.</span><span class="n">stages</span><span class="p">.</span><span class="n">stage1_feature_engineering</span><span class="p">.</span><span class="n">run</span> <span class="p">-</span><span class="n">-repeats</span> <span class="n">5</span>
+<span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">cybench</span><span class="p">.</span><span class="n">stages</span><span class="p">.</span><span class="n">stage1_feature_engineering</span><span class="p">.</span><span class="n">summarize</span>
+</pre></div>
+</div>
+</section>
+<section id="stage-2-tabpfn">
+<h3>Stage 2：TabPFN 跨国家预测<a class="headerlink" href="#stage-2-tabpfn" title="Link to this heading"></a></h3>
+<p>Stage 2 固定读取 Stage 1 的 <code class="docutils literal notranslate"><span class="pre">qwen_rag/feature_dataset.csv</span></code>，比较原始 TabPFN 与使用 CN 数据继续训练的 TabPFN。CN 使用严格留出的 2020–2022 年；其他国家采用最后 30% 年份的前向时间测试。CN 微调权重见 <a class="reference external" href="#模型权重">模型权重</a>。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">cybench</span><span class="p">.</span><span class="n">stages</span><span class="p">.</span><span class="n">stage2_tabpfn_transfer</span><span class="p">.</span><span class="n">prepare_cn_data</span>
+<span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">cybench</span><span class="p">.</span><span class="n">stages</span><span class="p">.</span><span class="n">stage2_tabpfn_transfer</span><span class="p">.</span><span class="n">run</span> <span class="p">-</span><span class="n">-repeats</span> <span class="n">5</span>
+</pre></div>
+</div>
+</section>
+<section id="stage-3">
+<h3>Stage 3：风险诊断与条件性建议<a class="headerlink" href="#stage-3" title="Link to this heading"></a></h3>
+<p>Stage 3 读取同一套 RAG 特征和 Stage 2 预测，拟合产量响应代理模型，识别高风险地区，并生成受动作白名单和证据字段约束的建议。Base Qwen 与结构化 RAG 分支使用同一基础模型，区别仅在于是否注入校准期历史气候检索证据。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">cybench</span><span class="p">.</span><span class="n">stages</span><span class="p">.</span><span class="n">stage3_advisory</span><span class="p">.</span><span class="n">run</span> <span class="p">-</span><span class="n">-repeats</span> <span class="n">5</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>五次重复协议<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>所有预测模型默认运行 5 次，seed 为 <code class="docutils literal notranslate"><span class="pre">42</span> <span class="pre">+</span> <span class="pre">1009</span> <span class="pre">×</span> <span class="pre">(repeat-1)</span></code>。逐样本预测文件同时保存 <code class="docutils literal notranslate"><span class="pre">train/test</span></code>、<code class="docutils literal notranslate"><span class="pre">repeat</span></code> 和 <code class="docutils literal notranslate"><span class="pre">seed</span></code>。指标文件包括逐次结果以及均值、样本方差。Ridge、SVR 等确定性算法出现方差 0 属于正常结果。</p>
+</section>
+<section id="id3">
+<h2>主要目录<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Climate_rag_knowledge_base/
+  processed/climate_rag_metrics.csv
+  raw/nasa_power/
+LLM/Qwen3.5-9B/
+tabpfn_3/
+cybench/stages/
+  stage1_feature_engineering/
+  stage2_tabpfn_transfer/
+  stage3_advisory/
+cybench/output/
+</pre></div>
+</div>
+<p>每个正式 CSV 都有相邻的 <code class="docutils literal notranslate"><span class="pre">.manifest.json</span></code>，记录数据身份、来源 SHA-256、模型、年份边界和实验参数。</p>
+</section>
+<section id="id4">
+<h2>模型权重<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Stage 2 使用的 CN 微调 TabPFN-3 权重已发布在 Hugging Face：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tabpfn-v3-regressor-cn_finetuned_full.ckpt</span></code>（668 MB，含 AdamW 优化器状态，可从此续训） <a class="reference external" href="https://huggingface.co/rouluan/Agro-TabPFN">https://huggingface.co/rouluan/Agro-TabPFN</a></p></li>
+</ul>
+<p>该权重是 TABPFN-3（<code class="docutils literal notranslate"><span class="pre">tabpfn-v3-regressor-v3_default</span></code>）在中国省级玉米产量数据上的微调衍生版本，受 <strong>TABPFN-3 Non-Commercial License v1.0</strong> 约束，仅限非商业研究与内部评估使用，禁止商用及托管/API/SaaS 形式的再分发。许可全文与修改声明见该仓库的 <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> 与 <code class="docutils literal notranslate"><span class="pre">NOTICE</span></code>。</p>
+</section>
+<section id="id5">
+<h2>测试<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">run</span> <span class="n">-n</span> <span class="n">specllm</span> <span class="n">python</span> <span class="n">-m</span> <span class="n">pytest</span> <span class="n">tests</span><span class="p">/</span><span class="n">stages</span> <span class="n">-q</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Wageningen University and Research.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #28242c; */
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #124400;
+    }
+  </style>
+
+
+</body>
+</html>

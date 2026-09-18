@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cybench.stages.stage3_advisory package &mdash; AgML-crop-yield-forecasting  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AgML-crop-yield-forecasting
+              <img src="_static/agml-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">cybench.stages.stage3_advisory package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#cybench-stages-stage3-advisory-llm-module">cybench.stages.stage3_advisory.llm module</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.stage3_advisory.models">cybench.stages.stage3_advisory.models module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel</span></code></a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.estimator"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.estimator</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.features"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.features</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.importance"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.importance</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.predict"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.predict()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.residual_quantile"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.residual_quantile</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.validation_metrics"><code class="docutils literal notranslate"><span class="pre">YieldResponseModel.validation_metrics</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models._estimator"><code class="docutils literal notranslate"><span class="pre">_estimator()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.models.fit_yield_response_model"><code class="docutils literal notranslate"><span class="pre">fit_yield_response_model()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage3_advisory.optimizer">cybench.stages.stage3_advisory.optimizer module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy</span></code></a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_actionable_features"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.max_actionable_features</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_water_proxy_shift_fraction"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.max_water_proxy_shift_fraction</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.reference_yield_quantile"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.reference_yield_quantile</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.stress_score_threshold"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.stress_score_threshold</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.top_reported_stresses"><code class="docutils literal notranslate"><span class="pre">OptimizationPolicy.top_reported_stresses</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer._historical_reference"><code class="docutils literal notranslate"><span class="pre">_historical_reference()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer._predict_row"><code class="docutils literal notranslate"><span class="pre">_predict_row()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.diagnose_stress"><code class="docutils literal notranslate"><span class="pre">diagnose_stress()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.optimize_recovery_scenario"><code class="docutils literal notranslate"><span class="pre">optimize_recovery_scenario()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.policy_dict"><code class="docutils literal notranslate"><span class="pre">policy_dict()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.sanitize_policy"><code class="docutils literal notranslate"><span class="pre">sanitize_policy()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.scenario_summary"><code class="docutils literal notranslate"><span class="pre">scenario_summary()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.select_current_conditions"><code class="docutils literal notranslate"><span class="pre">select_current_conditions()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench-stages-stage3-advisory-run-module">cybench.stages.stage3_advisory.run module</a></li>
+<li><a class="reference internal" href="#module-cybench.stages.stage3_advisory.schema">cybench.stages.stage3_advisory.schema module</a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData"><code class="docutils literal notranslate"><span class="pre">CountryYieldData</span></code></a><ul>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.country"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.country</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.feature_columns"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.feature_columns</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.frame"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.frame</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.lineage"><code class="docutils literal notranslate"><span class="pre">CountryYieldData.lineage</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.attach_stage2_predictions"><code class="docutils literal notranslate"><span class="pre">attach_stage2_predictions()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.feature_role"><code class="docutils literal notranslate"><span class="pre">feature_role()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.load_stage1_yield_data"><code class="docutils literal notranslate"><span class="pre">load_stage1_yield_data()</span></code></a></li>
+<li><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.validate_yield_frame"><code class="docutils literal notranslate"><span class="pre">validate_yield_frame()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cybench.stages.stage3_advisory">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AgML-crop-yield-forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">cybench.stages.stage3_advisory package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cybench.stages.stage3_advisory.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cybench-stages-stage3-advisory-package">
+<h1>cybench.stages.stage3_advisory package<a class="headerlink" href="#cybench-stages-stage3-advisory-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="cybench-stages-stage3-advisory-llm-module">
+<h2>cybench.stages.stage3_advisory.llm module<a class="headerlink" href="#cybench-stages-stage3-advisory-llm-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.stage3_advisory.models">
+<span id="cybench-stages-stage3-advisory-models-module"></span><h2>cybench.stages.stage3_advisory.models module<a class="headerlink" href="#module-cybench.stages.stage3_advisory.models" title="Link to this heading"></a></h2>
+<p>Leakage-aware yield response surrogate for Stage 3 scenario evaluation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.models.</span></span><span class="sig-name descname"><span class="pre">YieldResponseModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'ExtraTreesRegressor'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'tuple[str,</span> <span class="pre">...]'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">residual_quantile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'float'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'dict'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">importance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'dict[str,</span> <span class="pre">float]'</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel.estimator">
+<span class="sig-name descname"><span class="pre">estimator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ExtraTreesRegressor</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.estimator" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel.features">
+<span class="sig-name descname"><span class="pre">features</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel.importance">
+<span class="sig-name descname"><span class="pre">importance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.importance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.predict" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel.residual_quantile">
+<span class="sig-name descname"><span class="pre">residual_quantile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.residual_quantile" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.YieldResponseModel.validation_metrics">
+<span class="sig-name descname"><span class="pre">validation_metrics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.models.YieldResponseModel.validation_metrics" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models._estimator">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.models.</span></span><span class="sig-name descname"><span class="pre">_estimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ExtraTreesRegressor</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.models._estimator" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.models.fit_yield_response_model">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.models.</span></span><span class="sig-name descname"><span class="pre">fit_yield_response_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval_coverage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">training_end_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel" title="cybench.stages.stage3_advisory.models.YieldResponseModel"><span class="pre">YieldResponseModel</span></a></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.models.fit_yield_response_model" title="Link to this definition"></a></dt>
+<dd><p>Validate forward, then fit only on rows before the decision year.</p>
+</dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage3_advisory.optimizer">
+<span id="cybench-stages-stage3-advisory-optimizer-module"></span><h2>cybench.stages.stage3_advisory.optimizer module<a class="headerlink" href="#module-cybench.stages.stage3_advisory.optimizer" title="Link to this heading"></a></h2>
+<p>Historical-analog stress diagnosis and bounded recovery scenarios.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">OptimizationPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference_yield_quantile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'float'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress_score_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'float'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_water_proxy_shift_fraction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'float'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_actionable_features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'int'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_reported_stresses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'int'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_actionable_features">
+<span class="sig-name descname"><span class="pre">max_actionable_features</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_actionable_features" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_water_proxy_shift_fraction">
+<span class="sig-name descname"><span class="pre">max_water_proxy_shift_fraction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.max_water_proxy_shift_fraction" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.reference_yield_quantile">
+<span class="sig-name descname"><span class="pre">reference_yield_quantile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.75</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.reference_yield_quantile" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.stress_score_threshold">
+<span class="sig-name descname"><span class="pre">stress_score_threshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.75</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.stress_score_threshold" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.top_reported_stresses">
+<span class="sig-name descname"><span class="pre">top_reported_stresses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy.top_reported_stresses" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer._historical_reference">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">_historical_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy" title="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><span class="pre">OptimizationPolicy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer._historical_reference" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer._predict_row">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">_predict_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel" title="cybench.stages.stage3_advisory.models.YieldResponseModel"><span class="pre">YieldResponseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer._predict_row" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.diagnose_stress">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">diagnose_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel" title="cybench.stages.stage3_advisory.models.YieldResponseModel"><span class="pre">YieldResponseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy" title="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><span class="pre">OptimizationPolicy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.diagnose_stress" title="Link to this definition"></a></dt>
+<dd><p>Compare current conditions with pre-year high-yield historical analogs.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.optimize_recovery_scenario">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">optimize_recovery_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel" title="cybench.stages.stage3_advisory.models.YieldResponseModel"><span class="pre">YieldResponseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy" title="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><span class="pre">OptimizationPolicy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.optimize_recovery_scenario" title="Link to this definition"></a></dt>
+<dd><p>Greedily move observed water proxies toward feasible analog values.</p>
+<p>These are environmental target scenarios, not estimates of a specific irrigation
+dose. Temperature, radiation, soil, NDVI and FPAR are never modified.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.policy_dict">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">policy_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy" title="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><span class="pre">OptimizationPolicy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.policy_dict" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.sanitize_policy">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">sanitize_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proposal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cybench.stages.stage3_advisory.optimizer.OptimizationPolicy" title="cybench.stages.stage3_advisory.optimizer.OptimizationPolicy"><span class="pre">OptimizationPolicy</span></a></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.sanitize_policy" title="Link to this definition"></a></dt>
+<dd><p>Clamp an LLM proposal to conservative, data-only scenario bounds.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.scenario_summary">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">scenario_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recovery</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.models.YieldResponseModel" title="cybench.stages.stage3_advisory.models.YieldResponseModel"><span class="pre">YieldResponseModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.scenario_summary" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.optimizer.select_current_conditions">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.optimizer.</span></span><span class="sig-name descname"><span class="pre">select_current_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.optimizer.select_current_conditions" title="Link to this definition"></a></dt>
+<dd><p>Use the requested year, or each administrative unit’s latest observation.</p>
+</dd></dl>
+
+</section>
+<section id="cybench-stages-stage3-advisory-run-module">
+<h2>cybench.stages.stage3_advisory.run module<a class="headerlink" href="#cybench-stages-stage3-advisory-run-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-cybench.stages.stage3_advisory.schema">
+<span id="cybench-stages-stage3-advisory-schema-module"></span><h2>cybench.stages.stage3_advisory.schema module<a class="headerlink" href="#module-cybench.stages.stage3_advisory.schema" title="Link to this heading"></a></h2>
+<p>Data contract for Stage 3 using the project’s country-level yield tables.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.CountryYieldData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.schema.</span></span><span class="sig-name descname"><span class="pre">CountryYieldData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'str'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'pd.DataFrame'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'tuple[str,</span> <span class="pre">...]'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'dict</span> <span class="pre">|</span> <span class="pre">None'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.CountryYieldData.country">
+<span class="sig-name descname"><span class="pre">country</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.country" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.CountryYieldData.feature_columns">
+<span class="sig-name descname"><span class="pre">feature_columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.feature_columns" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.CountryYieldData.frame">
+<span class="sig-name descname"><span class="pre">frame</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.frame" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.CountryYieldData.lineage">
+<span class="sig-name descname"><span class="pre">lineage</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.CountryYieldData.lineage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.attach_stage2_predictions">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.schema.</span></span><span class="sig-name descname"><span class="pre">attach_stage2_predictions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'stage2_tabpfn_transfer'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.attach_stage2_predictions" title="Link to this definition"></a></dt>
+<dd><p>Attach checksum-verified Stage 2 ensemble summaries to Stage 1 data.</p>
+<p>Stage 2 stores one row per repeat.  Stage 3 consumes the repeat mean as
+the forecast and keeps the sample variance/standard deviation as explicit
+uncertainty rather than selecting an arbitrary repeat.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.feature_role">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.schema.</span></span><span class="sig-name descname"><span class="pre">feature_role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.feature_role" title="Link to this definition"></a></dt>
+<dd><p>Classify real CY-Bench predictors by how Stage 3 may use them.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.load_stage1_yield_data">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.schema.</span></span><span class="sig-name descname"><span class="pre">load_stage1_yield_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage1_output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'hardcoded'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.load_stage1_yield_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cybench.stages.stage3_advisory.schema.validate_yield_frame">
+<span class="sig-prename descclassname"><span class="pre">cybench.stages.stage3_advisory.schema.</span></span><span class="sig-name descname"><span class="pre">validate_yield_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cybench.stages.stage3_advisory.schema.CountryYieldData" title="cybench.stages.stage3_advisory.schema.CountryYieldData"><span class="pre">CountryYieldData</span></a></span></span><a class="headerlink" href="#cybench.stages.stage3_advisory.schema.validate_yield_frame" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-cybench.stages.stage3_advisory">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cybench.stages.stage3_advisory" title="Link to this heading"></a></h2>
+<p>Stage 3: evidence-grounded agronomic advisory comparison.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Wageningen University and Research.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #28242c; */
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #124400;
+    }
+  </style>
+
+
+</body>
+</html>

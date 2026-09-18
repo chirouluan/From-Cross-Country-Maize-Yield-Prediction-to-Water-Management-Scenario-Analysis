@@ -1,0 +1,29 @@
+cybench.stages.stage2\_tabpfn\_transfer package
+===============================================
+
+Submodules
+----------
+
+cybench.stages.stage2\_tabpfn\_transfer.prepare\_cn\_data module
+----------------------------------------------------------------
+
+.. automodule:: cybench.stages.stage2_tabpfn_transfer.prepare_cn_data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cybench.stages.stage2\_tabpfn\_transfer.run module
+--------------------------------------------------
+
+.. automodule:: cybench.stages.stage2_tabpfn_transfer.run
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cybench.stages.stage2_tabpfn_transfer
+   :members:
+   :undoc-members:
+   :show-inheritance:
