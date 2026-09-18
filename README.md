@@ -1,6 +1,8 @@
 # CY-Bench 三阶段农业 AI 框架
 
-本项目研究结构化气候 RAG 特征工程、TabPFN 跨国家产量预测，以及有证据约束的农业风险诊断与建议。当前正式流程不使用缺失值插补，也不使用 LoRA。
+![Graphical Abstract](graphical_abstract.png)
+
+本项目研究结构化气候 RAG 特征工程、TabPFN 跨国家产量预测，以及有证据约束的农业风险诊断与建议。
 
 ## 主流程
 
